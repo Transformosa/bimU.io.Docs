@@ -99,5 +99,5 @@ nav:
 
 # Google Analytics
 google_analytics:
-  - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
+  - 'UA-XXXXXXXX-X'
   - auto
