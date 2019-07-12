@@ -1,0 +1,103 @@
+# Project information
+site_name: 'User Guide'
+site_description: 'bimU.io Documentation'
+site_author: 'Transformosa Private Limited'
+site_url: 'http://docs.bimu.io'
+
+# Repository
+# repo_name: 'Transformosa/bimU-io-docs'
+# repo_url: 'https://github.com/Transformosa/bimU-io-docs'
+
+# Copyright
+copyright: 'Copyright &copy; 2019 Transformosa Private Limited'
+
+# Documentation and theme
+theme:
+  name: material
+  custom_dir: theme
+
+  # 404 page
+  static_templates:
+    - 404.html
+
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+
+  # Default values, taken from mkdocs_theme.yml
+  language: en
+  feature:
+    tabs: false
+  palette:
+    primary: blue grey
+    accent: blue
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: images/favicon-32x32.png
+  logo: images/logo.png
+
+# Plugins
+plugins:
+  - search
+  - minify:
+      minify_html: true
+
+# Customization
+extra:
+  social:
+    - type: globe
+      link: https://bimu.io
+    - type: twitter
+      link: https://twitter.com/transformosa
+    - type: linkedin
+      link: https://linkedin.com/in/transformosa
+    - type: facebook
+      link: https://facebook.com/in/transformosa
+  # disqus: ''
+
+# Extensions
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Page tree
+nav:
+  - bimU.io Viewer Overview: index.md
+  - Log in to bimU.io: log-in-to-bimu-viewer.md
+  - Manage BIM Models: manage-bim-models.md
+  - Upload a BIM model: upload-a-bim-model.md
+  - Navigate Using Web Viewer: navigate-using-web-viewer.md
+  - Embed in Other Applications : embed-in-other-applications.md
+  - Release Notes : release-notes.md
+
+# Google Analytics
+google_analytics:
+  - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
+  - auto
