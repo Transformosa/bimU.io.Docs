@@ -103,3 +103,9 @@ nav:
 google_analytics:
   - 'UA-143925879-2'
   - auto
+
+extra_css:
+  - '//wpcc.io/lib/1.0.2/cookieconsent.min.css'
+extra_javascript:
+  - '//wpcc.io/lib/1.0.2/cookieconsent.min.js'
+  - 'js/initcookieconsent.js'

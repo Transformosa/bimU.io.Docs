@@ -16,4 +16,4 @@ For full documentation visit [mkdocs.org](http://mkdocs.org).
         index.md  # The documentation homepage.
         ...       # Other markdown pages, images and other files.
 		
-## Something New Here
+## Cookie Policy
