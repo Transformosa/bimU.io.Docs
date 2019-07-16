@@ -4,13 +4,22 @@ For full documentation visit [mkdocs.org](http://mkdocs.org).
 
 ## Features
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
+* Model navgiation 
+* mobile
+* Blazingly fast and lightweight notification
+* pluginless
+* model part
+* formats
+* easy login sso
+* easy share and securely password link
+* easy integration embedded
+* bim data
+* feedback markup and comments Add lines, shapes, and texts to annotate model view screenshot. You can also paste image from clipboard by Ctrl + V.
+* label
 
-## Use Cases
+## Viewer Functions
 
+rotate pan zoom section box measurement full screen
     mkdocs.yml    # The configuration file.
     docs/
         index.md  # The documentation homepage.

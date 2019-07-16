@@ -1,6 +1,6 @@
 # Project information
-site_name: 'User Guide'
-site_description: 'bimU.io Documentation'
+site_name: 'bimU.io User Guide'
+site_description: 'bimU.io User Guide'
 site_author: 'Transformosa Private Limited'
 site_url: 'http://docs.bimu.io'
 
@@ -96,6 +96,8 @@ nav:
   - Navigate Using Web Viewer: navigate-using-web-viewer.md
   - Embed in Other Applications : embed-in-other-applications.md
   - Release Notes : release-notes.md
+  - Terms of Service : terms-of-service.md
+  - Privacy Policy : privacy-policy.md
 
 # Google Analytics
 google_analytics:
