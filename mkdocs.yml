@@ -58,6 +58,7 @@ extra:
 
 # Extensions
 markdown_extensions:
+  - markdown.extensions.attr_list
   - markdown.extensions.admonition
   - markdown.extensions.codehilite:
       guess_lang: false
@@ -106,6 +107,7 @@ google_analytics:
 
 extra_css:
   - '//wpcc.io/lib/1.0.2/cookieconsent.min.css'
+  - 'css/custom.css'
 extra_javascript:
   - '//wpcc.io/lib/1.0.2/cookieconsent.min.js'
   - 'js/initcookieconsent.js'
