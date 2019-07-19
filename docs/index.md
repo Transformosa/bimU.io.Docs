@@ -25,4 +25,4 @@ rotate pan zoom section box measurement full screen
         index.md  # The documentation homepage.
         ...       # Other markdown pages, images and other files.
 		
-## Something New Here
+## Video Tutorials
