@@ -1,19 +1,53 @@
 # Nagivate Using Web Viewer
 
-For full documentation visit [mkdocs.org](http://mkdocs.org).
+## Use 3D Viewer
 
-## Commands
+System requirement
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
+### Viewer Control
+- Orbit
+- Pan
+- Zoom
 
-## Project layout
+### Camera Viewpoint
+- Zoom to Fit
+- Zoom to Selection
+- Open Viewpoint
+- Rotate View
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+### Section Cut
+- Section Box
+- Section around Selection
+
+### Model Elements
+- Select Elements
+- Hide Elements
+
+### Other Viewer Capabilities
+- Reset Visibility
+- Measuring Tool
+- Toogle Fullscreen
+- Use Orthographic Camera
+- Switch to Embedded Mode
+
+## Work with Markups
+What is a markup?
+
+### Create a Markup
+
+### View a Markup
+Can edit description, download image, delete.
+
+### Open Viewpoint in Web Viewer
+
+### Open Viewpoint in BIM Software
 		
-## Something New Here
+## View BIM Data
+
+### Model Tab
+
+### Element Tab
+
+### File Tab
+
+## Mobile User Interface

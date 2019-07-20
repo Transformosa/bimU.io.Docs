@@ -3,6 +3,9 @@
 For full documentation visit [mkdocs.org](http://mkdocs.org).
 
 ## What is Embed?
+
+- Embed Link:
+- iFrame:
 		
 ## Embed in Microsoft Teams
 

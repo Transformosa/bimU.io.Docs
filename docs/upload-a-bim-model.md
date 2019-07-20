@@ -4,15 +4,23 @@ For full documentation visit [mkdocs.org](http://mkdocs.org).
 
 ## Install bimU.io Launcher
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
+Download Installer
+Pluginless 
+Background Update
 
-## Upload from Autodesk Revit
+## Upload from BIM Software
+
+### Upload from Autodesk Revit
 		
-## Upload from Autodesk Navisworks
+### Upload from Autodesk Navisworks
 
-## Upload from Trimble Tekla Structures
+### Upload from Trimble Tekla Structures
 
 ## Upload IFC Files
+
+## Conversion Process
+
+## Current Limitation
+- Upload size:
+- Number of elemements:
+- Model size: 
