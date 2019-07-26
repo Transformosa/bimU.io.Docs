@@ -10,11 +10,17 @@ Background Update
 
 ## Upload from BIM Software
 
+![Screenshot](images/placeholder.jpg){: class="center" style="width:300px"}
+
 ### Upload from Autodesk Revit
 		
 ### Upload from Autodesk Navisworks
 
 ### Upload from Trimble Tekla Structures
+
+### Upload Progress
+
+![Screenshot](images/placeholder.jpg){: class="center" style="width:300px"}
 
 ## Upload IFC Files
 
