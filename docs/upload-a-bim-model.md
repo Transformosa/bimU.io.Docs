@@ -52,7 +52,7 @@ If you have any problem installing or using bimU.io Launcher, please log a suppo
 
 ![Screenshot](images/placeholder.jpg){: class="center" style="width:300px"}
 
-Uploading from various BIM software has similar steps:
+Uploading from various BIM software has similar steps on bimU.io:
 
 1. Open a 3D model view in any supported BIM software.
 
@@ -64,21 +64,41 @@ Uploading from various BIM software has similar steps:
 
 5. Review screenshot and click the **Refresh** icon button if you want to start over.
 
-6. Change model name if you want a different one from current filename.
+6. Change **Model Name** if you want a different one from current filename.
 
 7. Click the **Upload** button to proceed.
 
-### Upload from Autodesk Revit
+Every BIM software handles 3D computer graphics differently. The general rules for bimU.io export are:
 
-Section Box
-Visibility and Graphics Override
-Temporary Hide/Isoalte
-		
-### Upload from Autodesk Navisworks
+- Only visible model elements in the current 3D view are exported.
+- Model unit is converted to meter.
+- Materials are exported without textures.
 
-### Upload from Trimble Tekla Structures
+See below for more details around how bimU.io exports a model from every BIM software. 
 
-### Upload from Other BIM Software
+### Export from Autodesk Revit
+
+_2D View_ and _Family Document_ are NOT supported for export at the moment. You must have a _3D View_ opened to start the upload process.
+
+Visisblity and appearance of _Elements_ can be determined based on a number of factors, such as _Section Box_, _Visibility/Graphic Override_, _Temporary Hide/Isolate_, etc.
+
+Both _Type Parameters_ and _Instance Parameters_ are exported. Some file metadata, such as _Document_ properties, _Project Information_, _Project Position_, _Site Location_, etc. are exported, too. Model coordinates are converted to _Shared Coordinates_.
+
+### Export from Autodesk Navisworks
+
+Appearance of _Model Items_ can be determined by _Color and Transparency Override_. However, _Sectioning_ is NOT currently supported. If you don't want to export some of the _Model Items_, you'll have to select and hide them manually.
+
+Most of the _Properties_ shown in the _Properties Window_ are exported, including _Document_-level properties.
+
+### Export from Trimble Tekla Structures
+
+Visible _Model Objects_ in the active _Work Area_ are exported. Color settings are defined by Tekla and cannot be changed.
+
+The exported _Model Objects_ include _Part_, _Assembly_, _Pour Object_, _Base Component_.
+
+The exported properties include _Model Information_, _Project Information_, and the properties defined in the _Global Attributes_.
+
+### Export from Other BIM Software
 
 bimU.io Launcher doesn't integrate with other BIM software at the moment. As a workaround, you can export to an IFC file from most BIM authoring software, such as Graphisoft ArchiCAD, Bentley OpeningBuildings Designer (formerly AECOsim Building Designer), etc.
 
