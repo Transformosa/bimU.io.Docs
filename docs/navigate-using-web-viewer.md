@@ -1,6 +1,6 @@
-# Nagivate Using Web Viewer
+# Nagivate Using Web Model Viewer
 
-Some introduction here...
+Clicking the magnifier button or on a model name brings you to a web model viewer page. You can view your model in a 3D viewer along with BIM data and saved markups.
 
 ![Screenshot](images/placeholder.jpg){: class="center" style="width:300px"}
 
@@ -50,24 +50,46 @@ You can enable sectioning to slice your model to view more details inside. To di
 - **Switch to Embedded Mode:** This tool enables the embedded mode which isolates the 3D viewer from the user interface. You can still view BIM data from the toolbar. It is particularly useful when the fullscreen mode is not supported, such as iOS devices.
 
 ## Work with Markups
-What is a markup?
+
+![Screenshot](images/placeholder.jpg){: class="center" style="width:300px"}
+
+In bimU.io, a markup is more than an image with some sketches. In addition to adding lines, shapes, freehand drawings, texts, etc. to annotate a screenshot of model view, every markup can capture a camera viewpoint and include a short description. You can then navigate to this location in a model later by opening the viewpoint in the 3D viewer or other BIM software. The concept is similar to BIM Collaboration Format (BCF). bimU.io Agile, our full-fledged BIM issue tracking solution, will also support BCF in early 2020.
 
 ### Create a Markup
 
+![Screenshot](images/placeholder.jpg){: class="center" style="width:300px"}
+
+Click the **Create Markup** placeholder in the **Markup Tab** and a dialog will pop up where you can find various drawing and annotation tools. If you want to paste an image taken from elsewhere, simply paste it from clipboard into the dialog by Ctrl + V. Add some description and Click **Save** when you are done.
+
 ### View a Markup
-Can edit description, download image, delete.
+
+![Screenshot](images/placeholder.jpg){: class="center" style="width:300px"}
+
+All markups attached to a model are shown in the **Markup Tab**. Click a thumbnail to enlarge it and view its details. You can also edit description, download image, or delete it in the lightbox.
 
 ### Open Viewpoint in Web Viewer
 
+A viewpoint saved in a markup can be opened directly in the 3D viewer. It would restore previous camera location, angle, sectioning state, etc.
+
 ### Open Viewpoint in BIM Software
+
+Make sure you have bimU.io Launcher installed and running. Then you can open a saved viewpoint in any supported BIM software as long as a corresponding model file is also opened. More details around bimU.io Launcher can be found [here](/upload-a-bim-model#install-bimu.io-launcher).
 		
 ## View BIM Data
 
+Uploaded BIM data normally consists of document information, element properties, and file metadata which can be viewed from the following three tabs. 
+
 ### Model Tab
+
+Model specific data refers to document-level information, such as project details, location, coordinate system, other authoring software metadata, etc.
 
 ### Element Tab
 
+Model element data includes all properties of a selected element. It can be a Revit Parameter, a Navisworks Property, a Tekla Attribute, or an IfcPropertySingleValue. 
+
 ### File Tab
+
+These are file properties specific to bimU.io, such as model source, file size, timestamp, etc.
 
 ## Mobile User Interface
 
