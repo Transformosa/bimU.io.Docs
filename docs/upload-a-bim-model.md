@@ -78,7 +78,7 @@ See below for more details around how bimU.io exports a model from every BIM sof
 
 ### Export from Autodesk Revit
 
-_2D View_ and _Family Document_ are NOT supported for export at the moment. You must have a _3D View_ opened to start the upload process.
+_2D View_ and _Family Document_ are NOT supported for export at the moment. You must have a _3D View_ opened to start the upload process. Visible _Linked Models_ in the current _3D View_ are exported, too.
 
 Visisblity and appearance of _Elements_ can be determined based on a number of factors, such as _Section Box_, _Visibility/Graphic Override_, _Temporary Hide/Isolate_, etc.
 
@@ -96,7 +96,7 @@ Visible _Model Objects_ in the active _Work Area_ are exported. Color settings a
 
 The exported _Model Objects_ include _Part_, _Assembly_, _Pour Object_, _Base Component_.
 
-The exported properties include _Model Information_, _Project Information_, and the properties defined in the _Global Attributes_.
+The exported properties include _Model Information_, _Project Information_, _User-Defined Attributes_, and the properties defined in the _Global Attributes_.
 
 ### Export from Other BIM Software
 
