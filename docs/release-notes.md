@@ -1,19 +1,15 @@
 # Release Notes
 
-For full documentation visit [mkdocs.org](http://mkdocs.org).
+### 2020.01.01
 
-## Commands
+- Custom branding
+- Rhino .3dm Support
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
+### 2019.09.16
 
-## Project layout
+- Public release
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
-		
-## Something New Here
+### 2019.02.11
+
+- Beta release
+- Early adopter program
