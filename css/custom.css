@@ -2,3 +2,7 @@
     display: table;
     margin: 0 auto;
 }
+
+[data-md-color-primary=blue-grey] .md-typeset a {
+    color: #1976D2
+}
