@@ -2,7 +2,7 @@
 
 You can integrate bimU.io with ohter applications by embedding. It is then possible to view your BIM model and data from other web-based applications if the following two common embedding methods are supported. Some usage examples are also provided below.
 
-**_Note that sharing must be switched on to embed a bimU.io model._**
+!!! warning "Note that sharing must be switched on to embed a bimU.io model."
 
 ### Types of Embedding
 
@@ -30,17 +30,19 @@ Copy an **Embed URL** from a bimU.io model and paste it into the URL field shown
 
 Microsoft SharePoint is a web-based collaborative platform that integrates with Microsoft Office. Organizations use SharePoint to create websites and manage documents. There two types of user interface: Classic and Modren. Classic SharePoint was a traditional look while Modern SharePoint is a whole new experience introduced to create responsive websites for different devices and screen sizes. Modern SharePoint exists only in SharePoint Online.
 
+!!! warning "You might need to ask your IT administrator to whitelist bimU.io URL if it is blocked."
+
 - **Modern SharePoint Page**
 
 ![Screenshot](images/sharepointmodern.png){: class="center" style="width:500px"}
 
-Simply add an **Embed** web part in a Modern SharePoint Page and insert either **Embed URL** or **IFrame** code copied from a bimU.io model. You might need to ask your IT administrator to whitelist bimU.io URL if it is blocked.
+Simply add an **Embed** web part in a Modern SharePoint Page and insert either **Embed URL** or **IFrame** code copied from a bimU.io model.
 
 - **Classic SharePoint Page**
 
 ![Screenshot](images/sharepointclassic.png){: class="center" style="width:500px"}
 
-You can insert a **Page Viewer** web part in a Classic SharePoint Page. Then open the tool pane and paste an **Embed URL** copied from a bimU.io model in the Link text box. You might want to adjust a bit the layout and the appearance to make it look better. Also ask your IT administrator to whitelist bimU.io URL if it is blocked.
+You can insert a **Page Viewer** web part in a Classic SharePoint Page. Then open the tool pane and paste an **Embed URL** copied from a bimU.io model in the Link text box. You might want to adjust the layout and the appearance a bit to make it look better.
 
 ### Embed in Your Own Website
 

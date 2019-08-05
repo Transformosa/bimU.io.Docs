@@ -6,7 +6,7 @@ bimU.io Viewer is a full-fledged online BIM model viewer that truly works for ev
 
 ### Fully Functional Design Review Tool
 
-What's more than a 3D visulisation tool? bimU.io Viewer is natively built for reviewing engineering design in the Cloud. It includes everything you need to interrogate BIM data, such as versatile 3D navigation tools, a cloud-hosted BIM database, an interoperable markup format, etc. bimU.io produces a lightweight BIM model that is blazingly fast over the internet and available on all your devices. What you really need is just a modern web browser!
+What's more than a 3D visulisation tool? bimU.io Viewer is natively built for reviewing engineering design in the Cloud. It includes everything you need to interrogate BIM data, such as versatile 3D navigation tools, a cloud-hosted BIM database, an interoperable markup view, etc. bimU.io produces a lightweight BIM model that is blazingly fast over the internet and available on all your devices. What you really need is just a modern web browser!
 
 ### Sharing BIM Made Easy
 
@@ -21,7 +21,7 @@ Currently, supported BIM authoring tools and file format include Autodesk Revit,
 - Cross-platform across all devices, including desktop, tablet, phone, etc.
 - A variety of 3D navigation tools, such as orbit, rotate, pan, zoom, zoom to fit, zoom to selection, section box, section around selection, hide elements, measuring tools, fullscreen mode, etc.
 - Create markups with free-hand drawings, comments, and a saved camera viewpoint.
-- View BIM data on the fly without downloading the whole database, including element properties, document properties, project information, file metadata, etc.
+- Query BIM data on the fly without downloading the whole database, including element properties, document properties, project information, file metadata, etc.
 - Upload a partial or entire model with current view settings from BIM software with the "Pluginless" technology.
 - Open a saved viewpoint in bimU.io 3D viewer or navigate to the same location in BIM software.
 - Upload open standard IFC files directly via browser.

@@ -6,7 +6,7 @@ Clicking the magnifier button or on a model name brings you to a web model viewe
 
 ### Use 3D Viewer
 
-bimU.io's 3D viewer is web-based, which means that it is cross-platform and can be used on any device as long as you have a WebGL-enabled browser installed. We suggest use the latest version of Google Chrome to achieve the best performance.
+bimU.io's 3D viewer is web-based, which means that it is cross-platform and can be used on any device as long as you have a WebGL-enabled browser installed. We suggest use the latest version of **Google Chrome** to achieve the best performance.
 
 ![Screenshot](images/placeholder.jpg){: class="center" style="width:300px"}
 
@@ -16,9 +16,9 @@ The viewer toolbar is located at the bottom of the 3D viewer. The status labels 
 
 You can control the camera with the following tools to view the 3D scene from different perspectives.
 
-- **Orbit:** The orbit tool allows you to rotate the camera around your model by using left mouse drag on desktop or one finger swipe on mobile devices. The camera will orbit around the centre of current selection or the previous zoom target. 
-- **Pan:** The pan tool allows you to move the camera vertically or horizontally by using right mouse drag on desktop or two-finger scroll on mobile devices.
-- **Zoom:** The zoom tool allows you to zoom in to focus on a specific area or zoom out to see more of your model by using the mouse wheel on desktop or two-finger pinch on mobile devices. The zoom speed will decrease gradually as the camera gets closer to the zoom target.
+- **Orbit:** The orbit tool allows you to rotate the camera around your model by using `left mouse drag` on desktop or `one finger swipe` on mobile devices. The camera will orbit around the centre of current selection or the previous zoom target. 
+- **Pan:** The pan tool allows you to move the camera vertically or horizontally by using `right mouse drag` on desktop or `two-finger scroll` on mobile devices.
+- **Zoom:** The zoom tool allows you to zoom in to focus on a specific area or zoom out to see more of your model by using `mouse wheel` on desktop or `two-finger pinch` on mobile devices. The zoom speed will decrease gradually as the camera gets closer to the zoom target.
 
 #### Specfic Camera Viewpoints
 
@@ -26,20 +26,23 @@ You can control the camera with the following tools to view the 3D scene from di
 
 - **Zoom to Fit:** This tool fits the entire model into the current viewport. It is particularly useful when you get lost in the 3D scene.
 - **Zoom to Selection:** This tool fits the selected elements into the current viewport to focus on them. You can use this tool if a target is too far or too close to zoom. 
-- **Open Viewpoint:** This tool opens the camera viewpoint attached to a markup in either bimU.io's 3D viewer or BIM software. See more details [here](#work-with-markups). 
+- **Open Viewpoint:** This tool opens the current camera viewpoint in BIM software. See more details [here](#open-viewpoint-in-bim-software).
+
+!!! warning "You must have bimU.io Launcher installed to open a viewpoint in BIM software."
+
 - **Rotate View:** This tool can view your model from all sides of the bounding box, including top, bottom, front, back, left, and right.
 
 #### Section Cut
 
-You can enable sectioning to slice your model to view more details inside. To disable sectioning, use the _Reset Visibility_ tool.
+You can enable sectioning to slice your model to view more details inside. To disable sectioning, use the **Reset Visibility** tool.
 
 - **Section Box:** This tool cuts model geometry by a rectangular box. The six edges of the section box can be adjusted using the grips.
 - **Section around Selection:** This tool creates a section box around the selected elements. Then you can expand it to view the adjacent area.
 
 #### Model Elements
 
-- **Select Elements:** Use left mouse click to select a model element. Shift + Left click to select multiple elements.
-- **Hide Elements:** This tool hides the selected elements. You can use the _Reset Visibility_ tool to unhide them.
+- **Select Elements:** Use `left mouse click` to select a model element. `Shift + Left click` to select multiple elements.
+- **Hide Elements:** This tool hides the selected elements. You can use the **Reset Visibility** tool to unhide them.
 
 #### Other Viewer Capabilities
 
@@ -53,7 +56,9 @@ You can enable sectioning to slice your model to view more details inside. To di
 
 ![Screenshot](images/placeholder.jpg){: class="center" style="width:300px"}
 
-In bimU.io, a markup is more than an image with some sketches. In addition to adding lines, shapes, freehand drawings, texts, etc. to annotate a screenshot of model view, every markup can capture a camera viewpoint and include a short description. You can then navigate to this location in a model later by opening the viewpoint in the 3D viewer or other BIM software. The concept is similar to BIM Collaboration Format (BCF). bimU.io Agile, our full-fledged BIM issue tracking solution, will also support BCF in early 2020.
+In bimU.io, a markup is more than an image with some sketches. In addition to adding lines, shapes, freehand drawings, texts, etc. to annotate a screenshot of model view, every markup can capture a camera viewpoint and include a short description. You can then navigate to this location in a model later by opening the viewpoint in the 3D viewer or other BIM software. The concept is similar to BIM Collaboration Format (BCF). 
+
+!!! info "bimU.io Agile, our full-fledged BIM issue tracking solution, will also support BCF in early 2020."
 
 #### Create a Markup
 
@@ -69,11 +74,13 @@ All markups attached to a model are shown in the **Markup Tab**. Click a thumbna
 
 #### Open Viewpoint in Web Viewer
 
-A viewpoint saved in a markup can be opened directly in the 3D viewer. It would restore previous camera location, angle, sectioning state, etc.
+A viewpoint attached to a markup can be opened directly in the 3D viewer. It would restore previous camera location, angle, sectioning state, etc.
 
 #### Open Viewpoint in BIM Software
 
-Make sure you have bimU.io Launcher installed and running. Then you can open a saved viewpoint in any supported BIM software as long as a corresponding model file is also opened. More details around bimU.io Launcher can be found [here](/upload-a-bim-model#install-bimu.io-launcher).
+!!! warning "You must have bimU.io Launcher installed to open a viewpoint in BIM software."
+
+Make sure bimU.io Launcher is running and connected to browser. Then you can open a saved viewpoint in any supported BIM software as long as a corresponding model file is also opened. More details around bimU.io Launcher can be found [here](/upload-a-bim-model#install-bimuio-launcher).
 		
 ### View BIM Data
 
@@ -85,7 +92,7 @@ Model specific data refers to document-level information, such as project detail
 
 #### Element Tab
 
-Model element data includes all properties of a selected element. It can be a Revit Parameter, a Navisworks Property, a Tekla Attribute, or an IfcPropertySingleValue. 
+Model element data includes all properties of a selected element. It can be a `Revit Parameter`, a `Navisworks Property`, a `Tekla Attribute`, or an IfcPropertySingleValue. 
 
 #### File Tab
 

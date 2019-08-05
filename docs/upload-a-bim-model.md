@@ -1,13 +1,13 @@
 # Upload a BIM Model
 
-There are two ways of uploading your BIM models:
+There are two ways to upload your BIM models:
 
 - **Upload from BIM Software:** Uploading from a BIM model view within authoring software gives you more control of how it looks like on bimU.io. What You See Is What You Get (WYSIWYG). Please follow the instructions in the next section to install the bimU.io Launcher before uploading a BIM model from authoring software.
 - **Upload IFC files:** The industry standard IFC (Industry Foundation Classes) format is also supported. Most authoring software can export to an IFC file. You can then upload it to bimU.io directly. 
 
 ### Install bimU.io Launcher
 
-**_Note that you must have bimU.io Launcher installed to upload models from BIM software._**
+!!! warning "Note that you must have bimU.io Launcher installed to upload a model from BIM software."
 
 #### What is bimU.io Launcher?
 
@@ -21,9 +21,11 @@ bimU.io Launcher is a middleware that exchanges data between bimU.io and BIM sof
 
 #### Download Installer
 
-**_<a href="#" target="_blank">Download bimU.io Launcher 2019.x.x.0</a>_**
+**<a href="#" target="_blank">Download bimU.io Launcher 2019.8.5.0</a>**
 
-The latest version of bimU.io Launcher is 2019.x.x.0. The installer can downloaded from the link above. **__Please close all BIM software sessions prior to installation.__** Technically speaking, admin right is NOT required for the installation. Please speak to your IT staffs if you don't have permission to install it.
+!!! warning "Please close all BIM software sessions prior to installation."
+
+The latest version of bimU.io Launcher is 2019.8.5.0. The installer can downloaded from the link above. Technically speaking, admin right is NOT required for the installation. Please speak to your IT staffs if you don't have permission to install it.
 
 #### Automatic Update
 
@@ -45,8 +47,8 @@ You can check out the installed version fo bimU.io Launcher from the top menu ba
 
 If you have any problem installing or using bimU.io Launcher, please log a support ticket with the following two items attached if they exist:
 
-- **Log File:** Open Windows File Explorer and paste **%localappdata%\temp\bimU.io.log** in the address bar. The log file is stored as **launcher.log** in the folder.
-- **Error Code:** An error code would be shown in browser When something goes wrong on bimU.io.
+- **Log File:** Open Windows File Explorer and paste `%localappdata%\temp\bimU.io.log` in the address bar. The log file is stored as `launcher.log` in the folder.
+- **Error Code:** An error code, such as `No BIM software is currently opened. Error code: 1002`, would be shown in browser when something goes wrong on bimU.io.
 
 ### Upload from BIM Software
 
@@ -78,25 +80,25 @@ See below for more details around how bimU.io exports a model from every BIM sof
 
 #### Export from Autodesk Revit
 
-_2D View_ and _Family Document_ are NOT supported for export at the moment. You must have a _3D View_ opened to start the upload process. Visible _Linked Models_ in the current _3D View_ are exported, too.
+`2D View` and `Family Document` are NOT supported for export at the moment. You must have a `3D View` opened to start the upload process. Visible `Linked Models` in the current `3D View` are exported, too.
 
-Visisblity and appearance of _Elements_ can be determined based on a number of factors, such as _Section Box_, _Visibility/Graphic Override_, _Temporary Hide/Isolate_, etc.
+Visisblity and appearance of `Elements` can be determined based on a number of factors, such as `Section Box`, `Visibility/Graphic Override`, `Temporary Hide/Isolate`, etc.
 
-Both _Type Parameters_ and _Instance Parameters_ are exported. Some file metadata, such as _Document_ properties, _Project Information_, _Project Position_, _Site Location_, etc. are exported, too. Model coordinates are converted to _Shared Coordinates_.
+Both `Type Parameters` and `Instance Parameters` are exported. Some file metadata, such as `Document` properties, `Project Information`, `Project Position`, `Site Location`, etc. are exported, too. Model coordinates are converted to `Shared Coordinates`.
 
 #### Export from Autodesk Navisworks
 
-Appearance of _Model Items_ can be determined by _Color and Transparency Override_. However, _Sectioning_ is NOT currently supported. If you don't want to export some of the _Model Items_, you'll have to select and hide them manually.
+Appearance of `Model Items` can be determined by `Color and Transparency Override`. However, `Sectioning` is NOT currently supported. If you don't want to export some of the `Model Items`, you'll have to select and hide them manually.
 
-Most of the _Properties_ shown in the _Properties Window_ are exported, including _Document_-level properties.
+Most of the `Properties` shown in the `Properties Window` are exported, including `Document`-level properties.
 
 #### Export from Trimble Tekla Structures
 
-Visible _Model Objects_ in the active _Work Area_ are exported. Color settings are defined by Tekla and cannot be changed.
+Visible `Model Objects` in the active `Work Area` are exported. Color settings are defined by Tekla and cannot be changed.
 
-The exported _Model Objects_ include _Part_, _Assembly_, _Pour Object_, _Base Component_.
+The exported `Model Objects` include `Part`, `Assembly`, `Pour Object`, `Base Component`.
 
-The exported properties include _Model Information_, _Project Information_, _User-Defined Attributes_, and the properties defined in the _Global Attributes_.
+The exported properties include `Model Information`, `Project Information`, `User-Defined Attributes`, and the properties defined in the `Global Attributes`.
 
 #### Export from Other BIM Software
 
@@ -106,7 +108,9 @@ bimU.io Launcher doesn't integrate with other BIM software at the moment. As a w
 
 ![Screenshot](images/placeholder.jpg){: class="center" style="width:300px"}
 
-You can check out the progress from the top menu bar while a model is being exported and uploaded. **DO NOT close the browser window before the upload is finished.** You might cancel it if necessary.
+!!! warning "DO NOT close browser window before the upload is finished."
+
+You can check out the progress from the top menu bar while a model is being exported and uploaded. You might cancel it if necessary.
 
 ### Upload an IFC File
 
@@ -125,8 +129,9 @@ bimU.io will process your model immediately after upload. Depending on file size
 
 ### Current Limitations
 
-To optimise computing and storage resources, bimU.io limits the size of a model that you can upload to **bimU.io Viewer Free**. Currently, the following soft limits apply per model file and will be increased for paid users in the near future.
+To optimise computing and storage resources, bimU.io limits the size of a model that you can upload to **bimU.io Viewer Free**. Currently, the following soft limits apply per model file and will be increased for paid users in the near future. These should be sufficient for most use cases.
 
 - **Compressed upload file size:** 100 MB
 - **Number of visible model elements:** 100,000
 - **Uncompressed model geometry size:** 400 MB
+- **IFC upload file size:** 150 MB

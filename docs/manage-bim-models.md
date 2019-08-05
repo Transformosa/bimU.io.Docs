@@ -1,5 +1,5 @@
 # Manage BIM Models
-After logging in successfully, you should see the main user interface which is made up of three sections and looks something like the following screenshot:
+After logging in successfully, you should see the main user interface which is made up of three sections and looks something like the following screenshot.
 
 ![Screenshot](images/placeholder.jpg){: class="center" style="width:300px"}
 
@@ -13,7 +13,7 @@ Four sample models are provided for a new user to play around:
 
 - **Sample_Building.rvt:** A 6-floor residential building modelled in Autodesk Revit.
 - **Sample_Federated.nwd:** A number of Mechanical, Eletrical, and Plumbing (MEP) models combined in Autodesk Navisworks.
-- **Sample_TS:** A structural model of building frame modelled in Trimble Tekla Structures.
+- **Sample_Steel:** A steel frame structure modelled in Trimble Tekla Structures.
 - **Sample_OBD.ifc:** An architectural model of a simple building modelled in Bentley OpeningBuildings Designer (formerly AECOsim Building Designer).
 
 ### Model Properties
