@@ -4,19 +4,19 @@ bimU.io Viewer is a full-fledged online BIM model viewer that truly works for ev
 
 <iframe class="center" width="560" height="315" src="https://www.youtube.com/embed/NpEaa2P7qZI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## Fully Functional Design Review Tool
+### Fully Functional Design Review Tool
 
 What's more than a 3D visulisation tool? bimU.io Viewer is natively built for reviewing engineering design in the Cloud. It includes everything you need to interrogate BIM data, such as versatile 3D navigation tools, a cloud-hosted BIM database, an interoperable markup format, etc. bimU.io produces a lightweight BIM model that is blazingly fast over the internet and available on all your devices. What you really need is just a modern web browser!
 
-## Sharing BIM Made Easy
+### Sharing BIM Made Easy
 
 Sharing a BIM model with your teams has never been so easy. Generating a password-protected link is safe and quick. You can also view a bimU.io hosted model from other applications, such as a project site or a collaboration workspace, by inserting an embed code. bimU.io Viewer is fully-managed. No additional server or account management work is required. You can log in to bimU.io with your company or organisational account. And most importantly, you have full control over your BIM models.
 
-## Seamless Integration with Authoring Software
+### Seamless Integration with Authoring Software
 
 Currently, supported BIM authoring tools and file format include Autodesk Revit, Autodesk Navisworks, Trimble Tekla Structures, and IFC (Industry Foundation Classes). bimU.io is backed by the so-called **Pluginless** technology that is made to exchange data with BIM software without leaving web browser. You only have to work with one single user interface! Isn't this briliiant? A 3D model view can be uploaded directly from any of supported BIM software via browser. By opening a saved viewpoint attached to a markup, bimU.io can navigate you to the same location in any of supported BIM software, too.
 
-## Feature List
+### Feature List
 
 - Cross-platform across all devices, including desktop, tablet, phone, etc.
 - A variety of 3D navigation tools, such as orbit, rotate, pan, zoom, zoom to fit, zoom to selection, section box, section around selection, hide elements, measuring tools, fullscreen mode, etc.
@@ -31,13 +31,13 @@ Currently, supported BIM authoring tools and file format include Autodesk Revit,
 - Real-time browser notification and email notification.
 - Categorise models by colored labels.
 
-## Video Podcast
+### Video Podcast
 
 We are constantly adding short clips to the playlist below to demonstrate the functionality of bimU.io. Stay tuned on our our social media (<a href="#" target="_blank">Twitter</a>, <a href="#" target="_blank">Facebook</a>, <a href="#" target="_blank">YouTube</a>, <a href="#" target="_blank">Blog</a>) for the updates.
 
 <iframe class="center" width="560" height="315" src="https://www.youtube.com/embed/NpEaa2P7qZI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## User Support
+### User Support
 
 <a href="https://support.bimu.io" target="_blank">bimU.io Help Centre</a> provides different types of support: 
 
