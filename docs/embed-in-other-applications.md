@@ -10,7 +10,7 @@ You can integrate bimU.io with ohter applications by embedding. It is then possi
 
 - **Embed URL**: To have better control of how overall user interface looks like, some hosting applications might prefer a URL (Uniform Resource Locator) link to an external webpage rather than an IFrame. 
 		
-![Screenshot](images/embedoptions.png){: class="center" style="width:500px"}
+![Screenshot](images/embedoptions.png){: class="center" style="width:80%"}
 
 Open the **Embed Options** from the three-dot menu. Both IFrame code and embed URL can be found in there.
 
@@ -18,11 +18,11 @@ Open the **Embed Options** from the three-dot menu. Both IFrame code and embed U
 
 Microsoft Teams is cloud-based team collaboration software that is part of the Office 365 suite of applications. The core capabilities include business messaging, calling, video meetings, file sharing, etc. It also supports embedding an external website within a tab in a channel.
 
-![Screenshot](images/msteamsembedweb.png){: class="center" style="width:500px"}
+![Screenshot](images/msteamsembedweb.png){: class="center" style="width:80%"}
 
 You can add a new tab by clicking the plus button and then select **Website** from various apps.
 
-![Screenshot](images/msteamsembeddialog.png){: class="center" style="width:500px"}
+![Screenshot](images/msteamsembeddialog.png){: class="center" style="width:80%"}
 
 Copy an **Embed URL** from a bimU.io model and paste it into the URL field shown in the above dialog. 
 
@@ -34,13 +34,13 @@ Microsoft SharePoint is a web-based collaborative platform that integrates with 
 
 - **Modern SharePoint Page**
 
-![Screenshot](images/sharepointmodern.png){: class="center" style="width:500px"}
+![Screenshot](images/sharepointmodern.png){: class="center" style="width:80%"}
 
 Simply add an **Embed** web part in a Modern SharePoint Page and insert either **Embed URL** or **IFrame** code copied from a bimU.io model.
 
 - **Classic SharePoint Page**
 
-![Screenshot](images/sharepointclassic.png){: class="center" style="width:500px"}
+![Screenshot](images/sharepointclassic.png){: class="center" style="width:80%"}
 
 You can insert a **Page Viewer** web part in a Classic SharePoint Page. Then open the tool pane and paste an **Embed URL** copied from a bimU.io model in the Link text box. You might want to adjust the layout and the appearance a bit to make it look better.
 

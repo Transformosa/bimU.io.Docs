@@ -1,6 +1,6 @@
 # bimU.io Viewer Overview
 
-bimU.io Viewer is a full-fledged online BIM model viewer that truly works for every project member. BIM is not exclusive to BIM managers or technicians. We've built an easy-to-use platform for everyone to review 3D design data without getting hands dirty. Simply upload your BIM model and it will be accessible via a browser instantly. Do some markups then share it securely or embed it in your collaboration software. All can be done with the **Free** version of bimU.io Viewer.
+bimU.io Viewer is a full-fledged online BIM model viewer that truly works for every project member. BIM is not exclusive to BIM managers and technicians. We've built an easy-to-use platform for everyone to review 3D design data without getting hands dirty. Simply upload your BIM model and it will be accessible via a browser instantly. Do some markups then share it securely or embed it in your collaboration software. All can be done with the **Free** version of bimU.io Viewer.
 
 <iframe class="center" width="560" height="315" src="https://www.youtube.com/embed/NpEaa2P7qZI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -39,7 +39,7 @@ We are constantly adding short clips to the playlist below to demonstrate the fu
 
 ### User Support
 
-<a href="https://support.bimu.io" target="_blank">bimU.io Help Centre</a> provides different types of support: 
+<a href="https://support.bimu.io" target="_blank">bimU.io Support Centre</a> provides different types of help: 
 
 - **FAQ:** You can find a list of Frequently Asked Questions (FAQ) and answers.
 - **Community Forum:** Participate in discussion and look for advice in our community forum.

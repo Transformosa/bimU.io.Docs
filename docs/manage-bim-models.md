@@ -1,7 +1,7 @@
 # Manage BIM Models
 After logging in successfully, you should see the main user interface which is made up of three sections and looks something like the following screenshot.
 
-![Screenshot](images/placeholder.jpg){: class="center" style="width:300px"}
+![Screenshot](images/mainui.png){: class="center" style="width:100%"}
 
 - **Menu bar** is on the top right where you can upload models, check out notifications and upload progress, edit user profile, check launcher and web app versions, report problems, view documentation, etc.
 - **Onboarding Information** provides some basic guidance on how to use bimU.io.
@@ -37,7 +37,7 @@ Open model viewer by clicking the magnifier button or simply clicking on a model
 
 A **Share Settings** dialog will pop up after switching on the toggle button. You can also open it from the three-dot button. 
 
-![Screenshot](images/placeholder.jpg){: class="center" style="width:300px"}
+![Screenshot](images/sharesettings.png){: class="center" style="width:80%"}
 
 Once sharing is enabled, a model is accessible by anyone who has the link shown in the dialog. Login is not required to view a shared model. It is not possible to make any change to it via the link. But we strongly suggest set a password to protect your model and only share it privately. To disable sharing, simply switch off the toggle button.
 

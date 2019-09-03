@@ -31,7 +31,7 @@ The latest version of bimU.io Launcher is 2019.8.5.0. The installer can download
 
 bimU.io Launcher performs automatic update behind the scene for the installed components. However, you will need to download a new installer for a new version of BIM software. For example, bimU.io Launcher can update itself for Autodesk software 2014-2020 whenever bimU.io has a new release or a bug fixed. But a new installer will be required to support Autodesk software 2021 next year.
 
-![Screenshot](images/placeholder.jpg){: class="center" style="width:300px"}
+![Screenshot](images/checkversion.png){: class="center" style="width:40%"}
 
 You can check out the installed version fo bimU.io Launcher from the top menu bar. For an automatic update to take effect immediately, we suggest repeat the following steps **twice**: 
 
@@ -52,7 +52,7 @@ If you have any problem installing or using bimU.io Launcher, please log a suppo
 
 ### Upload from BIM Software
 
-![Screenshot](images/placeholder.jpg){: class="center" style="width:300px"}
+![Screenshot](images/uploadmodel.png){: class="center" style="width:80%"}
 
 Uploading from various BIM software has similar steps on bimU.io:
 
@@ -80,7 +80,7 @@ See below for more details around how bimU.io exports a model from every BIM sof
 
 #### Export from Autodesk Revit
 
-`2D View` and `Family Document` are NOT supported for export at the moment. You must have a `3D View` opened to start the upload process. Visible `Linked Models` in the current `3D View` are exported, too.
+`2D View`, `Family Document` and `Analytical Model` are NOT supported for export at the moment. You must have a `3D View` opened to start the upload process. Visible `Linked Models` in the current `3D View` are exported, too.
 
 Visisblity and appearance of `Elements` can be determined based on a number of factors, such as `Section Box`, `Visibility/Graphic Override`, `Temporary Hide/Isolate`, etc.
 
@@ -106,7 +106,7 @@ bimU.io Launcher doesn't integrate with other BIM software at the moment. As a w
 
 #### Monitor Progress
 
-![Screenshot](images/placeholder.jpg){: class="center" style="width:300px"}
+![Screenshot](images/modelexportprogress.png){: class="center" style="width:40%"}
 
 !!! warning "DO NOT close browser window before the upload is finished."
 
