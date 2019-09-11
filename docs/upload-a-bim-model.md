@@ -21,7 +21,7 @@ bimU.io Launcher is a middleware that exchanges data between bimU.io and BIM sof
 
 #### Download Installer
 
-**<a href="#" target="_blank">Download bimU.io Launcher 2019.8.5.0</a>**
+**<a href="https://github.com/Transformosa/bimU.io.Launcher/releases/download/2019.8.22.0/bimU_io_Launcher_2019.8.22.0.exe" target="_blank">Download bimU.io Launcher 2019.8.22.0</a>**
 
 !!! warning "Please close all BIM software sessions prior to installation."
 
@@ -129,7 +129,7 @@ bimU.io will process your model immediately after upload. Depending on file size
 
 ### Current Limitations
 
-To optimise computing and storage resources, bimU.io limits the size of a model that you can upload to **bimU.io Viewer Free**. Currently, the following soft limits apply per model file and will be increased for paid users in the near future. These should be sufficient for most use cases.
+To optimise computing and storage resources, bimU.io limits the size of a model that you can upload to **bimU.io Viewer Free**. Currently, the following soft limits apply per model file and will be increased for paid users in the near future. These should be sufficient for most use cases. 
 
 - **Compressed upload file size:** 100 MB
 - **Number of visible model elements:** 100,000
