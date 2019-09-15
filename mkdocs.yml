@@ -49,11 +49,11 @@ extra:
     - type: globe
       link: https://bimu.io
     - type: twitter
-      link: https://twitter.com/transformosa
+      link: https://twitter.com/
     - type: linkedin
-      link: https://linkedin.com/in/transformosa
+      link: https://linkedin.com/
     - type: facebook
-      link: https://facebook.com/in/transformosa
+      link: https://facebook.com/
   # disqus: ''
 
 # Extensions

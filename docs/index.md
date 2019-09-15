@@ -2,7 +2,7 @@
 
 bimU.io Viewer is a full-fledged online BIM model viewer that truly works for every project member. BIM is not exclusive to BIM managers and technicians. We've built an easy-to-use platform for everyone to review 3D design data without getting hands dirty. Simply upload your BIM model and it will be accessible via a browser instantly. Do some markups then share it securely or embed it in your collaboration software. All can be done with the **Free** version of bimU.io Viewer.
 
-<iframe class="center" width="560" height="315" src="https://www.youtube.com/embed/NpEaa2P7qZI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="center" width="560" height="315" src="https://www.youtube.com/embed/mrOhB_fbh8I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Fully Functional Design Review Tool
 
@@ -35,7 +35,7 @@ Currently, supported BIM authoring tools and file format include Autodesk Revit,
 
 We are constantly adding short clips to the playlist below to demonstrate the functionality of bimU.io. Stay tuned on our our social media (<a href="#" target="_blank">Twitter</a>, <a href="#" target="_blank">Facebook</a>, <a href="#" target="_blank">YouTube</a>, <a href="#" target="_blank">Blog</a>) for the updates.
 
-<iframe class="center" width="560" height="315" src="https://www.youtube.com/embed/NpEaa2P7qZI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="center" width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLBL8gXaMel0cMKo5X0t20y4MIB8Lqa4UH&amp;controls=1&amp;showinfo=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### User Support
 

@@ -12,9 +12,9 @@ After logging in successfully, you should see the main user interface which is m
 Four sample models are provided for a new user to play around: 
 
 - **Sample_Building.rvt:** A 6-floor residential building modelled in Autodesk Revit.
-- **Sample_Federated.nwd:** A number of Mechanical, Eletrical, and Plumbing (MEP) models combined in Autodesk Navisworks.
-- **Sample_Steel:** A steel frame structure modelled in Trimble Tekla Structures.
-- **Sample_OBD.ifc:** An architectural model of a simple building modelled in Bentley OpeningBuildings Designer (formerly AECOsim Building Designer).
+- **Sample_Federated.nwd:** A number of structural, Mechanical, Eletrical, and Plumbing (MEP) models combined in Autodesk Navisworks.
+- **Sample_Tekla:** A steel structure modelled in Trimble Tekla Structures.
+- **Sample_Bentley.ifc:** A simple building frame modelled in Bentley OpeningBuildings Designer (formerly AECOsim Building Designer).
 
 ### Model Properties
 
