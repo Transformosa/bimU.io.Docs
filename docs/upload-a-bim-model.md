@@ -21,7 +21,7 @@ bimU.io Launcher is a middleware that exchanges data between bimU.io and BIM sof
 
 #### Download Installer
 
-**<a href="https://github.com/Transformosa/bimU.io.Launcher/releases/download/2019.9.13.0/bimU_io_Launcher_2019.9.13.0.exe" target="_blank">Download bimU.io Launcher 2019.9.13.0</a>**
+**<a href="https://github.com/Transformosa/bimU.io.Launcher/releases/download/2019.10.14.0/bimU_io_Launcher_2019.10.14.0.exe" target="_blank">Download bimU.io Launcher 2019.10.14.0</a>**
 
 !!! warning "Please close all BIM software sessions prior to installation."
 

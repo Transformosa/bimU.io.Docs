@@ -6,7 +6,7 @@ bimU.io Viewer is a full-fledged online BIM model viewer that truly works for ev
 
 ### Fully Functional Design Review Tool
 
-What's more than a 3D visulisation tool? bimU.io Viewer is natively built for reviewing engineering design in the Cloud. It includes everything you need to interrogate BIM data, such as versatile 3D navigation tools, a cloud-hosted BIM database, an interoperable markup view, etc. bimU.io produces a lightweight BIM model that is blazingly fast over the internet and available on all your devices. What you really need is just a modern web browser!
+What's more than a 3D visulisation tool? bimU.io Viewer is natively built for reviewing engineering design in the Cloud. It includes everything you need to interrogate BIM data, such as versatile 3D navigation tools, a cloud-hosted BIM database, an interoperable markup view, etc. bimU.io transforms your BIM model to a lightweight BIM format that is blazingly fast and smooth over the internet and available on all your devices. What you really need is just a modern web browser!
 
 ### Sharing BIM Made Easy
 
