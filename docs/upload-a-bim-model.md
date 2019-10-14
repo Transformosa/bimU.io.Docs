@@ -25,7 +25,7 @@ bimU.io Launcher is a middleware that exchanges data between bimU.io and BIM sof
 
 !!! warning "Please close all BIM software sessions prior to installation."
 
-The latest version of bimU.io Launcher is 2019.8.5.0. The installer can downloaded from the link above. Technically speaking, admin right is NOT required for the installation. Please speak to your IT staffs if you don't have permission to install it.
+The latest version of bimU.io Launcher is 2019.10.14.0. The installer can downloaded from the link above. Technically speaking, admin right is NOT required for the installation. Please speak to your IT staffs if you don't have permission to install it.
 
 #### Automatic Update
 
