@@ -48,12 +48,17 @@ extra:
   social:
     - type: globe
       link: https://bimu.io
-    - type: twitter
-      link: https://twitter.com/
-    - type: linkedin
-      link: https://linkedin.com/
+    - type: youtube
+      link: https://www.youtube.com/channel/UCW4NVA53RqJUfjJe3gao1kA
+    - type: medium
+      link: https://medium.com/transformosa-blog
     - type: facebook
-      link: https://facebook.com/
+      link: https://www.facebook.com/transformosa
+    - type: twitter
+      link: https://twitter.com/TransformosaUK
+    - type: linkedin
+      link: https://www.linkedin.com/company/transformosa
+    
   # disqus: ''
 
 # Extensions
