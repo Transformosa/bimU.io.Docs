@@ -1,9 +1,8 @@
 # Release Notes
 
-#### 2020.01.01
+#### 2020.02.16
 
-- Custom branding
-- Rhino .3dm Support
+- Large model support
 
 #### 2019.09.16
 

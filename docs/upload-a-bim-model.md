@@ -120,8 +120,8 @@ Both IFC 2x3 and IFC 4 formats are supported. Uploading an IFC file is quite str
 
 We aim to support more and more authoring software and 3D file formats in the future. The below items have been prioritised for developement. Note that the delivery timelines may change. Stay tuned on our our social media (<a href="#" target="_blank">Twitter</a>, <a href="#" target="_blank">Facebook</a>, <a href="#" target="_blank">YouTube</a>, <a href="#" target="_blank">Blog</a>) for the updates.
 
-- **McNeel Rhinoceros 3D (.3dm):** January 2020
-- **Trimble SketchUp (.skp):** March 2020
+- **McNeel Rhinoceros 3D (.3dm):** May 2020
+- **Trimble SketchUp (.skp):** June 2020
 
 ### Notifications
 
@@ -131,7 +131,7 @@ bimU.io will process your model immediately after upload. Depending on file size
 
 To optimise computing and storage resources, bimU.io limits the size of a model that you can upload to **bimU.io Viewer Free**. Currently, the following soft limits apply per model file and will be increased for paid users in the near future. These should be sufficient for most use cases. 
 
-- **Compressed upload file size:** 100 MB
-- **Number of visible model elements:** 100,000
-- **Uncompressed model geometry size:** 400 MB
+- **Compressed upload file size:** 250 MB
+- **Number of visible model elements:** 200,000
+- **Uncompressed model geometry size:** 2,500 MB
 - **IFC upload file size:** 150 MB
