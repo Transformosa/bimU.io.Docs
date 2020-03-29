@@ -2,13 +2,13 @@
 
 Clicking the magnifier button or on a model name brings you to a web model viewer page. You can view your model in a 3D viewer along with BIM data and saved markups.
 
-![Screenshot](images/viewer.png){: class="center" style="width:100%"}
+![Screenshot](../images/viewer.png){: class="center" style="width:100%"}
 
 ### Use 3D Viewer
 
 bimU.io's 3D viewer is web-based, which means that it is cross-platform and can be used on any device as long as you have a WebGL-enabled browser installed. We suggest use the latest version of **Google Chrome** to achieve the best performance.
 
-![Screenshot](images/toolbar.png){: class="center" style="width:100%"}
+![Screenshot](../images/toolbar.png){: class="center" style="width:100%"}
 
 The viewer toolbar is located at the bottom of the 3D viewer. The status labels will be shown on the bottom left when you make changes, such as enabling sectiong, selecting elements, changing element visibility, etc.
 
@@ -54,7 +54,7 @@ You can enable sectioning to slice your model to view more details inside. To di
 
 ### Work with Markups
 
-![Screenshot](images/markuptab.png){: class="center" style="width:60%"}
+![Screenshot](../images/markuptab.png){: class="center" style="width:60%"}
 
 In bimU.io, a markup is more than an image with some sketches. In addition to adding lines, shapes, freehand drawings, texts, etc. to annotate a screenshot of model view, every markup can capture a camera viewpoint and include a short description. You can then navigate to this location in a model later by opening the viewpoint in the 3D viewer or other BIM software. The concept is similar to BIM Collaboration Format (BCF). 
 
@@ -62,13 +62,13 @@ In bimU.io, a markup is more than an image with some sketches. In addition to ad
 
 #### Create a Markup
 
-![Screenshot](images/createmarkup.png){: class="center" style="width:100%"}
+![Screenshot](../images/createmarkup.png){: class="center" style="width:100%"}
 
 Click the **Create Markup** placeholder in the **Markup Tab** and a dialog will pop up where you can find various drawing and annotation tools. If you want to paste an image taken from elsewhere, simply paste it from clipboard into the dialog by Ctrl + V. Add some description and Click **Save** when you are done.
 
 #### View a Markup
 
-![Screenshot](images/viewmarkup.png){: class="center" style="width:100%"}
+![Screenshot](../images/viewmarkup.png){: class="center" style="width:100%"}
 
 All markups attached to a model are shown in the **Markup Tab**. Click a thumbnail to enlarge it and view its details. You can also edit description, download image, or delete it in the lightbox.
 

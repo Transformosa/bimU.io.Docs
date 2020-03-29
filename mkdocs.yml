@@ -27,7 +27,7 @@ theme:
   # Default values, taken from mkdocs_theme.yml
   language: en
   feature:
-    tabs: false
+    tabs: true
   palette:
     primary: blue grey
     accent: blue
@@ -95,15 +95,23 @@ markdown_extensions:
 
 # Page tree
 nav:
-  - bimU.io Viewer Overview: index.md
-  - Log in to bimU.io: log-in-to-bimu-viewer.md
-  - Manage BIM Models: manage-bim-models.md
-  - Upload a BIM model: upload-a-bim-model.md
-  - Navigate Using Web Viewer: navigate-using-web-viewer.md
-  - Embed in Other Applications : embed-in-other-applications.md
-  - Release Notes : release-notes.md
-  - Terms of Service : terms-of-service.md
-  - Privacy Policy : privacy-policy.md
+  - bimU.io Viewer: index.md
+  - Log in to bimU.io: viewer/log-in-to-bimu-viewer.md
+  - Manage BIM Models: viewer/manage-bim-models.md
+  - Upload a BIM model: viewer/upload-a-bim-model.md
+  - Navigate Using Web Viewer: viewer/navigate-using-web-viewer.md
+  - Embed in Other Applications: viewer/embed-in-other-applications.md
+  - Release Notes: viewer/release-notes.md
+  - Terms of Service: viewer/terms-of-service.md
+  - Privacy Policy: viewer/privacy-policy.md
+  - bimU.io Agile: 
+    - Overview: agile/agile-overview.md
+  - Developer Guide: 
+    - bimU.io Viewer API: developer/api-overview.md
+    - Authentication: developer/authentication.md
+    - Event Handling: developer/event-handling.md
+    - API Reference: developer/api-reference.md
+    - Examples: developer/api-examples.md
 
 # Google Analytics
 google_analytics:
