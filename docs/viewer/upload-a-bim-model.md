@@ -127,6 +127,8 @@ We aim to support more and more authoring software and 3D file formats in the fu
 
 bimU.io will process your model immediately after upload. Depending on file size, it can often be done in minutes. When a model is ready to view, you will receive an email notification and also a browser notification if you have bimU.io opened.
 
+![Screenshot](../images/notifications.png){: class="center" style="width:60%"}
+
 ### Current Limitations
 
 To optimise computing and storage resources, bimU.io limits the size of a model that you can upload to **bimU.io Viewer Free**. Currently, the following soft limits apply per model file and will be increased for paid users in the near future. These should be sufficient for most use cases. 

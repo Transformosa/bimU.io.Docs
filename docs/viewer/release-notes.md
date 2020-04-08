@@ -1,5 +1,9 @@
 # Release Notes
 
+#### 2020.04.05
+
+- Allow guest users to create markups and leave comments without creating acount.
+
 #### 2020.02.16
 
 - Large model support

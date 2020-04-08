@@ -58,19 +58,25 @@ You can enable sectioning to slice your model to view more details inside. To di
 
 In bimU.io, a markup is more than an image with some sketches. In addition to adding lines, shapes, freehand drawings, texts, etc. to annotate a screenshot of model view, every markup can capture a camera viewpoint and include a short description. You can then navigate to this location in a model later by opening the viewpoint in the 3D viewer or other BIM software. The concept is similar to BIM Collaboration Format (BCF). 
 
-!!! info "bimU.io Agile, our full-fledged BIM issue tracking solution, will also support BCF in early 2020."
+!!! info "bimU.io Agile, our full-fledged BIM issue tracking solution, will also support BCF in late 2020."
 
 #### Create a Markup
 
 ![Screenshot](../images/createmarkup.png){: class="center" style="width:100%"}
 
-Click the **Create Markup** placeholder in the **Markup Tab** and a dialog will pop up where you can find various drawing and annotation tools. If you want to paste an image taken from elsewhere, simply paste it from clipboard into the dialog by Ctrl + V. Add some description and Click **Save** when you are done.
+Click the **Create Markup** placeholder in the **Markup Tab** and a dialog will pop up where you can find various drawing and annotation tools. If you want to paste an image taken from elsewhere, simply paste it from clipboard into the dialog by Ctrl + V. Add some description and Click **Save** when you are done. If your shared model is password-protected, guest users will be able to create markups, too.
 
 #### View a Markup
 
 ![Screenshot](../images/viewmarkup.png){: class="center" style="width:100%"}
 
 All markups attached to a model are shown in the **Markup Tab**. Click a thumbnail to enlarge it and view its details. You can also edit description, download image, or delete it in the lightbox.
+
+#### Comment on a Markup
+
+![Screenshot](../images/guest_comments.png){: class="center" style="width:100%"}
+
+Guest users are now able to create markups and leave comments within a password-protected BIM model without creating an account. Once your BIM model is shared via a password-protected link, whoever has the link and knows the password can also create markups or leave comments on markups.
 
 #### Open Viewpoint in Web Viewer
 

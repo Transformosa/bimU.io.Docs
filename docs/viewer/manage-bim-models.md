@@ -35,11 +35,15 @@ Open model viewer by clicking the magnifier button or simply clicking on a model
 
 ### Share a Model
 
-A **Share Settings** dialog will pop up after switching on the toggle button. You can also open it from the three-dot button. 
+A **Share Settings** dialog will pop up after switching on the toggle button. You can also open it from the three-dot menu. 
 
-![Screenshot](../images/sharesettings.png){: class="center" style="width:80%"}
+![Screenshot](../images/share_settings_new.png){: class="center" style="width:80%"}
 
 Once sharing is enabled, a model is accessible by anyone who has the link shown in the dialog. Login is not required to view a shared model. It is not possible to make any change to it via the link. But we strongly suggest set a password to protect your model and only share it privately. To disable sharing, simply switch off the toggle button.
+
+![Screenshot](../images/password_protected_screen.png){: class="center" style="width:80%"}
+
+Recently a basic comment functionality has been added to bimU.io Viewer that allows guest users to create markups or comment on markups within a password-protected BIM model without creating an account. When a password is set, guest users will then be asked to provide their name in addition to the password on the login screen. The name will be used for comments in the current session.
 
 ### Embed a Model
 
