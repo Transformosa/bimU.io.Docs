@@ -1,3 +1,9 @@
-# Event Registration
+# Event Handling
 
-# Event Arguments
+### Event Types
+
+### Event Registration
+
+### Event Arguments
+
+### Callback

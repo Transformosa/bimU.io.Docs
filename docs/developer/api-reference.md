@@ -3,6 +3,8 @@
 <dl>
 <dt><a href="#Viewer">Viewer</a> ⇐ <code>THREE.EventDispatcher</code></dt>
 <dd></dd>
+<dt><a href="#PropertySelector">PropertySelector</a></dt>
+<dd></dd>
 </dl>
 
 ## Typedefs
@@ -16,6 +18,9 @@
 </dd>
 <dt><a href="#onProgressCallback">onProgressCallback</a> : <code>function</code></dt>
 <dd><p>This callback reports model loading progress.</p>
+</dd>
+<dt><a href="#DataTypesEnum">DataTypesEnum</a> : <code>enum</code></dt>
+<dd><p>Enum for SQL compatible data types.</p>
 </dd>
 </dl>
 
@@ -63,16 +68,17 @@
     * [.removeObject(objectId)](#Viewer+removeObject)
     * [.addTag(type, text, location)](#Viewer+addTag) ⇒ <code>string</code>
     * [.removeTag(tagId)](#Viewer+removeTag)
-    * [.getGeometry(elementIndex)](#Viewer+getGeometry) ⇒ <code>THREE.Geometry</code>
+    * [.getGeometry(elementIndex)](#Viewer+getGeometry) ⇒ <code>THREE.BufferGeometry</code>
     * [.getLocation(elementIndex)](#Viewer+getLocation) ⇒ <code>THREE.Vector3</code>
     * [.getSelectedElementIndices()](#Viewer+getSelectedElementIndices) ⇒ <code>Array.&lt;number&gt;</code>
-    * [.addCustomAction(name, tooltip, icon, callback)](#Viewer+addCustomAction)
-    * [.removeCustomAction(name)](#Viewer+removeCustomAction)
+    * [.addCustomButton(domElementId, icon, color, tooltip, callback)](#Viewer+addCustomButton)
+    * [.removeCustomButton(domElementId)](#Viewer+removeCustomButton)
     * [.setBackgroundColor(color)](#Viewer+setBackgroundColor)
     * [.toggleWireframeMode()](#Viewer+toggleWireframeMode)
-    * [.getElementDataByFilter(filter, properties, isDistinct)](#Viewer+getElementDataByFilter) ⇒ <code>Object</code>
-    * [.getElementDataByElementId(elementIdArray, properties)](#Viewer+getElementDataByElementId) ⇒ <code>Object</code>
-    * [.getElementDataByUniqueId(uniqueIdArray, properties)](#Viewer+getElementDataByUniqueId) ⇒ <code>Object</code>
+    * [.getElementDataByQuery(filterExpression, selectExpression, limit)](#Viewer+getElementDataByQuery) ⇒ <code>Object</code>
+    * [.getElementDataByProperty(propertyFilters, propertySelectors, limit)](#Viewer+getElementDataByProperty) ⇒ <code>Object</code>
+    * [.aggregateElementProperty(propertyFilters, propertyToAggregate, aggregateFunction)](#Viewer+aggregateElementProperty) ⇒ <code>number</code>
+    * [.getPropertyNamesByGroup(groupName)](#Viewer+getPropertyNamesByGroup) ⇒ <code>Object</code>
     * [.dispose()](#Viewer+dispose)
 
 <a name="new_Viewer_new"></a>
@@ -89,7 +95,6 @@ bimU.io Viewer main application. You should always create an instance of Viewer 
 ```js
 let viewerConfigs = {
     domElementId: "viewer",
-    accessToken: null,
     baseUrl: "https://viewer.bimu.io/rest/api/v1",
     THREE: null,
     showFPS: true,
@@ -425,11 +430,11 @@ This method removes an existing tag from the viewer.
 
 <a name="Viewer+getGeometry"></a>
 
-### viewer.getGeometry(elementIndex) ⇒ <code>THREE.Geometry</code>
+### viewer.getGeometry(elementIndex) ⇒ <code>THREE.BufferGeometry</code>
 This method returns primitive geometry of a particular element.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
-**Returns**: <code>THREE.Geometry</code> - Three.js Geometry object.  
+**Returns**: <code>THREE.BufferGeometry</code> - Three.js BufferGeometry object.  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -450,34 +455,35 @@ This method returns the center point of a particular element.
 <a name="Viewer+getSelectedElementIndices"></a>
 
 ### viewer.getSelectedElementIndices() ⇒ <code>Array.&lt;number&gt;</code>
-This method returns the center point of a particular element.
+This method returns indices of selected elements.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
 **Returns**: <code>Array.&lt;number&gt;</code> - An array of element indices.  
-<a name="Viewer+addCustomAction"></a>
+<a name="Viewer+addCustomButton"></a>
 
-### viewer.addCustomAction(name, tooltip, icon, callback)
-This method creates a menu item on the user interface of the viewer.
+### viewer.addCustomButton(domElementId, icon, color, tooltip, callback)
+This method creates a custom button on the user interface of the viewer.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| name | <code>string</code> | Name of custom action. |
-| tooltip | <code>string</code> | Short description. |
+| domElementId | <code>string</code> | DOM element id to use for this button. |
 | icon | <code>string</code> | Icon string. |
-| callback | <code>function</code> | A callback function when the menu item is clicked. |
+| color | <code>string</code> | Color string. |
+| tooltip | <code>string</code> | Short description. |
+| callback | <code>function</code> | A callback function when this button is clicked. |
 
-<a name="Viewer+removeCustomAction"></a>
+<a name="Viewer+removeCustomButton"></a>
 
-### viewer.removeCustomAction(name)
-This method removes an existing menu item.
+### viewer.removeCustomButton(domElementId)
+This method removes an existing custom button.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| name | <code>string</code> | Name of custom action. |
+| domElementId | <code>string</code> | DOM element id to remove. |
 
 <a name="Viewer+setBackgroundColor"></a>
 
@@ -496,45 +502,59 @@ This method sets background color of the viewer canvas.
 This method turns on or off wireframe mode.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
-<a name="Viewer+getElementDataByFilter"></a>
+<a name="Viewer+getElementDataByQuery"></a>
 
-### viewer.getElementDataByFilter(filter, properties, isDistinct) ⇒ <code>Object</code>
-This method retrieves element data based on a custom element filter from bimU.io server.
-
-**Kind**: instance method of [<code>Viewer</code>](#Viewer)  
-**Returns**: <code>Object</code> - Element data object.  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| filter | <code>string</code> | A query string of filter. |
-| properties | <code>Array.&lt;string&gt;</code> | An array of element properties to return. |
-| isDistinct | <code>boolean</code> | Whether return only unique values. |
-
-<a name="Viewer+getElementDataByElementId"></a>
-
-### viewer.getElementDataByElementId(elementIdArray, properties) ⇒ <code>Object</code>
-This method retrieves element data by an array of element IDs from bimU.io server.
+### viewer.getElementDataByQuery(filterExpression, selectExpression, limit) ⇒ <code>Object</code>
+This method retrieves element data from bimU.io server based on a custom query expression.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
 **Returns**: <code>Object</code> - Element data object.  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| elementIdArray | <code>Array.&lt;string&gt;</code> | An array of element IDs. |
-| properties | <code>Array.&lt;string&gt;</code> | An array of element properties to return. |
+| filterExpression | <code>string</code> | Filter expression string. |
+| selectExpression | <code>string</code> | Select expression string. |
+| limit | <code>number</code> | Limit on the number of elements returned. |
 
-<a name="Viewer+getElementDataByUniqueId"></a>
+<a name="Viewer+getElementDataByProperty"></a>
 
-### viewer.getElementDataByUniqueId(uniqueIdArray, properties) ⇒ <code>Object</code>
-This method retrieves element data by an array of unique IDs from bimU.io server.
+### viewer.getElementDataByProperty(propertyFilters, propertySelectors, limit) ⇒ <code>Object</code>
+This method retrieves element data by predefined property filters and selectors.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
 **Returns**: <code>Object</code> - Element data object.  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| uniqueIdArray | <code>Array.&lt;string&gt;</code> | An array of unique IDs. |
-| properties | <code>Array.&lt;string&gt;</code> | An array of element properties to return. |
+| propertyFilters | <code>Array.&lt;PropertyFilter&gt;</code> | Array of property filters that look for elements satisfying specified conditions. |
+| propertySelectors | [<code>Array.&lt;PropertySelector&gt;</code>](#PropertySelector) | Array of property selectors. Maximum of 5 properties to return. |
+| limit | <code>number</code> | Limit on the number of elements returned. |
+
+<a name="Viewer+aggregateElementProperty"></a>
+
+### viewer.aggregateElementProperty(propertyFilters, propertyToAggregate, aggregateFunction) ⇒ <code>number</code>
+This method retrieves element data by predefined property filters and selectors.
+
+**Kind**: instance method of [<code>Viewer</code>](#Viewer)  
+**Returns**: <code>number</code> - Aggregated result.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| propertyFilters | <code>Array.&lt;PropertyFilter&gt;</code> | Array of property filters. |
+| propertyToAggregate | [<code>PropertySelector</code>](#PropertySelector) | Single property selector that will be aggregated. |
+| aggregateFunction | <code>AggregateFunctionsEnum</code> | Limit on the number of elements returned. |
+
+<a name="Viewer+getPropertyNamesByGroup"></a>
+
+### viewer.getPropertyNamesByGroup(groupName) ⇒ <code>Object</code>
+This method returns all property names from a particular group or all groups if group name is not specified.
+
+**Kind**: instance method of [<code>Viewer</code>](#Viewer)  
+**Returns**: <code>Object</code> - All property names in groups.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| groupName | <code>string</code> | Property group name. |
 
 <a name="Viewer+dispose"></a>
 
@@ -542,6 +562,72 @@ This method retrieves element data by an array of unique IDs from bimU.io server
 This method destroy this Viewer instance and release all resources.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
+<a name="PropertySelector"></a>
+
+## PropertySelector
+**Kind**: global class  
+
+* [PropertySelector](#PropertySelector)
+    * [new PropertySelector(groupName, propertyName)](#new_PropertySelector_new)
+    * [.dataType](#PropertySelector+dataType) : [<code>DataTypesEnum</code>](#DataTypesEnum)
+    * [.groupName](#PropertySelector+groupName) : <code>string</code>
+    * [.propertyName](#PropertySelector+propertyName) : <code>string</code>
+    * [.alias](#PropertySelector+alias) : <code>string</code>
+    * [.getQueryString()](#PropertySelector+getQueryString) ⇒ <code>string</code>
+
+<a name="new_PropertySelector_new"></a>
+
+### new PropertySelector(groupName, propertyName)
+This class is used to specify or restrict properties to return. It is similar to the SQL SELECT clause.
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| groupName | <code>string</code> | Property group name. |
+| propertyName | <code>string</code> | Property name. |
+
+**Example**  
+```js
+// Return a property called "Top Offset" in a "Constraints" group.
+let propertySelector1 = new bimU.PropertySelector("Constraints", "Top Offset");
+// Default is STRING.
+propertySelector1.type = bimU.DataTypesEnum.FLOAT;
+// Return a property called "Mark" in a "Text" group.
+let propertySelector2 = new bimU.PropertySelector("Text", "Mark");
+// Rename the property to "Wall Mark" when data is returned.
+propertySelector2.alias = "Wall Mark";
+```
+<a name="PropertySelector+dataType"></a>
+
+### propertySelector.dataType : [<code>DataTypesEnum</code>](#DataTypesEnum)
+Data type casting/conversion. Default is bimU.DataTypesEnum.STRING.
+
+**Kind**: instance property of [<code>PropertySelector</code>](#PropertySelector)  
+<a name="PropertySelector+groupName"></a>
+
+### propertySelector.groupName : <code>string</code>
+Property group name
+
+**Kind**: instance property of [<code>PropertySelector</code>](#PropertySelector)  
+<a name="PropertySelector+propertyName"></a>
+
+### propertySelector.propertyName : <code>string</code>
+Property name.
+
+**Kind**: instance property of [<code>PropertySelector</code>](#PropertySelector)  
+<a name="PropertySelector+alias"></a>
+
+### propertySelector.alias : <code>string</code>
+Alias for renaming the property name. It is similar to the SQL AS command. Default is the same as the property name.
+
+**Kind**: instance property of [<code>PropertySelector</code>](#PropertySelector)  
+<a name="PropertySelector+getQueryString"></a>
+
+### propertySelector.getQueryString() ⇒ <code>string</code>
+This method returns a SQL equivalent expression for the underlying selector.
+
+**Kind**: instance method of [<code>PropertySelector</code>](#PropertySelector)  
+**Returns**: <code>string</code> - SQL select expression.  
 <a name="ViewerConfiguration"></a>
 
 ## ViewerConfiguration : <code>Object</code>
@@ -553,8 +639,6 @@ Configuation object used to initialise bimU.io Viewer.
 | Name | Type | Description |
 | --- | --- | --- |
 | domElementId | <code>string</code> | DIV element ID |
-| accessToken | <code>string</code> | Access token |
-| baseUrl | <code>string</code> | Override base URL of bimU.io server. |
 | showFPS | <code>boolean</code> | Whether show FPS meter. |
 | showUI | <code>boolean</code> | Whether show UI. |
 
@@ -583,4 +667,18 @@ This callback reports model loading progress.
 | --- | --- | --- |
 | type | <code>string</code> | Event type. |
 | progress | <code>number</code> | Model loading progress in percentage. |
+
+<a name="DataTypesEnum"></a>
+
+## DataTypesEnum : <code>enum</code>
+Enum for SQL compatible data types.
+
+**Kind**: global typedef  
+**Read only**: true  
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| STRING | <code>string</code> | UTF8-encoded variable-length string. |
+| TIMESTAMP | <code>string</code> | W3C date and time formats... |
 

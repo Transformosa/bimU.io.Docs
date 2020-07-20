@@ -108,11 +108,18 @@ nav:
   - bimU.io Agile: 
     - Overview: agile/agile-overview.md
   - Developer Guide: 
-    - bimU.io Viewer API: developer/api-overview.md
+    - Getting Started: developer/getting-started.md
+    - Sample Projects: developer/sample-projects.md
+    - Initialisation: developer/initialisation.md
     - Authentication: developer/authentication.md
     - Event Handling: developer/event-handling.md
+    - Navigation Controls: developer/navigation-controls.md
+    - Model Elements: developer/model-elements.md
+    - BIM Database: developer/bim-database.md
+    - User Interface: developer/user-interface.md
+    - Custom Visualisation: developer/custom-visualisation.md
+    - Examples: developer/examples.md
     - API Reference: developer/api-reference.md
-    - Examples: developer/api-examples.md
 
 # Google Analytics
 google_analytics:
