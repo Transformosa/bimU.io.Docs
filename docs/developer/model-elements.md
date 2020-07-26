@@ -1,13 +1,24 @@
 # Model elements
 
 ### Selection
+anyElementSelected
+getBoundingBoxBySelection
+unselectAllElements
+getElementIndicesBySelection
 
 ### Visibility
-(hide, isolate, etc.)
+hideSelectedElements
+isolateSelectedElements
+unhideAllElements
+resetVisibility
+this.setVisibility(elementIndices, isVisible, invertOthers)
 
 ### Color override
+this.setColor(elementIndices, color, transparency) 
 
 ### Geometry
-(BoundingBox, location)
+getGeometry
+getLocation
+getBoundingBox
 
 ### Element Properties

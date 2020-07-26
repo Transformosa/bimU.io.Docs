@@ -23,7 +23,31 @@ Viewer loads model geometry.
 BIM database query.
 
 ### Quick Start
-jsfiddle
+Minimum setup
+jsfiddle + dependencies
+
+``` html
+<div id="viewer" style="width:1000px;height:500px;background-color: black;border: 5px solid black;"></div>
+```
+
+``` javascript
+let onPorgress = (e) => console.log(e);
+let onLoaded = (e) => console.log(e);
+let onError = (e) => console.log(e);
+
+let viewerConfigs = {
+    domElementId: "viewer",
+    showUI: true
+};
+let viewer = new bimU.Viewer(viewerConfigs);
+viewer.initialize();
+
+let modelConfigs = {
+    modelId: "5e545747597b680004e70414",
+    password: ""
+};
+viewer.loadModel(modelConfigs, onPorgress, onLoaded, onError);
+```
 
 ### Support
 Please log a ticket on bimU.io's support centre or email support@bimu.io if you have any query. bimU.io Support Team is more than happy to answer any technical questions.
