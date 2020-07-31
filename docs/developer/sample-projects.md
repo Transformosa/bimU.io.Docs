@@ -10,8 +10,8 @@ bimU.io Viewer API
 <script src="./dist/bimU.io.Viewer.umd.js" crossorigin="anonymous"></script>
 ```
 
-### Vanilla JavaScript project
+### Vanilla HTML + JavaScript Project
 
-### React example project
+### React Example Project
 Initial setup (API Key)
 Dependencies (CDN, NPM)

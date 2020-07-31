@@ -2,7 +2,7 @@
 
 ### Access Token
 
-### Using API key
+### Using API Key
 Account scope
 Server-side
 REST API endpoint
