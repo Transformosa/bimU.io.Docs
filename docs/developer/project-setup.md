@@ -16,14 +16,14 @@ You can also use a JavaScript package manager to install the both libraries. Sin
 npm install bimu.io.viewer --save
 ```
 
-If you use a front-end framework that requires a module loader or a compilation step, such as React, Angular, Vue, etc., ES6 modules can be imported like below.
+If you use a front-end framework that requires a module loader or a compilation step, such as React, Angular, Vue, etc., ES6 modules can be imported like below. You can also benefit from the IntelliSense in Visual Studio Code.
 
 ``` javascript
 import * as THREE from 'three/build/three';
 import * as bimU from 'bimu.io.viewer';
 ```
 
-There are two ways to expose THREE in global scope:
+If Three.js is not loaded in HTML directly, there are two other ways to expose THREE in global scope:
 
 ``` javascript
 // 1 - Pass THREE into viewer configuration.

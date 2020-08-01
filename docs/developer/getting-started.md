@@ -25,7 +25,7 @@ bimU.io Viewer API is a development toolkit that provides out-of-the-box 3D BIM 
 ### Quick Start
 We've put together a JSFiddle to walk you through a quick demo with minimum setup to load a sample bimU.io model. With all necessary dependencies added in, you can easily start to play around bimU.io Viewer API in the sandbox by opening or cloning the JSFiddle here.
 
-Below is a DIV element that functions as a container for the viewer component. A DOM ID must be specified and passed into a viewer configuration object for initialisation.
+Below is a <div> element that functions as a container for the viewer component. A DOM ID must be specified and passed into a viewer configuration object for initialisation.
 ``` html
 <div id="viewer" style="width:1000px;height:500px;background-color: black;border: 5px solid black;"></div>
 ```
