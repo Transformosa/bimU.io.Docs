@@ -13,11 +13,11 @@ bimU.io Viewer API is a development toolkit that provides out-of-the-box 3D BIM 
 - Basic programming skills and web development experience in JavaScript, HTML, CSS, etc. will be helpful. bimU.io Viewer is built upon the most popular Web 3D library - Three.js. Knowledge in computer graphics and Three.js will bring you up to speed.
 - You need to have a bimU.io Pro account which is currently the default subscription and freely available until December 2020.
 - You need to upload your BIM model to bimU.io Viewer or simply use the sample models provided by bimU.io.
-- There are various different options in terms of website hosting. For development purpose, we recommend Web Server for Chrome if you are going to code in vanilla HTML, JavaScript, or jQuery. Furthermore, if you are an experienced web developer, a development server provided by a front-end stack or boilerplate, such as React, Angular, Vue, etc. is a preferred option. For production use, while most cloud providers, such as AWS, Azure, etc. offer static site hosting capabilities, products like Netlify or Firebase Hosting would make your life much easier.
+- There are various different options in terms of website hosting. For development purpose, we recommend Web Server for Chrome if you are going to code in vanilla HTML, JavaScript, or jQuery. Furthermore, if you are an experienced web developer, a development server included in a front-end stack or boilerplate, such as React, Angular, Vue, etc. is a preferred option. For production use, while most cloud providers, such as AWS, Azure, etc. offer static site hosting capabilities, products like Netlify or Firebase Hosting would make your life much easier.
 - Using the latest version of Google Chrome browser is always recommended.
 
 ### Main Concepts
-- When a BIM model is loaded via bimU.io Viewer JavaScript API, it literally provides the same functionality as in bimU.io Viewer. You can further customise how the viewer component or your model looks like by calling other API methods.
+- When a BIM model is loaded via bimU.io Viewer JavaScript API, it literally has the same functionality as in bimU.io Viewer. You can further customise how the viewer component or your model looks like by calling other API methods.
 - After proper initialisation, the viewer component can render a bimU.io-hosted model on your own webpage if correct crednetials are provided. Your website will then manipulate the viewer component and the loaded model with bimU.io Viewer JavaScript API.
 - The viewer component is a pure front-end, browser-side 3D canvas based on WebGL technology. You don't necessarily have to set up a back-end server application if password authentication is used. However, it is strongly recommended to use API Key authentication which requires a back-end, server-side web application to request for a one-time access token to load a model.
 - The viewer component will load full geometry initially for users to see entire model visually. However, it does not load all non-geometric BIM data at once. There are several API methods that can query server-side BIM database to retrieve model metadata, element properties, etc. individually.
@@ -30,7 +30,7 @@ Below is a DIV element that functions as a container for the viewer component. A
 <div id="viewer" style="width:1000px;height:500px;background-color: black;border: 5px solid black;"></div>
 ```
 
-Firstly, a Viewer object must be initialised with proper configuration. A model can then be loaded by supplying model configuration and callback functions to the loadModel method.
+Firstly, a Viewer object must be initialised with proper configuration. A model can then be loaded by supplying model configuration and callback functions to the loadModel method. The methods exposed by the Viewer object provide all functionality.
 ``` javascript
 let onPorgress = (e) => console.log(e); // Callback that reports model loading progress.
 let onLoaded = (e) => console.log(e); // Callback when model is fully loaded.

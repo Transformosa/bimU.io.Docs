@@ -109,7 +109,7 @@ nav:
     - Overview: agile/agile-overview.md
   - Developer Guide: 
     - Getting Started: developer/getting-started.md
-    - Sample Projects: developer/sample-projects.md
+    - Project Setup: developer/project-setup.md
     - Initialisation: developer/initialisation.md
     - Authentication: developer/authentication.md
     - Event Handling: developer/event-handling.md
