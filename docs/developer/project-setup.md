@@ -3,7 +3,7 @@
 ### Dependencies
 bimU.io Viewer API is based on Three.js. So the both libraries must be included in your project. Additionally, Three.js must be loaded in global scope and exposed as a global variable called THREE.
 
-If you use vanilla HTML, CSS, JavaScript or a front-end framework that doesn't require compilation, such as Bootstrap, Semantic UI, etc., both Three.js and bimU.io Viewer API are exported as Universal Modules that can be included before your project's closing </body> tag. For example, the both libraries are available over a CDN:
+If you use vanilla HTML, CSS, JavaScript or a front-end framework that doesn't require compilation, such as Bootstrap, Semantic UI, etc., both Three.js and bimU.io Viewer API are exported as Universal Modules that can be included before your project's closing ```</body>``` tag. For example, the both libraries are available over a CDN:
 
 ``` html
 <script src="https://cdn.jsdelivr.net/npm/three@0.113.2/build/three.min.js" crossorigin="anonymous"></script>
