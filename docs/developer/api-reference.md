@@ -653,6 +653,7 @@ Configuation object used to initialise bimU.io Viewer.
 | domElementId | <code>string</code> | DIV element ID |
 | showFPS | <code>boolean</code> | Whether show FPS meter. |
 | showUI | <code>boolean</code> | Whether show UI. |
+| buttonColor | <code>string</code> | CSS color keyword, RGBA, or Hex code for the default UI buttons. |
 
 <a name="Viewpoint"></a>
 
