@@ -3,8 +3,6 @@
 <dl>
 <dt><a href="#Viewer">Viewer</a> ⇐ <code>THREE.EventDispatcher</code></dt>
 <dd></dd>
-<dt><a href="#PropertySelector">PropertySelector</a></dt>
-<dd></dd>
 </dl>
 
 ## Typedefs
@@ -14,13 +12,19 @@
 <dd><p>Configuation object used to initialise bimU.io Viewer.</p>
 </dd>
 <dt><a href="#Viewpoint">Viewpoint</a> : <code>Object</code></dt>
-<dd><p>BCF-compatible camera viewpoint.</p>
+<dd><p>BCF-compatible viewpoint object.</p>
 </dd>
-<dt><a href="#onProgressCallback">onProgressCallback</a> : <code>function</code></dt>
-<dd><p>This callback reports model loading progress.</p>
+<dt><a href="#Camera">Camera</a> : <code>Object</code></dt>
+<dd><p>BCF-compatible camera object.</p>
 </dd>
-<dt><a href="#DataTypesEnum">DataTypesEnum</a> : <code>enum</code></dt>
-<dd><p>Enum for SQL compatible data types.</p>
+<dt><a href="#ClippingPlane">ClippingPlane</a> : <code>Object</code></dt>
+<dd><p>BCF-compatible clipping plane object.</p>
+</dd>
+<dt><a href="#XYZ">XYZ</a> : <code>Object</code></dt>
+<dd><p>BCF-compatible XYZ object.</p>
+</dd>
+<dt><a href="#TagOptions">TagOptions</a> : <code>Object</code></dt>
+<dd><p>Display options for Tag.</p>
 </dd>
 </dl>
 
@@ -32,53 +36,59 @@
 
 * [Viewer](#Viewer) ⇐ <code>THREE.EventDispatcher</code>
     * [new Viewer(configs)](#new_Viewer_new)
+    * [.showDialog(title, body, closeButtonText, okButtonText, okButtonCallback, dismissible)](#Viewer+showDialog)
+    * [.closeDialog()](#Viewer+closeDialog)
+    * [.showHelp()](#Viewer+showHelp)
+    * [.showElementInformation()](#Viewer+showElementInformation)
     * [.initialize()](#Viewer+initialize)
     * [.setViewpoint(viewpointObject)](#Viewer+setViewpoint)
     * [.getViewpoint()](#Viewer+getViewpoint) ⇒ [<code>Viewpoint</code>](#Viewpoint)
+    * [.setSectionBox(min, max)](#Viewer+setSectionBox)
     * [.setProjectionMode(mode, value)](#Viewer+setProjectionMode)
     * [.isPerspectiveMode()](#Viewer+isPerspectiveMode) ⇒ <code>boolean</code>
-    * [.switchSectionbox()](#Viewer+switchSectionbox)
+    * [.toggleSectionbox([isVisible])](#Viewer+toggleSectionbox)
     * [.sectionAroundSelection()](#Viewer+sectionAroundSelection)
     * [.anyElementSelected(showWarning)](#Viewer+anyElementSelected) ⇒ <code>boolean</code>
-    * [.orientToView(viewe)](#Viewer+orientToView)
+    * [.alignToView(viewOrientation)](#Viewer+alignToView)
     * [.zoomToFit()](#Viewer+zoomToFit)
     * [.zoomToSelection()](#Viewer+zoomToSelection)
-    * [.getBoundingBoxBySelectedElements()](#Viewer+getBoundingBoxBySelectedElements) ⇒ <code>THREE.Box3</code>
+    * [.getBoundingBoxBySelection()](#Viewer+getBoundingBoxBySelection) ⇒ <code>THREE.Box3</code>
     * [.zoomToObject(object3D)](#Viewer+zoomToObject)
     * [.loadModel(modelConfigs, onProgress, onLoaded, onError)](#Viewer+loadModel)
     * [.unselectAllElements()](#Viewer+unselectAllElements)
     * [.unhideAllElements()](#Viewer+unhideAllElements)
     * [.resetVisibility()](#Viewer+resetVisibility)
-    * [.setVisibility(elementIndices, isVisible)](#Viewer+setVisibility)
+    * [.setVisibility(elementIndices, isVisible, [invertOthers])](#Viewer+setVisibility)
     * [.hideSelectedElements()](#Viewer+hideSelectedElements)
+    * [.isolateSelectedElements()](#Viewer+isolateSelectedElements)
     * [.isPointInSectionBox(point)](#Viewer+isPointInSectionBox)
-    * [.getFileProperties(onSuccess, onError)](#Viewer+getFileProperties) ⇒ <code>Object</code>
-    * [.getModelMetadata(onSuccess, onError)](#Viewer+getModelMetadata) ⇒ <code>Object</code>
-    * [.getElementDataByIndex(elementIndex, onSuccess, onError)](#Viewer+getElementDataByIndex) ⇒ <code>Object</code>
-    * [.toggleFullscreen()](#Viewer+toggleFullscreen)
+    * [.getFileProperties(onSuccess, onError)](#Viewer+getFileProperties)
+    * [.getModelMetadata(onSuccess, onError)](#Viewer+getModelMetadata)
+    * [.getElementDataByIndex(elementIndex, onSuccess, onError)](#Viewer+getElementDataByIndex)
+    * [.toggleFullscreen([isFullScreen])](#Viewer+toggleFullscreen)
     * [.readCoordinates()](#Viewer+readCoordinates)
     * [.measureDistance()](#Viewer+measureDistance)
     * [.measureHeight()](#Viewer+measureHeight)
     * [.measureAngle()](#Viewer+measureAngle)
     * [.measureArea()](#Viewer+measureArea)
     * [.clearAllMeasurements()](#Viewer+clearAllMeasurements)
-    * [.setColor(elementIndices, color, transparency)](#Viewer+setColor)
+    * [.setColor(elementIndices, color)](#Viewer+setColor)
     * [.setTexture(elementIndices, texture)](#Viewer+setTexture)
     * [.addObject(object3D)](#Viewer+addObject) ⇒ <code>string</code>
     * [.removeObject(objectId)](#Viewer+removeObject)
-    * [.addTag(type, text, location)](#Viewer+addTag) ⇒ <code>string</code>
+    * [.addTag(text, location, [options], [onClick])](#Viewer+addTag) ⇒ <code>string</code>
     * [.removeTag(tagId)](#Viewer+removeTag)
     * [.getGeometry(elementIndex)](#Viewer+getGeometry) ⇒ <code>THREE.BufferGeometry</code>
+    * [.getBoundingBox(elementIndices)](#Viewer+getBoundingBox) ⇒ <code>THREE.Box3</code>
     * [.getLocation(elementIndex)](#Viewer+getLocation) ⇒ <code>THREE.Vector3</code>
-    * [.getSelectedElementIndices()](#Viewer+getSelectedElementIndices) ⇒ <code>Array.&lt;number&gt;</code>
+    * [.getElementIndicesBySelection()](#Viewer+getElementIndicesBySelection) ⇒ <code>Array.&lt;number&gt;</code>
     * [.addCustomButton(domElementId, icon, color, tooltip, callback)](#Viewer+addCustomButton)
-    * [.removeCustomButton(domElementId)](#Viewer+removeCustomButton)
+    * [.removeDomElement(domElementId)](#Viewer+removeDomElement)
     * [.setBackgroundColor(color)](#Viewer+setBackgroundColor)
-    * [.toggleWireframeMode()](#Viewer+toggleWireframeMode)
-    * [.getElementDataByQuery(filterExpression, selectExpression, limit)](#Viewer+getElementDataByQuery) ⇒ <code>Object</code>
-    * [.getElementDataByProperty(propertyFilters, propertySelectors, limit)](#Viewer+getElementDataByProperty) ⇒ <code>Object</code>
-    * [.aggregateElementProperty(propertyFilters, propertyToAggregate, aggregateFunction)](#Viewer+aggregateElementProperty) ⇒ <code>number</code>
-    * [.getPropertyNamesByGroup(groupName)](#Viewer+getPropertyNamesByGroup) ⇒ <code>Object</code>
+    * [.toggleWireframeMode([isWireframe])](#Viewer+toggleWireframeMode)
+    * [.getElementDataByQuery(filterExpression, selectExpression, limit, onSuccess, onError)](#Viewer+getElementDataByQuery)
+    * [.getElementDataByProperty(propertyFilters, propertySelectors, limit, onSuccess, onError)](#Viewer+getElementDataByProperty)
+    * [.aggregateElementProperty(propertyFilters, propertyToAggregate, aggregateFunction, onSuccess, onError)](#Viewer+aggregateElementProperty)
     * [.dispose()](#Viewer+dispose)
 
 <a name="new_Viewer_new"></a>
@@ -102,16 +112,50 @@ let viewerConfigs = {
 };
 let viewer = new bimU.Viewer(viewerConfigs);
 ```
+<a name="Viewer+showDialog"></a>
+
+### viewer.showDialog(title, body, closeButtonText, okButtonText, okButtonCallback, dismissible)
+Displays a modal dialog with custom UI.
+
+**Kind**: instance method of [<code>Viewer</code>](#Viewer)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| title | <code>string</code> | Modal dialog title in plain text or HTML. |
+| body | <code>string</code> | Modal dialog body in plain text or HTML. |
+| closeButtonText | <code>string</code> | Display text of the Close button. Passing a null value will hide the button. |
+| okButtonText | <code>string</code> | Display text of the OK button. Passing a null value will hide the button. |
+| okButtonCallback | <code>function</code> | Callback function when the OK button is clicked. |
+| dismissible | <code>boolean</code> | Allow modal to be dismissed by keyboard or overlay click. |
+
+<a name="Viewer+closeDialog"></a>
+
+### viewer.closeDialog()
+Closes custom modal dialog.
+
+**Kind**: instance method of [<code>Viewer</code>](#Viewer)  
+<a name="Viewer+showHelp"></a>
+
+### viewer.showHelp()
+Displays user instructions in a modal dialog.
+
+**Kind**: instance method of [<code>Viewer</code>](#Viewer)  
+<a name="Viewer+showElementInformation"></a>
+
+### viewer.showElementInformation()
+Displays selected element properties in a modal dialog.
+
+**Kind**: instance method of [<code>Viewer</code>](#Viewer)  
 <a name="Viewer+initialize"></a>
 
 ### viewer.initialize()
-You must call this method before using any other methods of Viewer.
+Initializes bimU.io Viewer. This function must be called before using any other functions.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
 <a name="Viewer+setViewpoint"></a>
 
 ### viewer.setViewpoint(viewpointObject)
-Set camera viewpoint and clipping planes.
+Sets camera viewpoint and clipping planes.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
 **See**: [BCF Documentation](https://github.com/buildingSMART/BCF-XML/tree/release_2_1/Documentation#visualization-information-bcfv-file)  
@@ -123,15 +167,27 @@ Set camera viewpoint and clipping planes.
 <a name="Viewer+getViewpoint"></a>
 
 ### viewer.getViewpoint() ⇒ [<code>Viewpoint</code>](#Viewpoint)
-Get camera viewpoint and clipping planes.
+Gets camera viewpoint and clipping planes.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
 **Returns**: [<code>Viewpoint</code>](#Viewpoint) - The BCF compatible viewpoint definition. See [Viewpoint](#Viewpoint).  
 **See**: [BCF Documentation](https://github.com/buildingSMART/BCF-XML/tree/release_2_1/Documentation#visualization-information-bcfv-file)  
+<a name="Viewer+setSectionBox"></a>
+
+### viewer.setSectionBox(min, max)
+WORK IN PROGRESS. Sets the section box orthogonally.
+
+**Kind**: instance method of [<code>Viewer</code>](#Viewer)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| min | [<code>XYZ</code>](#XYZ) | Minimum coordinates (lower-left-rear corner of the box). |
+| max | [<code>XYZ</code>](#XYZ) | Maximum coordinates (upper-right-front corner of the box). |
+
 <a name="Viewer+setProjectionMode"></a>
 
 ### viewer.setProjectionMode(mode, value)
-This method changes camera parameters directly.
+Changes camera parameters directly.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
 
@@ -143,26 +199,31 @@ This method changes camera parameters directly.
 <a name="Viewer+isPerspectiveMode"></a>
 
 ### viewer.isPerspectiveMode() ⇒ <code>boolean</code>
-This is a helper method for checking camera type.
+Checks camera type.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
 **Returns**: <code>boolean</code> - Whether current camera is a perspective one.  
-<a name="Viewer+switchSectionbox"></a>
+<a name="Viewer+toggleSectionbox"></a>
 
-### viewer.switchSectionbox()
-This method toggles section box visibility.
+### viewer.toggleSectionbox([isVisible])
+Toggles section box visibility.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [isVisible] | <code>boolean</code> | Use true to show the section box or false to hide it. It toggles the visibility if the parameter is not set. |
+
 <a name="Viewer+sectionAroundSelection"></a>
 
 ### viewer.sectionAroundSelection()
-This method creates a section box around current selection.
+Creates a section box around current selection.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
 <a name="Viewer+anyElementSelected"></a>
 
 ### viewer.anyElementSelected(showWarning) ⇒ <code>boolean</code>
-This is a helper method for checking if there's any element selected.
+Checks if there's any element selected.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
 **Returns**: <code>boolean</code> - Whether at least one element selected.  
@@ -171,40 +232,40 @@ This is a helper method for checking if there's any element selected.
 | --- | --- | --- |
 | showWarning | <code>boolean</code> | Whether an event should be dispathed if there's no element selected. |
 
-<a name="Viewer+orientToView"></a>
+<a name="Viewer+alignToView"></a>
 
-### viewer.orientToView(viewe)
-This method aligns current camera to an orthogonal view.
+### viewer.alignToView(viewOrientation)
+Aligns current camera to an orthogonal view.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| viewe | <code>ViewOrientation</code> | Top, Bottom, Front, Back, Left, Right. |
+| viewOrientation | <code>string</code> | Valid values: 'top', 'bottom', 'front', 'back', 'left', 'right'. |
 
 <a name="Viewer+zoomToFit"></a>
 
 ### viewer.zoomToFit()
-This method zooms model extent to fit current viewport.
+Zooms model extent to fit current viewport.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
 <a name="Viewer+zoomToSelection"></a>
 
 ### viewer.zoomToSelection()
-This method moves camera to focus on current selection.
+Moves camera to focus on current selection.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
-<a name="Viewer+getBoundingBoxBySelectedElements"></a>
+<a name="Viewer+getBoundingBoxBySelection"></a>
 
-### viewer.getBoundingBoxBySelectedElements() ⇒ <code>THREE.Box3</code>
-This method returns a bounding box of selected elements.
+### viewer.getBoundingBoxBySelection() ⇒ <code>THREE.Box3</code>
+Returns a bounding box of selected elements.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
 **Returns**: <code>THREE.Box3</code> - Represents an axis-aligned bounding box (AABB) in 3D space.  
 <a name="Viewer+zoomToObject"></a>
 
 ### viewer.zoomToObject(object3D)
-This method moves camera to focus on a particular 3D object.
+Moves camera to focus on a particular 3D object.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
 
@@ -215,39 +276,39 @@ This method moves camera to focus on a particular 3D object.
 <a name="Viewer+loadModel"></a>
 
 ### viewer.loadModel(modelConfigs, onProgress, onLoaded, onError)
-Load model from bimU.io
+Loads model from bimU.io server.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | modelConfigs | <code>object</code> | Model configuration object. |
-| onProgress | [<code>onProgressCallback</code>](#onProgressCallback) | Callback when model is being downloaded. |
-| onLoaded | <code>onLoadedCallback</code> | Callback when model is fully loaded. |
-| onError | <code>onErrorCallback</code> | Callback when an error occurs. |
+| onProgress | <code>function</code> | Callback when model is being downloaded. |
+| onLoaded | <code>function</code> | Callback when model is fully loaded. |
+| onError | <code>function</code> | Callback when an error occurs. |
 
 <a name="Viewer+unselectAllElements"></a>
 
 ### viewer.unselectAllElements()
-This method unselects all selected elements.
+Unselects all selected elements.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
 <a name="Viewer+unhideAllElements"></a>
 
 ### viewer.unhideAllElements()
-This method make all hidden elements visible.
+Makes all hidden elements visible.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
 <a name="Viewer+resetVisibility"></a>
 
 ### viewer.resetVisibility()
-This method unhide all elements and clear all section planes.
+Unhides all elements and clears all section planes.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
 <a name="Viewer+setVisibility"></a>
 
-### viewer.setVisibility(elementIndices, isVisible)
-This method makes elements hidden or visible.
+### viewer.setVisibility(elementIndices, isVisible, [invertOthers])
+Makes elements hidden or visible.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
 
@@ -255,17 +316,24 @@ This method makes elements hidden or visible.
 | --- | --- | --- |
 | elementIndices | <code>Array.&lt;number&gt;</code> | An array of element indices. |
 | isVisible | <code>boolean</code> | True is visible. False is hidden. |
+| [invertOthers] | <code>boolean</code> | True to set all other elements inversely. Default is false. |
 
 <a name="Viewer+hideSelectedElements"></a>
 
 ### viewer.hideSelectedElements()
-This method make all selected elements invisible.
+Makes all selected elements invisible.
+
+**Kind**: instance method of [<code>Viewer</code>](#Viewer)  
+<a name="Viewer+isolateSelectedElements"></a>
+
+### viewer.isolateSelectedElements()
+Hides all unselected elements.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
 <a name="Viewer+isPointInSectionBox"></a>
 
 ### viewer.isPointInSectionBox(point)
-This method checks whether a 3D point is within the current section box.
+Checks whether a 3D point is within the current section box.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
 
@@ -275,90 +343,92 @@ This method checks whether a 3D point is within the current section box.
 
 <a name="Viewer+getFileProperties"></a>
 
-### viewer.getFileProperties(onSuccess, onError) ⇒ <code>Object</code>
-This method retrieves file properties from bimU.io server.
+### viewer.getFileProperties(onSuccess, onError)
+Retrieves file properties from bimU.io server.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
-**Returns**: <code>Object</code> - File property object.  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| onSuccess | <code>onSuccessCallback</code> | Callback when data is received. |
-| onError | <code>onErrorCallback</code> | Callback when an error occurs. |
+| onSuccess | <code>function</code> | Callback when data is received. |
+| onError | <code>function</code> | Callback when an error occurs. |
 
 <a name="Viewer+getModelMetadata"></a>
 
-### viewer.getModelMetadata(onSuccess, onError) ⇒ <code>Object</code>
-This method retrieves model metadata from bimU.io server.
+### viewer.getModelMetadata(onSuccess, onError)
+Retrieves model metadata from bimU.io server.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
-**Returns**: <code>Object</code> - Model metadata object.  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| onSuccess | <code>onSuccessCallback</code> | Callback when data is received. |
-| onError | <code>onErrorCallback</code> | Callback when an error occurs. |
+| onSuccess | <code>function</code> | Callback when data is received. |
+| onError | <code>function</code> | Callback when an error occurs. |
 
 <a name="Viewer+getElementDataByIndex"></a>
 
-### viewer.getElementDataByIndex(elementIndex, onSuccess, onError) ⇒ <code>Object</code>
-This method retrieves model element data (Revit parameters, Navisworks properties, etc.) from bimU.io server.
+### viewer.getElementDataByIndex(elementIndex, onSuccess, onError)
+Retrieves model element data (Revit parameters, Navisworks properties, etc.) from bimU.io server.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
-**Returns**: <code>Object</code> - Element data object.  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | elementIndex | <code>number</code> | Element index. |
-| onSuccess | <code>onSuccessCallback</code> | Callback when data is received. |
-| onError | <code>onErrorCallback</code> | Callback when an error occurs. |
+| onSuccess | <code>function</code> | Callback when data is received. |
+| onError | <code>function</code> | Callback when an error occurs. |
 
 <a name="Viewer+toggleFullscreen"></a>
 
-### viewer.toggleFullscreen()
-This method enables or exits full screen mode.
+### viewer.toggleFullscreen([isFullScreen])
+Activates or exits full screen mode.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [isFullScreen] | <code>boolean</code> | Use true to activate full screen or false to exit. It toggles the full screen mode if the parameter is not set. |
+
 <a name="Viewer+readCoordinates"></a>
 
 ### viewer.readCoordinates()
-This method starts user interaction to read XYZ coordinates.
+Starts user interaction to read XYZ coordinates.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
 <a name="Viewer+measureDistance"></a>
 
 ### viewer.measureDistance()
-This method starts user interaction to measure distance point by point.
+Starts user interaction to measure distance point by point.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
 <a name="Viewer+measureHeight"></a>
 
 ### viewer.measureHeight()
-This method starts user interaction to measure height by three points.
+Starts user interaction to measure height by three points.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
 <a name="Viewer+measureAngle"></a>
 
 ### viewer.measureAngle()
-This method starts user interaction to measure angles by a triangle formed by three points.
+Starts user interaction to measure angles by a triangle formed by three points.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
 <a name="Viewer+measureArea"></a>
 
 ### viewer.measureArea()
-This method starts user interaction to measure area by a polygon.
+Starts user interaction to measure area by a polygon.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
 <a name="Viewer+clearAllMeasurements"></a>
 
 ### viewer.clearAllMeasurements()
-This method removes all current measurements shown in the viewer.
+Removes all current measurements shown in the viewer.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
 <a name="Viewer+setColor"></a>
 
-### viewer.setColor(elementIndices, color, transparency)
-This method sets element color.
+### viewer.setColor(elementIndices, color)
+Overrides element color.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
 
@@ -366,12 +436,11 @@ This method sets element color.
 | --- | --- | --- |
 | elementIndices | <code>Array.&lt;number&gt;</code> | An array of element indices. |
 | color | <code>THREE.Color</code> | Color object in RGB. |
-| transparency | <code>number</code> | 0 is Opaque. 1 is invisible. |
 
 <a name="Viewer+setTexture"></a>
 
 ### viewer.setTexture(elementIndices, texture)
-This method adds texture to elements.
+WORK IN PROGRESS. Adds texture to elements.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
 
@@ -383,7 +452,7 @@ This method adds texture to elements.
 <a name="Viewer+addObject"></a>
 
 ### viewer.addObject(object3D) ⇒ <code>string</code>
-This method adds an arbitrary 3D object to the viewer.
+Adds an arbitrary 3D object to the viewer.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
 **Returns**: <code>string</code> - UUID of created Object3D.  
@@ -395,7 +464,7 @@ This method adds an arbitrary 3D object to the viewer.
 <a name="Viewer+removeObject"></a>
 
 ### viewer.removeObject(objectId)
-This method removes an existing 3D object from the viewer.
+Removes an existing 3D object from the viewer.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
 
@@ -405,7 +474,7 @@ This method removes an existing 3D object from the viewer.
 
 <a name="Viewer+addTag"></a>
 
-### viewer.addTag(type, text, location) ⇒ <code>string</code>
+### viewer.addTag(text, location, [options], [onClick]) ⇒ <code>string</code>
 This method adds a 3D sprite to a particular location.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
@@ -413,14 +482,15 @@ This method adds a 3D sprite to a particular location.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| type | <code>string</code> | Tag type. |
 | text | <code>string</code> | Text to display in tag. |
-| location | <code>THREE.Vector3</code> | A 3D point where this tag should be placed. |
+| location | <code>THREE.Vector3</code> | 3D point where tag is placed. |
+| [options] | [<code>TagOptions</code>](#TagOptions) | Tag display options. |
+| [onClick] | <code>function</code> | WORK IN PROGRESS. Callback function when tag is clicked. |
 
 <a name="Viewer+removeTag"></a>
 
 ### viewer.removeTag(tagId)
-This method removes an existing tag from the viewer.
+Removes an existing tag from the viewer.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
 
@@ -431,7 +501,7 @@ This method removes an existing tag from the viewer.
 <a name="Viewer+getGeometry"></a>
 
 ### viewer.getGeometry(elementIndex) ⇒ <code>THREE.BufferGeometry</code>
-This method returns primitive geometry of a particular element.
+Returns primitive geometry of a particular element.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
 **Returns**: <code>THREE.BufferGeometry</code> - Three.js BufferGeometry object.  
@@ -440,10 +510,22 @@ This method returns primitive geometry of a particular element.
 | --- | --- | --- |
 | elementIndex | <code>number</code> | Element index. |
 
+<a name="Viewer+getBoundingBox"></a>
+
+### viewer.getBoundingBox(elementIndices) ⇒ <code>THREE.Box3</code>
+Returns the bounding box of particular elements or the entire model if the parameter is not set.
+
+**Kind**: instance method of [<code>Viewer</code>](#Viewer)  
+**Returns**: <code>THREE.Box3</code> - Represents an axis-aligned bounding box (AABB) in 3D space.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| elementIndices | <code>number</code> | Element index. |
+
 <a name="Viewer+getLocation"></a>
 
 ### viewer.getLocation(elementIndex) ⇒ <code>THREE.Vector3</code>
-This method returns the center point of a particular element.
+Returns the center point of a particular element.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
 **Returns**: <code>THREE.Vector3</code> - Three.js Vector3 object.  
@@ -452,17 +534,17 @@ This method returns the center point of a particular element.
 | --- | --- | --- |
 | elementIndex | <code>number</code> | Element index. |
 
-<a name="Viewer+getSelectedElementIndices"></a>
+<a name="Viewer+getElementIndicesBySelection"></a>
 
-### viewer.getSelectedElementIndices() ⇒ <code>Array.&lt;number&gt;</code>
-This method returns indices of selected elements.
+### viewer.getElementIndicesBySelection() ⇒ <code>Array.&lt;number&gt;</code>
+Returns indices of selected elements.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
 **Returns**: <code>Array.&lt;number&gt;</code> - An array of element indices.  
 <a name="Viewer+addCustomButton"></a>
 
 ### viewer.addCustomButton(domElementId, icon, color, tooltip, callback)
-This method creates a custom button on the user interface of the viewer.
+Creates a custom button on the user interface of the viewer.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
 
@@ -470,14 +552,14 @@ This method creates a custom button on the user interface of the viewer.
 | --- | --- | --- |
 | domElementId | <code>string</code> | DOM element id to use for this button. |
 | icon | <code>string</code> | Icon string. |
-| color | <code>string</code> | Color string. |
+| color | <code>string</code> | CSS color keyword, RGBA, or Hex code. |
 | tooltip | <code>string</code> | Short description. |
 | callback | <code>function</code> | A callback function when this button is clicked. |
 
-<a name="Viewer+removeCustomButton"></a>
+<a name="Viewer+removeDomElement"></a>
 
-### viewer.removeCustomButton(domElementId)
-This method removes an existing custom button.
+### viewer.removeDomElement(domElementId)
+Removes an existing DOM element by its ID.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
 
@@ -488,146 +570,76 @@ This method removes an existing custom button.
 <a name="Viewer+setBackgroundColor"></a>
 
 ### viewer.setBackgroundColor(color)
-This method sets background color of the viewer canvas.
+Sets background color of the viewer canvas.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| color | <code>THREE.Color</code> | Color object in RGB. |
+| color | <code>number</code> | Hexadecimal color. E.g., 0xff0000. |
 
 <a name="Viewer+toggleWireframeMode"></a>
 
-### viewer.toggleWireframeMode()
-This method turns on or off wireframe mode.
+### viewer.toggleWireframeMode([isWireframe])
+Turns on or off wireframe mode.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [isWireframe] | <code>boolean</code> | Use true to show wireframe or false to hide it. It toggles the wireframe mode if the parameter is not set. |
+
 <a name="Viewer+getElementDataByQuery"></a>
 
-### viewer.getElementDataByQuery(filterExpression, selectExpression, limit) ⇒ <code>Object</code>
-This method retrieves element data from bimU.io server based on a custom query expression.
+### viewer.getElementDataByQuery(filterExpression, selectExpression, limit, onSuccess, onError)
+Retrieves element data from bimU.io server based on a custom query expression.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
-**Returns**: <code>Object</code> - Element data object.  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | filterExpression | <code>string</code> | Filter expression string. |
 | selectExpression | <code>string</code> | Select expression string. |
 | limit | <code>number</code> | Limit on the number of elements returned. |
+| onSuccess | <code>function</code> | Callback when data is received. |
+| onError | <code>function</code> | Callback when an error occurs. |
 
 <a name="Viewer+getElementDataByProperty"></a>
 
-### viewer.getElementDataByProperty(propertyFilters, propertySelectors, limit) ⇒ <code>Object</code>
-This method retrieves element data by predefined property filters and selectors.
+### viewer.getElementDataByProperty(propertyFilters, propertySelectors, limit, onSuccess, onError)
+Retrieves element data by predefined property filters and selectors.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
-**Returns**: <code>Object</code> - Element data object.  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | propertyFilters | <code>Array.&lt;PropertyFilter&gt;</code> | Array of property filters that look for elements satisfying specified conditions. |
-| propertySelectors | [<code>Array.&lt;PropertySelector&gt;</code>](#PropertySelector) | Array of property selectors. Maximum of 5 properties to return. |
+| propertySelectors | <code>Array.&lt;PropertySelector&gt;</code> | Array of property selectors. Maximum of 5 properties to return. |
 | limit | <code>number</code> | Limit on the number of elements returned. |
+| onSuccess | <code>function</code> | Callback when data is received. |
+| onError | <code>function</code> | Callback when an error occurs. |
 
 <a name="Viewer+aggregateElementProperty"></a>
 
-### viewer.aggregateElementProperty(propertyFilters, propertyToAggregate, aggregateFunction) ⇒ <code>number</code>
-This method retrieves element data by predefined property filters and selectors.
+### viewer.aggregateElementProperty(propertyFilters, propertyToAggregate, aggregateFunction, onSuccess, onError)
+Retrieves element data by predefined property filters and selectors.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
-**Returns**: <code>number</code> - Aggregated result.  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | propertyFilters | <code>Array.&lt;PropertyFilter&gt;</code> | Array of property filters. |
-| propertyToAggregate | [<code>PropertySelector</code>](#PropertySelector) | Single property selector that will be aggregated. |
-| aggregateFunction | <code>AggregateFunctionsEnum</code> | Limit on the number of elements returned. |
-
-<a name="Viewer+getPropertyNamesByGroup"></a>
-
-### viewer.getPropertyNamesByGroup(groupName) ⇒ <code>Object</code>
-This method returns all property names from a particular group or all groups if group name is not specified.
-
-**Kind**: instance method of [<code>Viewer</code>](#Viewer)  
-**Returns**: <code>Object</code> - All property names in groups.  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| groupName | <code>string</code> | Property group name. |
+| propertyToAggregate | <code>PropertySelector</code> | Single property selector that will be aggregated. |
+| aggregateFunction | <code>AggregateFunctionsEnum</code> | Limit on the number of elements returned. Default is COUNT. |
+| onSuccess | <code>function</code> | Callback when data is received. |
+| onError | <code>function</code> | Callback when an error occurs. |
 
 <a name="Viewer+dispose"></a>
 
 ### viewer.dispose()
-This method destroy this Viewer instance and release all resources.
+Destroys this Viewer instance and releases all resources.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
-<a name="PropertySelector"></a>
-
-## PropertySelector
-**Kind**: global class  
-
-* [PropertySelector](#PropertySelector)
-    * [new PropertySelector(groupName, propertyName)](#new_PropertySelector_new)
-    * [.dataType](#PropertySelector+dataType) : [<code>DataTypesEnum</code>](#DataTypesEnum)
-    * [.groupName](#PropertySelector+groupName) : <code>string</code>
-    * [.propertyName](#PropertySelector+propertyName) : <code>string</code>
-    * [.alias](#PropertySelector+alias) : <code>string</code>
-    * [.getQueryString()](#PropertySelector+getQueryString) ⇒ <code>string</code>
-
-<a name="new_PropertySelector_new"></a>
-
-### new PropertySelector(groupName, propertyName)
-This class is used to specify or restrict properties to return. It is similar to the SQL SELECT clause.
-
-
-| Param | Type | Description |
-| --- | --- | --- |
-| groupName | <code>string</code> | Property group name. |
-| propertyName | <code>string</code> | Property name. |
-
-**Example**  
-```js
-// Return a property called "Top Offset" in a "Constraints" group.
-let propertySelector1 = new bimU.PropertySelector("Constraints", "Top Offset");
-// Default is STRING.
-propertySelector1.type = bimU.DataTypesEnum.FLOAT;
-// Return a property called "Mark" in a "Text" group.
-let propertySelector2 = new bimU.PropertySelector("Text", "Mark");
-// Rename the property to "Wall Mark" when data is returned.
-propertySelector2.alias = "Wall Mark";
-```
-<a name="PropertySelector+dataType"></a>
-
-### propertySelector.dataType : [<code>DataTypesEnum</code>](#DataTypesEnum)
-Data type casting/conversion. Default is bimU.DataTypesEnum.STRING.
-
-**Kind**: instance property of [<code>PropertySelector</code>](#PropertySelector)  
-<a name="PropertySelector+groupName"></a>
-
-### propertySelector.groupName : <code>string</code>
-Property group name
-
-**Kind**: instance property of [<code>PropertySelector</code>](#PropertySelector)  
-<a name="PropertySelector+propertyName"></a>
-
-### propertySelector.propertyName : <code>string</code>
-Property name.
-
-**Kind**: instance property of [<code>PropertySelector</code>](#PropertySelector)  
-<a name="PropertySelector+alias"></a>
-
-### propertySelector.alias : <code>string</code>
-Alias for renaming the property name. It is similar to the SQL AS command. Default is the same as the property name.
-
-**Kind**: instance property of [<code>PropertySelector</code>](#PropertySelector)  
-<a name="PropertySelector+getQueryString"></a>
-
-### propertySelector.getQueryString() ⇒ <code>string</code>
-This method returns a SQL equivalent expression for the underlying selector.
-
-**Kind**: instance method of [<code>PropertySelector</code>](#PropertySelector)  
-**Returns**: <code>string</code> - SQL select expression.  
 <a name="ViewerConfiguration"></a>
 
 ## ViewerConfiguration : <code>Object</code>
@@ -645,40 +657,77 @@ Configuation object used to initialise bimU.io Viewer.
 <a name="Viewpoint"></a>
 
 ## Viewpoint : <code>Object</code>
-BCF-compatible camera viewpoint.
+BCF-compatible viewpoint object.
 
 **Kind**: global typedef  
 **Properties**
 
 | Name | Type | Description |
 | --- | --- | --- |
-| camera | <code>string</code> | Perspective camera or orthographic camera. |
-| clippingPlanes | <code>string</code> | Clipping plane definition. |
+| camera | [<code>Camera</code>](#Camera) | Perspective camera or orthographic camera. |
+| clippingPlanes | [<code>Array.&lt;ClippingPlane&gt;</code>](#ClippingPlane) | Clipping plane definition. |
 | originatingSystem | <code>string</code> | Where this viewpoint was created from. |
 
-<a name="onProgressCallback"></a>
+<a name="Camera"></a>
 
-## onProgressCallback : <code>function</code>
-This callback reports model loading progress.
-
-**Kind**: global typedef  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| type | <code>string</code> | Event type. |
-| progress | <code>number</code> | Model loading progress in percentage. |
-
-<a name="DataTypesEnum"></a>
-
-## DataTypesEnum : <code>enum</code>
-Enum for SQL compatible data types.
+## Camera : <code>Object</code>
+BCF-compatible camera object.
 
 **Kind**: global typedef  
-**Read only**: true  
 **Properties**
 
 | Name | Type | Description |
 | --- | --- | --- |
-| STRING | <code>string</code> | UTF8-encoded variable-length string. |
-| TIMESTAMP | <code>string</code> | W3C date and time formats... |
+| cameraViewPoint | [<code>XYZ</code>](#XYZ) | Camera location. |
+| cameraDirection | [<code>XYZ</code>](#XYZ) | Camera direction. |
+| cameraUpVector | [<code>XYZ</code>](#XYZ) | Camera up vector. |
+| fieldOfView | <code>number</code> | Camera’s field of view angle in degrees. |
+| viewToWorldScale | <code>number</code> | Scaling from view to world. |
+
+<a name="ClippingPlane"></a>
+
+## ClippingPlane : <code>Object</code>
+BCF-compatible clipping plane object.
+
+**Kind**: global typedef  
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| normal | [<code>XYZ</code>](#XYZ) | The normal to the plane. |
+| constant | <code>number</code> | The negative distance from the origin to the plane along the normal vector. |
+
+<a name="XYZ"></a>
+
+## XYZ : <code>Object</code>
+BCF-compatible XYZ object.
+
+**Kind**: global typedef  
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| x | <code>number</code> | X. |
+| y | <code>number</code> | Y. |
+| z | <code>number</code> | Z. |
+
+<a name="TagOptions"></a>
+
+## TagOptions : <code>Object</code>
+Display options for Tag.
+
+**Kind**: global typedef  
+**Properties**
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| [shape] | <code>string</code> | <code>&quot;&#x27;circle&#x27;&quot;</code> | Use 'cicle' or 'rectangular'. |
+| [fontName] | <code>string</code> | <code>&quot;&#x27;Helvetica&#x27;&quot;</code> | Font name. See https://www.cssfontstack.com/ for more details. FontAwesome is also |
+| [fontSize] | <code>number</code> | <code>30</code> | Font size in pixel values (px). |
+| [fontColor] | <code>string</code> | <code>&quot;&#x27;rgba(255, 255, 255, 1)&#x27;&quot;</code> | CSS color keyword, RBGA, or Hex code for text. |
+| [backgroundColor] | <code>string</code> | <code>&quot;&#x27;rgba(97, 232, 240, 1)&#x27;&quot;</code> | CSS color keyword, RGBA, or Hex code for background. |
+| [borderColor] | <code>string</code> | <code>&quot;&#x27;rgba(0, 0, 0, 0)&#x27;&quot;</code> | CSS color keyword, RGBA, or Hex code for border. Default is no border (transparent). |
+| [borderThickness] | <code>number</code> | <code>0</code> | Border thickness in pixel values (px). |
+| [visibleBehindObjects] | <code>boolean</code> | <code>true</code> | Whether tag is still visible when behind other objects. |
+| [pulse] | <code>boolean</code> | <code>false</code> | Whether tag has pulse effect. |
 
