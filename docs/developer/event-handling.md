@@ -13,6 +13,8 @@ viewer.addEventListener(bimU.EventsEnum.ON_VIEWER_INITIALIZED, onLoaded);
 
 For some events, an event handler won't work if subscription is done after it happens. For example, you must subscribe to the ```ON_VIEWER_INITIALIZED``` event and the ```ON_MODEL_PROGRESS``` event prior to calling the ```initialize``` function and the ```loadModel``` function respectively.
 
+Some API functions, such as those fetching data from the bimU.io server, must be called after a specific event is finished. For example, you can only send a BIM database query when a model is fully loaded. The ```ON_MODEL_LOADED``` is particularly helpful in this case.
+
 ### Event Handler and Event Argument
 An event handler is simply a callback function that takes an event argument. All information related to an event can be found from the properties of the event argument object. The best way to inspect an event arugment is logging it out. Below is an example responding to a UI event when a model element is clicked by user. Clicking on a model element can either select or deselect it. If it is selected, a further action can be taken in the callback function.
 

@@ -1,15 +1,11 @@
 # Navigation Controls
 
 ### Basics
-alignToView
-zoomToFit
-zoomToSelection
-zoomToObject(object3D)
+There are a few built-in functions that adjust the viewer camera to focus on particular angles or items, such as ```alignToView```, ```zoomToFit```, ```zoomToSelection```, ```zoomToObject```, etc. These functions are also available on the default user interface.
 
 ### Camera Viewpoint
-[https://github.com/buildingSMART/BCF-XML/tree/release_2_1/Documentation#visualization-information-bcfv-file|BCF Documentation]
-getViewpoint
-setViewpoint
+Tweaking camera parameters can be a complicated task. bimU.io adopts the prevailling [BCF (BIM Collaboration Format)](https://github.com/buildingSMART/BCF-XML/tree/release_2_1/Documentation#visualization-information-bcfv-file) open standard and simplifies its data schema to streamline this process. To capture current camera viewpoint in the viewer, calling the ```getViewpoint``` function returns the following JSON format. You can keep it somewhere (e.g., in your own database) and pass it into the ```setViewpoint``` function later on to restore a previously saved viewpoint. Note that element information is not stored in the JSON object at the moment.
+
 ``` json
 {
   "camera": {
@@ -36,13 +32,7 @@ setViewpoint
 ```
 
 ### Sectioning
-Section box visibility and section planes are separate things.
-toggleSectionbox
-sectionAroundSelection
-isPointInSectionBox
-setSectionBox
-setViewpoint
-resetVisibility
+Section plane/clipping plane information can be captured in the BCF-compatible JSON format as well. Below is a sample camera viewpoint when section box is enabled in the viewer.
 
 ``` json
 {
@@ -76,6 +66,9 @@ resetVisibility
 }
 ```
 
+It's worth to know that section box visibility and section planes applied in the JSON object are separate things. Section box is a built-in functionality in the user interface. Call the ```toggleSectionbox``` function to make it visible or hidden. To control the extents of section box, you can take advantage of the ```setSectionBox``` and the ```sectionAroundSelection``` functions. Call the ```resetVisibility``` function to clear current section box state.
+
 ### Camera Projection
-isPerspectiveMode
-setProjectionMode
+bimU.io Viewer uses perspective camera by default which is the most common projection mode for rendering a 3D scene. If you wish to switch to orthographic projection, call the ```setProjectionMode``` function and use the ```isPerspectiveMode``` function to check current projection mode.
+
+If current viewpoint is rendered by perspective camera, the ```fieldOfView``` property in the BCF-compatible JSON object is a positive value. Otherwise, the ```viewToWorldScale``` will be a positive value when orthographic camera is used.
