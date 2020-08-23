@@ -12,6 +12,7 @@ isolateSelectedElements
 unhideAllElements
 resetVisibility
 this.setVisibility(elementIndices, isVisible, invertOthers)
+toggleWireframeMode
 
 ### Color override
 this.setColor(elementIndices, color, transparency) 
