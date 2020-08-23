@@ -14,7 +14,7 @@ let func = bimU.AggregateFunctionsEnum.AVG;
 ```
 
 ### Viewer Class
-This is the entry point to all bimU.io Viewer API functions. Dot key is the best exploration tool. Viewer configuration object must be passed into the Viewer's constructor. DOM element ID must be specified to contain the viewer component. The initialize method must be called before using other functions. The ```viewer``` variable used everywhere in our documentation literally refers to an instance of the ```Viewer``` class.
+This is the entry point to all bimU.io Viewer API functions that are listed in the [API Reference](/developer/api-reference). Dot key is the best exploration tool. Viewer configuration object must be passed into the Viewer's constructor. DOM element ID must be specified to contain the viewer component. The initialize method must be called before using other functions. The ```viewer``` variable used everywhere in our documentation literally refers to an instance of the ```Viewer``` class.
 
 ``` javascript
 let viewerConfigs = {

@@ -56,7 +56,7 @@ let selectExpression = 'CAST("Constraints.Top Offset" AS FLOAT), SUBSTRING("Text
 let filterExpression = '"Constraints.Top Constrant" LIKE "Typical Level: %" AND CAST("Dimension.Height" AS FLOAT) > 59.78'; 
 viewer.getElementDataByQuery(filterExpression, selectExpression, limit, log, log);
 ```
-
+quantity/metric
 aggregateElementProperty(propertyFilters, propertyToAggregate, aggregateFunction, onSuccess, onError)
 
 ``` javascript
