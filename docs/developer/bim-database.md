@@ -59,7 +59,7 @@ let propertySelector2 = new bimU.PropertySelector("Text", "Mark");
 propertySelector2.alias = "Wall Mark";
 ```
 
-A corresponding SQL query should look like below.
+A corresponding SQL query should look like this:
 
 ``` sql
 SELECT "Constraints:Top Offset", "Text:Mark" as "Wall Mark"
@@ -92,8 +92,9 @@ viewer.getElementDataByQuery(filterExpression, selectExpression, limit, onSucces
 ```
 
 Some useful tips for writing a query:
-- Column name is composed of a group name and a property name with a colon **:** as a delimiter in between.
-- Column name should be wrapped in double quotes **"**. String value should be wrapped in single quotes **'**. To avoid using escape characters, [JavaScript Template Literal](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) **`** is the best way to create an expression string.
+
+- Column name is composed of a group name and a property name with a colon ``` : ``` as a delimiter in between.
+- Column name should be wrapped in double quotes ``` " ```. String value should be wrapped in single quotes ``` ' ```. To avoid using escape characters, [JavaScript Template Literal](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) ``` ` ``` is the best way to create an expression string.
 - Note that all input data is treated as a string. It must be cast into the relevant data types when necessary.
 
 #### Aggregation
@@ -111,12 +112,19 @@ viewer.aggregateElementProperty(propertyFilters, propertySelector1, func, onSucc
 - **Query Data Size:** 1 MB. HTTP response status code 413 if response payload is too large.
 - **Supported Data Types:** bool, int, integer, string, float, decimal, numeric, timestamp.
 - **Supported Operators:**
+
+|                            |                                      |
+|----------------------------|--------------------------------------|
 | Logical Operators          | AND, NOT, OR                         |
 | Comparison Operators       | <, >, <=, >=, =, <>, !=, BETWEEN, IN |
 | Pattern Matching Operators | LIKE, _, %                           |
 | Unitary Operators          | IS NULL, IS NOT NULL                 |
 | Math Operators             | +, -, *, /, %                        |
+
 - **Supported Functions:**
+
+|                       |                                                               |
+|-----------------------|---------------------------------------------------------------|
 | Conversion Functions  | CAST                                                          |
 | Conditional Functions | CASE, COALESCE, NULLIF                                        |
 | Date Functions        | DATE_ADD, DATE_DIFF, EXTRACT, TO_STRING, TO_TIMESTAMP, UTCNOW |

@@ -16,28 +16,23 @@ You can also use a JavaScript package manager to install the both libraries. Sin
 npm install bimu.io.viewer --save
 ```
 
-If you use a front-end framework that requires a module loader or a compilation step, such as React, Angular, Vue, etc., ES6 modules can be imported like below. You can also benefit from the IntelliSense in Visual Studio Code.
+If you use a front-end framework that requires a module loader or a compilation step, such as React, Angular, Vue, etc., please make sure Three.js is loaded first and accessible by a global variable called ```THREE``` **before** importing bimU.io's ES6 module. The type definitions are included in the package, so you can also benefit from the IntelliSense in Visual Studio Code.
 
 ``` javascript
+// ThreeImporter.js
 import * as THREE from 'three/build/three';
-import * as bimU from 'bimu.io.viewer';
-```
-
-If Three.js is not loaded in HTML directly, there are two other ways to expose THREE in global scope:
-
-``` javascript
-// 1 - Pass THREE into viewer configuration.
-let viewerConfigs = {
-    domElementId: "viewer",
-    THREE: THREE
-};
-
-// 2 - Assign THREE directly.
+// Assign THREE to global variable
 window.THREE = THREE;
 ```
 
+``` javascript
+// ViewerComponent.js
+import ThreeImporter from './ThreeImporter';
+import * as bimU from 'bimu.io.viewer';
+```
+
 ### Debugging
-All available bimU.io Viewer API functions are exposed as methods of the Viewer object. It would be easier to explore and inspect in browser console if the Viewer variable is also exposed in global scope.
+All available bimU.io Viewer API functions are exposed as methods of the ```Viewer``` object. It would be easier to explore and inspect in browser console if a ```viewer``` variable is also exposed in global scope.
 
 ``` javascript
 let viewer = new bimU.Viewer(viewerConfigs);
