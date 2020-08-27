@@ -6,14 +6,15 @@ bimU.io Viewer API uses token-based authentication that is secure, reliable, and
 There are two ways to generate an access token: **API key** or **model password**. Using model password is easier. However, it is recommended to use API key that is a more robust and flexible approach. 
 
 ### Using API Key
-Every bimU.io user has a corresponding account name and can generate an API key which is unique to the bimU.io account. You can find your account name and generate an API key on bimU.io by going to **Settings** => **API Key**. All your models are programmatically accessible by a generated API key even though they are not shared explicitly. Therefore, please bear in mind the following best practices:
+Every bimU.io user has a corresponding account name and can generate an API key which is unique to the bimU.io account. You can find your **account name** and generate an **API key** on bimU.io by going to **Settings** => **API Key**. All your models are programmatically accessible by a generated API key even though they are not shared explicitly. Therefore, please bear in mind the following best practices:
+
 - Use environmental variables rather than putting your account name and API key directly in code.
 - Never check in an API key to your source code repositories.
 - Do not use an API key in a front-end web application.
 - Do not share an API key with others.
 - Revoke an API key in case of any security risk.
 
-A back-end, server-side web application should be set up to use an API key to request for an access token. You need to put together your account name (as user ID) and API key (as password) for the HTTP Basic Authentication. An HTTP request can then be sent to the REST API endpoint below.
+A back-end, server-side web application should be set up to use an API key to request for an access token. You need to put together your **account name** (as user ID) and **API key** (as password) for the HTTP Basic Authentication. An HTTP request can then be sent to the REST API endpoint below. Note that only HTTPS is supported.
 
 **HTTP Request for Access Token**
 ```

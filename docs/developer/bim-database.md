@@ -107,6 +107,7 @@ viewer.aggregateElementProperty(propertyFilters, propertySelector1, func, onSucc
 ```
 
 #### Limitation
+
 - **Number of Properties:** Maximum of 5 properties can be returned in one single query.
 - **Query Timeout:** 2 seconds. HTTP response status code 408 if it takes too long.
 - **Query Data Size:** 1 MB. HTTP response status code 413 if response payload is too large.

@@ -4,12 +4,14 @@ Advanced users, digital specialists, and software developers can take advantage 
 
 ### Overview
 bimU.io Viewer API is a development toolkit that provides out-of-the-box 3D BIM viewer and database. It is packaged as a web front-end library that is able to:
+
 - render BIM models hosted on bimU.io in your own web application.
 - extend bimU.io Viewer's core functionality.
 - retrieve model and element information from BIM database.
 - create BIM-based digital solutions, such as custom visualisation, data analytics, Digital Twin, IoT (Internet of Things), etc.
 
 ### Prerequisites
+
 - Basic programming skills and web development experience in JavaScript, HTML, CSS, etc. will be helpful. bimU.io Viewer is built upon the most popular Web 3D library - Three.js. Knowledge in computer graphics and Three.js will bring you up to speed.
 - You need to have a bimU.io Pro account which is currently the default subscription and freely available until December 2020.
 - You need to upload your BIM model to bimU.io Viewer or simply use the sample models provided by bimU.io.
@@ -17,6 +19,7 @@ bimU.io Viewer API is a development toolkit that provides out-of-the-box 3D BIM 
 - Using the latest version of Google Chrome browser is always recommended.
 
 ### Main Concepts
+
 - When a BIM model is loaded via bimU.io Viewer JavaScript API, it literally has the same functionality as in bimU.io Viewer. You can further customise how the viewer component or your model looks like by calling other API functions. All available API functions are listed in the [API Reference](/developer/api-reference).
 - After proper initialisation, the viewer component can render a bimU.io-hosted model on your own webpage if correct crednetials are provided. Your website will then manipulate the viewer component and the loaded model with bimU.io Viewer JavaScript API.
 - The viewer component is a pure front-end, browser-side 3D canvas based on WebGL technology. You don't necessarily have to set up a back-end server application if model password authentication is used. However, it is strongly recommended to use API Key authentication which requires a back-end, server-side web application to request for a one-time access token to load a model.
