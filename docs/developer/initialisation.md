@@ -27,7 +27,7 @@ viewer.initialize();
 ```
 
 ### Load Model
-The loadModel method loads full model geometry in the container (i.e., a ```<div>``` element). Model ID must be specified and can be found from the bimU.io Shared Link. Either access token or password must be specified depending on what authentication method used.
+The ```loadModel``` method loads full model geometry in the viewer container (i.e., a ```<div>``` element). Model ID must be specified in a model configuration object and can be found from the bimU.io Shared Link ```https://viewer.bimu.io/share/models/YOUR_MODEL_ID_IS_HERE```. Either access token or password must be specified depending on what authentication method used.
 
 ``` javascript
 let modelConfigs = {

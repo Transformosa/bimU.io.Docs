@@ -5,8 +5,8 @@ bimU.io is not only a BIM model viewer but also a full-fledged, cloud-hosted dat
 There are two model-level data functions: ```getFileProperties``` and ```getModelMetadata```. The former returns bimU.io's system properties of a model file, such as author, timestamp, source, etc. The latter returns model-level information contained in a BIM model, such as parameters in Revit Project Information.
 
 ``` javascript
-let onSuccess = (data) => console.log(data);
-let onError = (errorMessage) => console.error(errorMessage);
+const onSuccess = (data) => console.log(data);
+const onError = (errorMessage) => console.error(errorMessage);
 viewer.getFileProperties(onSuccess, onError);
 viewer.getModelMetadata(onSuccess, onError);
 ```

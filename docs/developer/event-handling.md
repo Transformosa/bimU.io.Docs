@@ -7,7 +7,7 @@ You can subscribe to a particular event when it is triggered by bimU.io Viewer A
 bimU.io Viewer API takes advantage of the ```EventDispatcher``` supported by Three.js. ```addEventListener``` is a method of the ```Viewer``` class. Below is an example showing how to subscribe to the ```ON_VIEWER_INITIALIZED``` event by passing an event type and an event handler into the ```addEventListener``` function. 
 
 ``` javascript
-let onLoaded = (e) => console.log(e);
+const onLoaded = (e) => console.log(e);
 viewer.addEventListener(bimU.EventsEnum.ON_VIEWER_INITIALIZED, onLoaded);
 ```
 

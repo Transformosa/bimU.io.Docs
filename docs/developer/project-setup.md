@@ -43,5 +43,6 @@ window.viewer = viewer;
 ### Sample Projects
 We've created a couple of Hello World boilerplates:
 
-- Vanilla HTML + JavaScript Sample Project
-- React Sample Project
+- [Vanilla HTML + JavaScript Sample Project](https://github.com/bimU-io/VanillaSample): This project loads a model on a dummy HTML web page with some basic UI.
+
+- [React Sample Project](https://github.com/bimU-io/ReactSample): This project is a React.js web application set up by using [Create React App](https://create-react-app.dev/).
