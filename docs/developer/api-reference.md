@@ -187,14 +187,14 @@ Gets camera viewpoint and clipping planes.
 <a name="Viewer+setSectionBox"></a>
 
 ### viewer.setSectionBox(min, max)
-WORK IN PROGRESS. Sets the section box orthogonally.
+Sets the section box orthogonally.
 
 **Kind**: instance method of [<code>Viewer</code>](#Viewer)  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| min | [<code>XYZ</code>](#XYZ) | Minimum coordinates (lower-left-rear corner of the box). |
-| max | [<code>XYZ</code>](#XYZ) | Maximum coordinates (upper-right-front corner of the box). |
+| min | <code>THREE.Vector3</code> | Minimum coordinates (lower-left-rear corner of the box). |
+| max | <code>THREE.Vector3</code> | Maximum coordinates (upper-right-front corner of the box). |
 
 <a name="Viewer+setProjectionMode"></a>
 
