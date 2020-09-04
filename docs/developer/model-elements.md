@@ -1,7 +1,7 @@
 # Model elements
 This section summarises how to control the states of model elements in the viewer component, such as selection, visibility, appearance, etc. If you want to retrieve element data from bimU.io server, such as element properties, database query, etc., please refer to the next section [BIM Database](/developer/bim-database).
 
-Every BIM authoring tool has its own mechanism to track and manage model element identifiers, such as element ID, unique ID, object ID, instance ID, GUID, etc. To avoid confusion, bimU.io uses **element index** which is an integer value for sorting model elements internally. Every model element in bimU.io has a unique element index and therefore serves as an identifier for manipulating model elements.
+Every BIM authoring tool has its own mechanism to track and manage model element identifiers, such as element ID, unique ID, object ID, instance GUID, GUID, etc. To avoid confusion, bimU.io uses **element index** which is an integer value for sorting model elements internally. Every model element in bimU.io has a unique element index and therefore serves as an identifier for manipulating model elements.
 
 ### Selection
 To know what model elements are currently selected by user, call the ```getElementIndicesBySelection``` function. You can use the ```anyElementSelected``` function to check if there's any selected model element beforehand. To clear current selection, call the ```unselectAllElements``` function.

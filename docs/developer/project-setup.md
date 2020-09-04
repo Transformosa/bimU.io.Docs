@@ -7,7 +7,7 @@ If you use vanilla HTML, CSS, JavaScript or a front-end framework that doesn't r
 
 ``` html
 <script src="https://cdn.jsdelivr.net/npm/three@0.113.2/build/three.min.js" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bimu.io.viewer@0.0.6/dist/bimU.io.Viewer.umd.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bimu.io.viewer@latest/dist/bimU.io.Viewer.umd.js" crossorigin="anonymous"></script>
 ```
 
 You can also use a JavaScript package manager to install the both libraries. Since Three.js is specified as a dependency of bimU.io Viewer API, below is an NPM command that will save them to your project folder at the same time.

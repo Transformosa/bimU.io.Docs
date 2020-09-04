@@ -81,6 +81,24 @@ let limit = 100;
 viewer.getElementDataByProperty(propertyFilters, propertySelectors, limit, onSuccess, onError);
 ```
 
+#### Model Element Identifiers
+As mentioned [here](/developer/model-elements), bimU.io uses **element index** as model element identifier internally. In addition to that, bimU.io also stores other identifiers sourced from authoring formats. Every identifier has a corresponding property name stored in the BIM database as well:
+
+- ```eIdx```: bimU.io's internal element index.
+- ```uId```: Unique ID, such as IFC's ```IfcGuid```, Revit's ```UniqueId```, Navisworks' ```InstanceGuid```, and Tekla's ```Identifier.GUID```.
+- ```eId```: Element ID, such as Revit's ```ElementId``` and Tekla's ```Identifier.ID```.
+
+To use identifiers in a database query, simply leave **group name** blank or ```null```:
+
+``` javascript
+// Look for element index equals to "0"
+let propertyFilter1 = new bimU.PropertyFilter(null, "eIdx", "0");
+// Return unique ID
+let propertySelector1 = new bimU.PropertySelector("", "uId");
+// Return element ID as integer and rename it to "ElementId"
+let selectExpression = `CAST("eId" AS INTEGER) as "ElementId"`;
+```
+
 #### Raw Query
 It is possible to create a very complicated query. That said, writing an arbitrary query from scratch is only recommended for advanced users. If you have good knowledge in SQL, you can write a **Filter** expressesion along with a **Select** expression to run the ```getElementDataByQuery``` function like below.
 
