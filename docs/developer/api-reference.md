@@ -98,6 +98,7 @@
     * [.removeDomElement(domElementId)](#Viewer+removeDomElement)
     * [.setBackgroundColor(color)](#Viewer+setBackgroundColor)
     * [.toggleWireframeMode([isWireframe])](#Viewer+toggleWireframeMode)
+    * [.getScreenshot(openInNewWindow)](#Viewer+getScreenshot) ⇒ <code>string</code>
     * [.getElementDataByQuery(filterExpression, selectExpression, limit, onSuccess, onError)](#Viewer+getElementDataByQuery)
     * [.getElementDataByProperty(propertyFilters, propertySelectors, limit, onSuccess, onError)](#Viewer+getElementDataByProperty)
     * [.aggregateElementProperty(propertyFilters, propertyToAggregate, aggregateFunction, onSuccess, onError)](#Viewer+aggregateElementProperty)
@@ -497,7 +498,7 @@ This method adds a 3D sprite to a particular location.
 | text | <code>string</code> | Text to display in tag. |
 | location | <code>THREE.Vector3</code> | 3D point where tag is placed. |
 | [options] | [<code>TagOptions</code>](#TagOptions) | Tag display options. |
-| [onClick] | <code>function</code> | WORK IN PROGRESS. Callback function when tag is clicked. |
+| [onClick] | <code>function</code> | Callback function when tag is clicked. |
 
 <a name="Viewer+removeTag"></a>
 
@@ -600,6 +601,18 @@ Turns on or off wireframe mode.
 | Param | Type | Description |
 | --- | --- | --- |
 | [isWireframe] | <code>boolean</code> | Use true to show wireframe or false to hide it. It toggles the wireframe mode if the parameter is not set. |
+
+<a name="Viewer+getScreenshot"></a>
+
+### viewer.getScreenshot(openInNewWindow) ⇒ <code>string</code>
+Returns screenshot of the viewer canvas.
+
+**Kind**: instance method of [<code>Viewer</code>](#Viewer)  
+**Returns**: <code>string</code> - A DOMString containing a data URI containing a representation of the screenshot.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| openInNewWindow | <code>boolean</code> | Whether opens screenshot in a new window/tab. |
 
 <a name="Viewer+getElementDataByQuery"></a>
 
