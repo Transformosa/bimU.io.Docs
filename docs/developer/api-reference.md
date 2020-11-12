@@ -74,6 +74,7 @@
     * [.hideSelectedElements()](#Viewer+hideSelectedElements)
     * [.isolateSelectedElements()](#Viewer+isolateSelectedElements)
     * [.isPointInSectionBox(point)](#Viewer+isPointInSectionBox)
+    * [.clearAllColorOverrides()](#Viewer+clearAllColorOverrides)
     * [.getFileProperties(onSuccess, onError)](#Viewer+getFileProperties)
     * [.getModelMetadata(onSuccess, onError)](#Viewer+getModelMetadata)
     * [.getElementDataByIndex(elementIndex, onSuccess, onError)](#Viewer+getElementDataByIndex)
@@ -354,6 +355,12 @@ Checks whether a 3D point is within the current section box.
 | --- | --- | --- |
 | point | <code>THREE.Vector3</code> | A 3D point. |
 
+<a name="Viewer+clearAllColorOverrides"></a>
+
+### viewer.clearAllColorOverrides()
+Removes color overrides from all elements.
+
+**Kind**: instance method of [<code>Viewer</code>](#Viewer)  
 <a name="Viewer+getFileProperties"></a>
 
 ### viewer.getFileProperties(onSuccess, onError)
@@ -448,7 +455,7 @@ Overrides element color.
 | Param | Type | Description |
 | --- | --- | --- |
 | elementIndices | <code>Array.&lt;number&gt;</code> | An array of element indices. |
-| color | <code>THREE.Color</code> | Color object in RGB. |
+| color | <code>THREE.Color</code> | Three.js color object. |
 
 <a name="Viewer+setTexture"></a>
 

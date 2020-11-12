@@ -17,7 +17,7 @@ viewer.setVisibility([0, 1, 2, 3, 4], true, true);
 There are two functions that can restore a model to its original state, i.e., all model elements are visible. The ```unhideAllElements``` function is self-explanatory. The ```resetVisibility``` function will not only unhide all elements but also clear current section box.
 
 ### Color Override
-Occasionally you might need to change color for some model elements. For example, highlighting a clash, categorising by disciplines, etc. The ```setColor``` function allows to override original color of model elements. Below example highlights element indices from 0 to 4 in red. Calling the ```resetColor``` function will restore original colors.
+Occasionally you might need to change color for some model elements. For example, highlighting a clash, categorising by disciplines, etc. The ```setColor``` function allows to override original color of model elements. Below example highlights element indices from 0 to 4 in red. Calling the ```clearAllColorOverrides``` function will restore original colors for all model elements.
 
 ``` javascript
 // Element indices 0 to 4 will become red
