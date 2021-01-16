@@ -58,7 +58,7 @@ You can enable sectioning to slice your model to view more details inside. To di
 
 In bimU.io, a markup is more than an image with some sketches. In addition to adding lines, shapes, freehand drawings, texts, etc. to annotate a screenshot of model view, every markup can capture a camera viewpoint and include a short description. You can then navigate to this location in a model later by opening the viewpoint in the 3D viewer or other BIM software. The concept is similar to BIM Collaboration Format (BCF). 
 
-!!! info "bimU.io Agile, our full-fledged BIM issue tracking solution, will also support BCF in late 2020."
+!!! info "bimU.io Agile, our full-fledged BIM issue tracking solution, will also support BCF in late 2021."
 
 #### Create a Markup
 

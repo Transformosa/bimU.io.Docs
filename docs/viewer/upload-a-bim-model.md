@@ -120,8 +120,8 @@ Both IFC 2x3 and IFC 4 formats are supported. Uploading an IFC file is quite str
 
 We aim to support more and more authoring software and 3D file formats in the future. The below items have been prioritised for developement. Note that the delivery timelines may change. Stay tuned on our our social media (<a href="#" target="_blank">Twitter</a>, <a href="#" target="_blank">Facebook</a>, <a href="#" target="_blank">YouTube</a>, <a href="#" target="_blank">Blog</a>) for the updates.
 
-- **McNeel Rhinoceros 3D (.3dm):** May 2020
-- **Trimble SketchUp (.skp):** June 2020
+- **McNeel Rhinoceros 3D (.3dm)**
+- **Trimble SketchUp (.skp)**
 
 ### Notifications
 

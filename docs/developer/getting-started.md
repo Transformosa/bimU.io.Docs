@@ -13,7 +13,7 @@ bimU.io Viewer API is a development toolkit that provides out-of-the-box 3D BIM 
 ### Prerequisites
 
 - Basic programming skills and web development experience in JavaScript, HTML, CSS, etc. will be helpful. bimU.io Viewer is built upon the most popular Web 3D library - Three.js. Knowledge in computer graphics and Three.js will bring you up to speed.
-- You need to have a bimU.io Pro account which is currently the default subscription and freely available until December 2020.
+- You need to have a bimU.io Pro account which is currently the default subscription and freely available until June 2021.
 - You need to upload your BIM model to bimU.io Viewer or simply use the sample models provided by bimU.io.
 - There are various different options in terms of website hosting. For development purpose, we recommend Web Server for Chrome if you are going to code in vanilla HTML, JavaScript, or jQuery. Furthermore, if you are an experienced web developer, a development server included in a front-end stack or boilerplate, such as React, Angular, Vue, etc. is a preferred option. For production use, while most cloud providers, such as AWS, Azure, etc. offer static site hosting capabilities, products like Netlify or Firebase Hosting would make your life much easier.
 - Using the latest version of Google Chrome browser is always recommended.
