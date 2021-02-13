@@ -15,21 +15,22 @@ bimU.io Launcher is a middleware that exchanges data between bimU.io and BIM sof
 
 #### Supported BIM Software
 
-- Autodesk Revit 2014-2020
-- Autodesk Navisworks 2014-2020
-- Trimble Tekla Structures 21.0-2019
+- Autodesk Revit 2014-2021
+- Autodesk Navisworks 2014-2021
+- Trimble Tekla Structures 21.0-2020
+- Solibri 9.12.1 (Open viewpoint only)
 
 #### Download Installer
 
-**<a href="https://github.com/Transformosa/bimU.io.Launcher/releases/download/2019.10.14.0/bimU_io_Launcher_2019.10.14.0.exe" target="_blank">Download bimU.io Launcher 2019.10.14.0</a>**
+**<a href="https://github.com/Transformosa/bimU.io.Launcher/releases/download/2021.2.8.0/bimU_io_Launcher_2021.2.8.0.exe" target="_blank">Download bimU.io Launcher 2021.2.8.0</a>**
 
 !!! warning "Please close all BIM software sessions prior to installation."
 
-The latest version of bimU.io Launcher is 2019.10.14.0. The installer can downloaded from the link above. Technically speaking, admin right is NOT required for the installation. Please speak to your IT staffs if you don't have permission to install it.
+The latest version of bimU.io Launcher is 2021.2.8.0. The installer can downloaded from the link above. Technically speaking, admin right is NOT required for the installation. Please speak to your IT staffs if you don't have permission to install it.
 
 #### Automatic Update
 
-bimU.io Launcher performs automatic update behind the scene for the installed components. However, you will need to download a new installer for a new version of BIM software. For example, bimU.io Launcher can update itself for Autodesk software 2014-2020 whenever bimU.io has a new release or a bug fixed. But a new installer will be required to support Autodesk software 2021 next year.
+bimU.io Launcher performs automatic update behind the scene for the installed components. However, you will need to download a new installer for a new version of BIM software. For example, bimU.io Launcher can update itself for Autodesk software 2014-2021 whenever bimU.io has a new release or a bug fixed. But a new installer will be required to support Autodesk software 2022 next year.
 
 ![Screenshot](../images/checkversion.png){: class="center" style="width:40%"}
 

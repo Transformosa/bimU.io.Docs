@@ -26,9 +26,9 @@ You can control the camera with the following tools to view the 3D scene from di
 
 - **Zoom to Fit:** This tool fits the entire model into the current viewport. It is particularly useful when you get lost in the 3D scene.
 - **Zoom to Selection:** This tool fits the selected elements into the current viewport to focus on them. You can use this tool if a target is too far or too close to zoom. 
-- **Open Viewpoint:** This tool opens the current camera viewpoint in BIM software. See more details [here](#open-viewpoint-in-bim-software).
+- **Set Viewpoint:** This tool sets the current camera viewpoint from/to BIM software. See more details [here](#open-viewpoint-in-bim-software).
 
-!!! warning "You must have bimU.io Launcher installed to open a viewpoint in BIM software."
+!!! warning "You must have bimU.io Launcher installed to set a viewpoint from/to BIM software."
 
 - **Rotate View:** This tool can view your model from all sides of the bounding box, including top, bottom, front, back, left, and right.
 
@@ -87,6 +87,8 @@ A viewpoint attached to a markup can be opened directly in the 3D viewer. It wou
 !!! warning "You must have bimU.io Launcher installed to open a viewpoint in BIM software."
 
 Make sure bimU.io Launcher is running and connected to browser. Then you can open a saved viewpoint in any supported BIM software as long as a corresponding model file is also opened. More details around bimU.io Launcher can be found [here](/upload-a-bim-model#install-bimuio-launcher).
+
+The latest version of bimU.io Launcher supports setting camera viewpoint from/to Solibri. Please make sure Solibri is opened with REST API enabled and bimU.io Launcher is running in the background. We've created a Windows program called **Start Solibri** that does everything needed to use this function. You can find it in the `Start Menu` -> `bimU.io` or `Transformosa` -> `Start Solibri`.
 		
 ### View BIM Data
 
