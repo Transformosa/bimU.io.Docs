@@ -88,7 +88,7 @@ A viewpoint attached to a markup can be opened directly in the 3D viewer. It wou
 
 Make sure bimU.io Launcher is running and connected to browser. Then you can open a saved viewpoint in any supported BIM software as long as a corresponding model file is also opened. More details around bimU.io Launcher can be found [here](/upload-a-bim-model#install-bimuio-launcher).
 
-The latest version of bimU.io Launcher supports setting camera viewpoint from/to Solibri. Please make sure Solibri is opened with REST API enabled and bimU.io Launcher is running in the background. We've created a Windows program called **Start Solibri** that does everything needed to use this function. You can find it in the `Start Menu` -> `bimU.io` or `Transformosa` -> `Start Solibri`.
+The latest version of bimU.io Launcher supports setting camera viewpoint from/to Solibri. Please make sure Solibri is opened with REST API enabled and bimU.io Launcher is running in the background. We've created a Windows program called **Start Solibri** that does everything needed to use this function. You can find it in the `Start Menu` => `bimU.io` (or `Transformosa`) => `Start Solibri`.
 		
 ### View BIM Data
 
@@ -100,7 +100,7 @@ Model specific data refers to document-level information, such as project detail
 
 #### Element Tab
 
-Model element data includes all properties of a selected element. It can be a `Revit Parameter`, a `Navisworks Property`, a `Tekla Attribute`, or an IfcPropertySingleValue. 
+Model element data includes all properties of a selected element. It can be a `Revit Parameter`, a `Navisworks Property`, a `Tekla Attribute`, or an `IfcPropertySingleValue`. 
 
 #### File Tab
 
@@ -109,3 +109,6 @@ These are file properties specific to bimU.io, such as model source, file size, 
 ### Mobile User Interface
 
 A simplified user interface will be enabled on a mobile device if the screen size is too small. You can still view BIM data from the toolbar though some of the tools might be disabled. The main user interface might be available if you change device orientation to landscape mode and then refresh the entire page.
+
+### bimU.io Reality - Augmented Reality
+bimU.io Reality is an interactive 3D visualisation tool that animates Digital Twin in real-world environment. Every BIM model hosted on bimU.io Viewer can be displayed in Augmented Reality in minutes. bimU.io Reality is a web-based, full-featured, easy-to-use Augmented Reality application that overlays BIM models into the physical world — as if they’re actually there with you, in your own space. It is the best stakeholder engagement tool that offers interactivity and intuitiveness for facilitating 3D model navigation and BIM design review. Check out [this blog post](http://bit.ly/bim-ar) for more details.
