@@ -106,7 +106,14 @@ nav:
   - Terms of Service: viewer/terms-of-service.md
   - Privacy Policy: viewer/privacy-policy.md
   - bimU.io Agile: 
-    - Overview: agile/agile-overview.md
+    - bimU.io Agile Overview: agile/overview.md
+    - Get Started with bimU.io Agile: agile/get-started.md
+    - Collaborate in a Channel: agile/collaborate-in-a-channel.md
+    - Manage Channel Members: agile/manage-channel-members.md
+    - Manage and Resolve Issues: agile/manage-and-resolve-issues.md
+    - Configure Issue Fields: agile/configure-issue-fields.md
+    - Navigate BIM Models: agile/navigate-bim-models.md
+    - Gain Insight from Analytics: agile/gain-insight-from-analytics.md    
   - Developer Guide: 
     - Getting Started: developer/getting-started.md
     - Project Setup: developer/project-setup.md
