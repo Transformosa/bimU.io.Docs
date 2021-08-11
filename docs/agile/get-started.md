@@ -1,70 +1,76 @@
 # Get Started with bimU.io Agile
+This is a quick start guide to walk you through some basic functionality on bimU.io Agile.
 
 ### Log in to bimU.io Agile
+Single Sign-On (SSO) is enforced on bimU.io Agile. Every user needs to have a **Microsoft** or **Google** account to log in. It can be a company, school, organisation, or personal account. Simply go to **<a href="https://agile.bimu.io" target="_blank">bimU.io Agile</a>** and select preferred login method to continue.
+
+![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
+
+If you're a first-time user, make sure your profile is correct before creating a bimU.io Agile account.
+
+![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
 
 ### Welcome Information
+You'll see a welcome screen if you don't have any active channel. Try to install **<a href="/" target="_blank">bimU.io Launcher</a>** if you want to upload models from BIM software. Documentation is also available.
 
-### Top Menu Bar
+![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
 
 ### Create New Channel
+**Channel** is a workspace for team collaboration where BIM models and issues are stored. Click the `CREATE MY FIRST CHANNEL` button to create a new channel. Make sure ``Create channel with sample data`` is ticked if you'd like to view sample issues and sample models.
 
-### Invite Your Project Team Members
+![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
+
+Once a channel is created, you'll see an issue list view by default. The navigation menu on the left-hand side is specific to this channel.
+
+![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
+
+There are also some quick actions available on the top menu bar.
+
+![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
+
+### Invite Your Team Members
+Now it's time to add your project team members to this channel. Click the ``+`` button on the top menu and select ``Add Member``. You can then send invites to multiple email addresses. Your team members can join the channel from a unique link in the email. They'll be logging in to bimU.io Agile in the same way.
+
+![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
 
 ### Create New Issue
+**Issue** is normally a problem found in BIM models that you want to capture and track. Click the ``CREATE ISSUE`` button on the left menu to create a new issue. If you already have **bimU.io Launcher** installed and supported BIM software opened, it is possible to capture a snapshot of the active 3D view and its viewpoint. Fill in relevant issue information and then click ``Create``.
 
-### Upload BIM Model
+![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
+
+## Kanban Board
+You can review issues on the **<a href="https://en.wikipedia.org/wiki/Kanban_board" target="_blank">Kanban board</a>** that visually categorises issues in vertical columns. Drag an issue card and put it into another column to push it forward.
+
+![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
+
+Click on an issue card to see its details.
+
+![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
+
+Moreover, you can open a saved viewpoint in BIM software or in bimU.io Agile's online model viewer.
+
+![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
+
+### Navigate BIM Models
+Click the ``UPLOAD MODEL`` button on the left menu to upload an IFC file or export a model view from BIM software. Once uploaded, it will show up on the ``Models`` page.
+
+![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
+
+Select a model file to open up the web viewer. 3D navigation tools are available on the toolbar. Element properties, model metadata, etc. can be viewed from the right panels.
+
+![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
+
+### Issues and Web Viewer
+
+![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
 
 ### Personal Dashboard
 
-### Personal Profile 
+![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
 
-There are two ways to upload your BIM models:
+### Personal Profile
 
-- **Upload from BIM Software:** Uploading from a BIM model view within authoring software gives you more control of how it looks like on bimU.io. What You See Is What You Get (WYSIWYG). Please follow the instructions in the next section to install the bimU.io Launcher before uploading a BIM model from authoring software.
-- **Upload IFC files:** The industry standard IFC (Industry Foundation Classes) format is also supported. Most authoring software can export to an IFC file. You can then upload it to bimU.io directly. 
+![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
 
-### Install bimU.io Launcher
-
-!!! warning "Note that you must have bimU.io Launcher installed to upload a model from BIM software."
-
-#### What is bimU.io Launcher?
-
-bimU.io Launcher is a middleware that exchanges data between bimU.io and BIM software. It is a background process running along with BIM software without a user interface. Unlike other third-party tools that require a plugin opened manually within various BIM software for exporting data, bimU.io Launcher implements the so-called **Pluginless** technology which allows users to stick with a single user interface, i.e., using bimU.io via browser.
-
-#### Supported BIM Software
-
-- Autodesk Revit 2014-2021
-- Autodesk Navisworks 2014-2021
-- Trimble Tekla Structures 21.0-2020
-- Solibri 9.12.1 (Open viewpoint only)
-
-#### Download Installer
-
-**<a href="https://github.com/Transformosa/bimU.io.Launcher/releases/download/2021.2.8.0/bimU_io_Launcher_2021.2.8.0.exe" target="_blank">Download bimU.io Launcher 2021.2.8.0</a>**
-
-!!! warning "Please close all BIM software sessions prior to installation."
-
-The latest version of bimU.io Launcher is 2021.2.8.0. The installer can downloaded from the link above. Technically speaking, admin right is NOT required for the installation. Please speak to your IT staffs if you don't have permission to install it.
-
-#### Automatic Update
-
-bimU.io Launcher performs automatic update behind the scene for the installed components. However, you will need to download a new installer for a new version of BIM software. For example, bimU.io Launcher can update itself for Autodesk software 2014-2021 whenever bimU.io has a new release or a bug fixed. But a new installer will be required to support Autodesk software 2022 next year.
-
-![Screenshot](../images/checkversion.png){: class="center" style="width:40%"}
-
-You can check out the installed version fo bimU.io Launcher from the top menu bar. For an automatic update to take effect immediately, we suggest repeat the following steps **twice**: 
-
-1. Restart your machine or log off Windows.
-
-2. Make sure you have a stable internet connection.
-
-3. Open any supported BIM software.
-
-4. Open any file and wait for one minute.
-
-#### Troubleshooting
-
-If you have any problem installing or using bimU.io Launcher, please log a support ticket with the following two items attached if they exist:
-
-- **Log File:** Open Windows File Explorer and paste `%localappdata%\temp\bimU.io.log` in the address bar. The log file is stored as `launcher.log` in the folder.
-- **Error Code:** An error code, such as `No BIM software is currently opened. Error code: 1002`, would be shown in browser when something goes wrong on bimU.io.
+### What's More?
+- 
