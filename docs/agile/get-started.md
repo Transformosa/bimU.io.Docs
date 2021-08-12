@@ -34,7 +34,7 @@ Now it's time to add your project team members to this channel. Click the ``+`` 
 ![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
 
 ### Create New Issue
-**Issue** is normally a problem found in BIM models that you want to capture and track. Click the ``CREATE ISSUE`` button on the left menu to create a new issue. If you already have **bimU.io Launcher** installed and supported BIM software opened, it is possible to capture a snapshot of the active 3D view and its viewpoint. Fill in relevant issue information and then click ``Create``.
+**Issue** is normally a problem found in BIM models that you want to capture and track. Click the ``CREATE ISSUE`` button on the left menu to create a new issue. If you already have **bimU.io Launcher** installed and supported BIM software opened, it is possible to capture a snapshot of the active 3D view and its camera viewpoint. Fill in relevant issue information and then click ``Create``.
 
 ![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
 
@@ -61,16 +61,16 @@ Select a model file to open up the web viewer. 3D navigation tools are available
 ![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
 
 ### Issues and Web Viewer
+You can also create or view issues directly from bimU.io's web viewer. If a BIM model is opened in the web viewer, a snapshot of the current view as well as its camera viewpoint will automatically be captured when you create an issue. There's also an ``Issues`` panel on the right-hand side that allows you to view issues side by side and open viewpoints more quickly. 
 
 ![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
 
 ### Personal Dashboard
+Personal dashboard is bimU.io Agile's landing page. It puts together some updates, including pinned channels, recently viewed issues, recently uploaded models, issues assigned, issues due, etc.
 
 ![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
 
 ### Personal Profile
+Make your profile complete allows your collaborators to know your project or business role. Open your profile from the top right avatar, then you can change your name, company, and job title. 
 
 ![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
-
-### What's More?
-- 
