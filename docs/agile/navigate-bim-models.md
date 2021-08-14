@@ -1,52 +1,75 @@
 # Navigate BIM Models
+This section talks about how to upload, manage, and view BIM models. 
+
+### Upload Models
+Click the ``UPLOAD MODEL`` button on the left menu to open up the dialog.
+
+![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
 
 There are two ways to upload your BIM models:
 
-- **Upload from BIM Software:** Uploading from a BIM model view within authoring software gives you more control of how it looks like on bimU.io. What You See Is What You Get (WYSIWYG). Please follow the instructions in the next section to install the bimU.io Launcher before uploading a BIM model from authoring software.
-- **Upload IFC files:** The industry standard IFC (Industry Foundation Classes) format is also supported. Most authoring software can export to an IFC file. You can then upload it to bimU.io directly. 
+- **Upload from BIM Software:** Uploading from a model view within BIM software gives you more control of how it looks like on bimU.io Agile. What You See Is What You Get (WYSIWYG). Make sure you have [bimU.io Launcher](/upload-a-bim-model#install-bimuio-launcher) installed before uploading a model.
 
-### Install bimU.io Launcher
+![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
 
-!!! warning "Note that you must have bimU.io Launcher installed to upload a model from BIM software."
+- **Upload IFC files:** The industry standard IFC (Industry Foundation Classes) format is also supported. Most BIM modelling tools can export to an IFC file. You can then upload it to bimU.io Agile directly.
 
-#### What is bimU.io Launcher?
+![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
 
-bimU.io Launcher is a middleware that exchanges data between bimU.io and BIM software. It is a background process running along with BIM software without a user interface. Unlike other third-party tools that require a plugin opened manually within various BIM software for exporting data, bimU.io Launcher implements the so-called **Pluginless** technology which allows users to stick with a single user interface, i.e., using bimU.io via browser.
+### Manage Models
+You can find all uploaded models on the ``Models`` page. Click the button in the ``Category`` column and select a colour to put a model into a different category. You can then use the filter to find your models more quickly. To rename or delete a model, you can find the options from the three dot menu.
 
-#### Supported BIM Software
+![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
 
-- Autodesk Revit 2014-2021
-- Autodesk Navisworks 2014-2021
-- Trimble Tekla Structures 21.0-2020
-- Solibri 9.12.1 (Open viewpoint only)
+### Use Web Viewer
+bimU.io Agile's 3D viewer is web-based, which means that it is cross-platform and can be used on any device as long as you have a WebGL-enabled browser installed. Use the latest version of **Google Chrome** to achieve the best performance.
 
-#### Download Installer
+Click on a model filename or the magnifier button to enter the web viewer. There are a number of navigation tools in the horizontal toolbar.
 
-**<a href="https://github.com/Transformosa/bimU.io.Launcher/releases/download/2021.2.8.0/bimU_io_Launcher_2021.2.8.0.exe" target="_blank">Download bimU.io Launcher 2021.2.8.0</a>**
+![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
 
-!!! warning "Please close all BIM software sessions prior to installation."
+#### Basic Viewer Controls
 
-The latest version of bimU.io Launcher is 2021.2.8.0. The installer can downloaded from the link above. Technically speaking, admin right is NOT required for the installation. Please speak to your IT staffs if you don't have permission to install it.
+You can control the camera with the following tools to view the 3D scene from different perspectives.
 
-#### Automatic Update
+- **Orbit:** The orbit tool allows you to rotate the camera around your model by using `left mouse drag` on desktop or `one finger swipe` on mobile devices. The camera will orbit around the centre of current selection or the previous zoom target. 
+- **Pan:** The pan tool allows you to move the camera vertically or horizontally by using `mouse wheel drag` or `right mouse drag` on desktop or `two-finger scroll` on mobile devices.
+- **Zoom:** The zoom tool allows you to zoom in to focus on a specific area or zoom out to see more of your model by using `mouse wheel scroll` on desktop or `two-finger pinch` on mobile devices. The zoom speed will decrease gradually as the camera gets closer to the zoom target.
 
-bimU.io Launcher performs automatic update behind the scene for the installed components. However, you will need to download a new installer for a new version of BIM software. For example, bimU.io Launcher can update itself for Autodesk software 2014-2021 whenever bimU.io has a new release or a bug fixed. But a new installer will be required to support Autodesk software 2022 next year.
+#### Specfic Camera Viewpoints
 
-![Screenshot](../images/checkversion.png){: class="center" style="width:40%"}
+ You can use the following tools to set camera viewpoint to specific areas you want to see.
 
-You can check out the installed version fo bimU.io Launcher from the top menu bar. For an automatic update to take effect immediately, we suggest repeat the following steps **twice**: 
+- **Fit to View:** This tool fits the entire model into the current viewport. It is particularly useful when you get lost in the 3D scene.
+- **Zoom to Selection:** This tool fits the selected elements into the current viewport to focus on them. You can use this tool if a target is too far or too close to zoom.
+- **Rotate View:** This tool can view your model from all sides of the bounding box, including top, bottom, front, back, left, and right.
 
-1. Restart your machine or log off Windows.
+#### Section Cut
 
-2. Make sure you have a stable internet connection.
+You can enable sectioning to slice your model to view more details inside. To disable sectioning, use the **Reset Visibility** tool.
 
-3. Open any supported BIM software.
+- **Section Box:** This tool cuts model geometry by a rectangular box. The six edges of the section box can be adjusted using the grips.
+- **Section around Selection:** This tool creates a section box around the selected elements. Then you can expand it to view the adjacent area.
 
-4. Open any file and wait for one minute.
+#### Model Elements
 
-#### Troubleshooting
+- **Select Elements:** Use `left mouse click` to select a model element. `Shift + Left click` to select multiple elements.
+- **Hide Elements:** This tool hides the selected elements. You can use the **Reset Visibility** tool to unhide them.
 
-If you have any problem installing or using bimU.io Launcher, please log a support ticket with the following two items attached if they exist:
+#### Other Viewer Capabilities
 
-- **Log File:** Open Windows File Explorer and paste `%localappdata%\temp\bimU.io.log` in the address bar. The log file is stored as `launcher.log` in the folder.
-- **Error Code:** An error code, such as `No BIM software is currently opened. Error code: 1002`, would be shown in browser when something goes wrong on bimU.io.
+- **Reset Visibility:** This tool unhides all hidden elements and disables sectioning.
+- **Measuring Tool:** A few different measurement tools are available, such as reporting coordinates, measuring distance, height, angle, area, etc.
+- **Toogle Fullscreen:** This tool presents the entire viewport of the 3D viewer in browser's fullscreen mode.
+- **Toggle Camera Projection:** This tool can switch the camera between perspective and orthographic projection.
+
+#### Data Panels
+There is also a vertical toolbar on the right-hand side where you can open the panels below to view relevant data.
+
+![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
+
+- **File Properties Panel:** View file properties, such as model source, file size, timestamp, etc.
+- **Model Metadata Panel:** View document-level metadata, such as project details, location, coordinate system, other BIM software specific metadata, etc.
+- **Element Properties Panel:** View all properties of a selected element. A property can be a `Revit Parameter`, a `Navisworks Property`, a `Tekla Attribute`, or an `IfcPropertySingleValue`.
+- **Issues Panel:** View all issues in the current channel.
+- **Search Elements Panel:** Search model elements by a certain condition, e.g. find all elements having the same property value.
