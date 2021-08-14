@@ -34,11 +34,11 @@ Now it's time to add your project team members to this channel. Click the ``+`` 
 ![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
 
 ### Create New Issue
-**Issue** is normally a problem found in BIM models that you want to capture and track. Click the ``CREATE ISSUE`` button on the left menu to create a new issue. If you already have **bimU.io Launcher** installed and supported BIM software opened, it is possible to capture a snapshot of the active 3D view and its camera viewpoint. Fill in relevant issue information and then click ``Create``.
+**Issue** is usually a problem found in BIM models that you want to capture and track. Click the ``CREATE ISSUE`` button on the left menu to create a new issue. If you already have [bimU.io Launcher](/upload-a-bim-model#install-bimuio-launcher) installed and supported BIM software opened, it is possible to capture a snapshot of the active 3D view and its camera viewpoint. Fill in relevant issue information and then click ``Create``.
 
 ![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
 
-## Kanban Board
+### Kanban Board
 You can review issues on the **<a href="https://en.wikipedia.org/wiki/Kanban_board" target="_blank">Kanban board</a>** that visually categorises issues in vertical columns. Drag an issue card and put it into another column to push it forward.
 
 ![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
