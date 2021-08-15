@@ -18,6 +18,8 @@ Most ITS solutions also make it possible to assign issues to various persons in 
 
 ### Add New Issue Field
 
+<iframe class="center" width="560" height="315" src="https://www.youtube.com/embed/fN_n34CerfY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ### Edit Issue Field
 
 ### Delete Issue Field

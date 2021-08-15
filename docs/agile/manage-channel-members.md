@@ -7,9 +7,14 @@ Go to the ``Members`` page, every channel member can view and search member deta
 ![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
 
 ### Add Members to Channel
-Only a channel admin can add members to a channel. Click the ``ADD MEMBER`` button on the ``Members`` page or look for the same option from plus icon button in the top menu bar. You can then send an invite to multiple email addresses. When your team members receive the invite, they can join your channel from the unique link in the email. If your team members haven't used bimU.io Agile before, they will be prompted to create a bimU.io Agile account in the first place. 
+Only a channel admin can add members to a channel. Click the ``ADD MEMBER`` button on the ``Members`` page or look for the same option from plus icon button in the top menu bar. You can then send an invite to multiple email addresses.
 
 ![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
+
+### Join Channel
+When your team members receive the invite, they can join your channel from the unique link in the email. If your team members haven't used bimU.io Agile before, they will be prompted to create a bimU.io Agile account in the first place.
+
+<iframe class="center" width="560" height="315" src="https://www.youtube.com/embed/SAIKqpEBL-Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Manage Sent Invites
 Click the ``MANAGE INVITES`` button on the ``Members`` page to view who you've sent invites to. If you change your mind, click the delete icon button to withdraw an invite. 

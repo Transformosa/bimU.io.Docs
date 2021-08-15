@@ -18,7 +18,7 @@ You'll see a welcome screen if you don't have any active channel. Try to install
 ### Create New Channel
 **Channel** is a workspace for team collaboration where BIM models and issues are stored. Click the `CREATE MY FIRST CHANNEL` button to create a new channel. Make sure ``Create channel with sample data`` is ticked if you'd like to view sample issues and sample models.
 
-![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
+<iframe class="center" width="560" height="315" src="https://www.youtube.com/embed/tDmP-81b4Bw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Once a channel is created, you'll see an issue list view by default. The navigation menu on the left-hand side is specific to this channel.
 
@@ -31,7 +31,7 @@ There are also some quick actions available on the top menu bar.
 ### Invite Your Team Members
 Now it's time to add your project team members to this channel. Click the ``+`` button on the top menu and select ``Add Member``. You can then send invites to multiple email addresses. Your team members can join the channel from a unique link in the email. They'll be logging in to bimU.io Agile in the same way.
 
-![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
+<iframe class="center" width="560" height="315" src="https://www.youtube.com/embed/pNdLNfIn8Yg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Create New Issue
 **Issue** is usually a problem found in BIM models that you want to capture and track. Click the ``CREATE ISSUE`` button on the left menu to create a new issue. If you already have [bimU.io Launcher](/upload-a-bim-model#install-bimuio-launcher) installed and supported BIM software opened, it is possible to capture a snapshot of the active 3D view and its camera viewpoint. Fill in relevant issue information and then click ``Create``.

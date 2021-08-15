@@ -22,7 +22,7 @@ We fully understand the challenge of software procurement and expense recharge, 
 
 We are constantly adding short clips to the playlist below to demonstrate the functionality of bimU.io Agile. Stay tuned on our our social media (<a href="#" target="_blank">Twitter</a>, <a href="#" target="_blank">Facebook</a>, <a href="#" target="_blank">YouTube</a>, <a href="#" target="_blank">Blog</a>) for the updates.
 
-<iframe class="center" width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLBL8gXaMel0cMKo5X0t20y4MIB8Lqa4UH&amp;controls=1&amp;showinfo=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="center" width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLBL8gXaMel0fzV9YVMq_kJ3VLHiaa7whO&amp;controls=1&amp;showinfo=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### User Support
 
