@@ -4,7 +4,7 @@ This section talks about how to upload, manage, and view BIM models.
 ### Upload Models
 Click the ``UPLOAD MODEL`` button on the left menu to open up the dialog.
 
-![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
+![Screenshot](../images/model-list-and-upload-model-dialog.png){: class="center" style="width:80%"}
 
 There are two ways to upload your BIM models:
 
@@ -14,19 +14,19 @@ There are two ways to upload your BIM models:
 
 - **Upload IFC files:** The industry standard IFC (Industry Foundation Classes) format is also supported. Most BIM modelling tools can export to an IFC file. You can then upload it to bimU.io Agile directly.
 
-![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
+![Screenshot](../images/upload-ifc.png){: class="center" style="width:50%"}
 
 ### Manage Models
 You can find all uploaded models on the ``Models`` page. Click the button in the ``Category`` column and select a colour to put a model into a different category. You can then use the filter to find your models more quickly. To rename or delete a model, you can find the options from the three dot menu.
 
-![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
+![Screenshot](../images/model-list-select-category.png){: class="center" style="width:80%"}
 
 ### Use Web Viewer
 bimU.io Agile's 3D viewer is web-based, which means that it is cross-platform and can be used on any device as long as you have a WebGL-enabled browser installed. Use the latest version of **Google Chrome** to achieve the best performance.
 
 Click on a model filename or the magnifier button to enter the web viewer. There are a number of navigation tools in the horizontal toolbar.
 
-![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
+![Screenshot](../images/model-viewer-element-properties-panel.png){: class="center" style="width:80%"}
 
 #### Basic Viewer Controls
 
@@ -66,7 +66,7 @@ You can enable sectioning to slice your model to view more details inside. To di
 #### Data Panels
 There is also a vertical toolbar on the right-hand side where you can open the panels below to view relevant data.
 
-![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
+![Screenshot](../images/data-panels.png){: class="center" style="width:50%"}
 
 - **File Properties Panel:** View file properties, such as model source, file size, timestamp, etc.
 - **Model Metadata Panel:** View document-level metadata, such as project details, location, coordinate system, other BIM software specific metadata, etc.

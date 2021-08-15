@@ -27,12 +27,12 @@ Click the ``ADD`` button next to an issue field to create a new option.
 ### Edit Issue Field Option
 Click the edit button next to an option to modify it.
 
-![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
+![Screenshot](../images/edit-issue-type-option.png){: class="center" style="width:50%"}
 
 ### Delete Issue Field Option
 Click the delete button next to an option to delete it. You must also select a replacement option. Issues that currently have the deleted option will be replaced by the selected replacement option.
 
-![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
+![Screenshot](../images/delete-issue-status-option.png){: class="center" style="width:50%"}
 
 ### Non-configurable Issue Fields
 There are also some issue fields that don't have modifiable options and therefore not configurable.

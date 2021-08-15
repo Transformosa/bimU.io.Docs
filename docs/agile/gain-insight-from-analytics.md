@@ -4,29 +4,29 @@ The ``Analytics`` page provides some necessary statistics and accountability mea
 ### Issue Metrics
 This shows the total number of issues and how many of them are unassigned, overdue, active, and closed.
 
-![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
+![Screenshot](../images/issue-metrics.png){: class="center" style="width:40%"}
 
 ### Issue Field Pie Charts
 For every quantifiable issue field, there's a corresponding pie chart to show the percentage of every option.
 
-![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
+![Screenshot](../images/pie-chart.png){: class="center" style="width:40%"}
 
 ### Issue Burnup Chart
 A burnup chart is a tool used to track how many issues have been resolved (i.e. moved to the final status), and show the total number of issues in a channel.
 
-![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
+![Screenshot](../images/burnup-chart.png){: class="center" style="width:80%"}
 
 ### Issue Cumulative Flow
 A cumulative flow is an area chart that shows the various issue statuses over time. Each coloured area of the chart equates to an issue status.
 
-![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
+![Screenshot](../images/cumulative-flow.png){: class="center" style="width:80%"}
 
 ### Issue Daily Counts
 This is similar to the burnup chart but in a bar chart format.
 
-![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
+![Screenshot](../images/bar-chart.png){: class="center" style="width:80%"}
 
 ### Responsibility Matrix
 A responsibility matrix is a tool to monitor workload for every assignee as per status or priority.
 
-![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
+![Screenshot](../images/responsibility-matrix.png){: class="center" style="width:80%"}

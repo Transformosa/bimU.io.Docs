@@ -4,12 +4,12 @@ You are a channel admin by default when you create a new channel. Every team mem
 ### View and Search Members
 Go to the ``Members`` page, every channel member can view and search member details.
 
-![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
+![Screenshot](../images/members.png){: class="center" style="width:80%"}
 
 ### Add Members to Channel
 Only a channel admin can add members to a channel. Click the ``ADD MEMBER`` button on the ``Members`` page or look for the same option from plus icon button in the top menu bar. You can then send an invite to multiple email addresses.
 
-![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
+![Screenshot](../images/add-members.png){: class="center" style="width:60%"}
 
 ### Join Channel
 When your team members receive the invite, they can join your channel from the unique link in the email. If your team members haven't used bimU.io Agile before, they will be prompted to create a bimU.io Agile account in the first place.
@@ -19,12 +19,12 @@ When your team members receive the invite, they can join your channel from the u
 ### Manage Sent Invites
 Click the ``MANAGE INVITES`` button on the ``Members`` page to view who you've sent invites to. If you change your mind, click the delete icon button to withdraw an invite. 
 
-![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
+![Screenshot](../images/sent-invites.png){: class="center" style="width:60%"}
 
 ### Member Roles and Permissions
 There are two channel roles with different permissions: ``Admin`` and ``Member``. The default role for a new channel member is ``Member``. You need to be an ``Admin`` to change a member's role on the ``Members`` page.
 
-![Screenshot](../images/checkversion.png){: class="center" style="width:80%"}
+![Screenshot](../images/change-role.png){: class="center" style="width:30%"}
 
 Below is a list of permissions of what an ``Admin`` or a ``Member`` can do.
 
@@ -53,3 +53,8 @@ Below is a list of permissions of what an ``Admin`` or a ``Member`` can do.
 | Delete all comments     |   V   |        |
 | Delete own comments     |   V   |    V   |
 | Delete all issues       |   V   |        |
+
+### Remove Member from Channel
+You need to be a channel admin to remove members. Click the cross button to remove a member from the current channel.
+
+![Screenshot](../images/remove-member.png){: class="center" style="width:40%"}
