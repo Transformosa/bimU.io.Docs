@@ -52,7 +52,9 @@ Go to the ``Board`` page to view all issues on a <a href="https://en.wikipedia.o
 ![Screenshot](../images/kanban-board-row-group.png){: class="center" style="width:80%"}
 
 ### View Issues alongside Web Viewer
-Open a BIM model in bimU.io Agile's web viewer and click the ``Issues`` icon button on the right toolbar. All issues will show up on an ``Issues`` panel. You can quickly open a saved viewpoint in the web viewer from an issue card.
+Open a BIM model in bimU.io Agile's web viewer and click the ``Issues`` icon button on the right toolbar. All issues in the current channel will show up on an ``Issues`` panel. You can quickly open a saved viewpoint in the web viewer from an issue card.
+
+!!! info "You must have an identical BIM model uploaded to bimU.io Agile in the first place."
 
 ![Screenshot](../images/issues-panel-open-viewpoint.png){: class="center" style="width:80%"}
 
@@ -67,7 +69,9 @@ Clicking an issue on either a table row or a card will open up a dialog that sho
 ![Screenshot](../images/issue-details-dialog-editing.png){: class="center" style="width:80%"}
 
 ### Open Viewpoint
-Saved viewpoint can be opened in supported BIM software or in bimU.io Agile's web viewer. Click the magnifier button and select where you want the viewpoint to be opened. Before opening a viewpoint, you **must** also open the original BIM model file or an identical BIM model. The underlying principle is similar to <a href="https://github.com/BuildingSMART/BCF-XML/tree/master/Documentation#visualization-information-bcfv-file" target="_blank">BCF (BIM Collaboration Format) viewpoint</a>.
+Saved viewpoint can be opened in supported BIM software or in bimU.io Agile's web viewer. Click the magnifier button and select where you want the viewpoint to be opened. The underlying principle is similar to <a href="https://github.com/BuildingSMART/BCF-XML/tree/master/Documentation#visualization-information-bcfv-file" target="_blank">BCF (BIM Collaboration Format) viewpoint</a>.
+
+!!! info "Before opening a viewpoint, you must also open the original BIM model file or an identical BIM model."
 
 ![Screenshot](../images/open-viewpoint-popover.png){: class="center" style="width:50%"}
 
