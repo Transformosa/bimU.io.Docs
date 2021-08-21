@@ -2,6 +2,8 @@
 
 bimU.io Viewer is a full-fledged online BIM model viewer that truly works for every project member. BIM is not exclusive to BIM managers and technicians. We've built an easy-to-use platform for everyone to review 3D design data without getting hands dirty. Simply upload your BIM model and it will be accessible via a browser instantly. Do some markups then share it securely or embed it in your collaboration software. All can be done with the **Free** version of bimU.io Viewer.
 
+<a href="https://viewer.bimu.io/" target="_blank" class="button center">Log in to bimU.io Viewer</a>
+
 <iframe class="center" width="560" height="315" src="https://www.youtube.com/embed/zGV0Pf2F-cw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Fully Functional Design Review Tool

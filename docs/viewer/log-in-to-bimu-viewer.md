@@ -1,6 +1,8 @@
 # Log in to bimU.io
 We aim to make your life easier. You don't need to sign up a new account to use bimU.io. Instead, we provide two ways of authentication. Simply log in to bimU.io via Microsoft or Google. Both of them support Single Sign-On (SSO). You can use your personal, company, or school account to log in. See details of different account types below.
 
+<a href="https://viewer.bimu.io/" target="_blank" class="button center">Log in to bimU.io Viewer</a>
+
 ### Log in with Microsoft Account
 ![Screenshot](../images/azuread.png){: class="center" style="width:60%"}
 

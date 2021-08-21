@@ -6,3 +6,17 @@
 [data-md-color-primary=blue-grey] .md-typeset a {
     color: #1976D2
 }
+
+.button {
+    width: 250px;
+    text-align: center;
+    background-color: #0277bd;
+    color: #fff !important;
+    padding: 5px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+.button:hover {
+    background-color: rgb(1, 83, 132);
+}
