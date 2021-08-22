@@ -1,5 +1,5 @@
 # Manage and Resolve Issues
-bimU.io Agile has a comprehensive issue tracking capability for recording and managing problems or tasks in BIM models. An issue can be anything from an interdisciplinary clash to a constructability problem. You can also add **Markup** to a BIM **Snapshot** with a saved **Viewpoint** while creating a new issue. Subsequently, you can review issues and open corresponding camera viewpoints within multiple BIM environments, including BIM modelling tools, BIM clash detection tools, and bimU.io Agile's online model viewer.
+bimU.io Agile has a comprehensive issue tracking capability for recording and managing problems or tasks in BIM models. An issue can be anything from an interdisciplinary clash to a constructability problem. You can also add **Markup** to a BIM **Snapshot** with a saved **Viewpoint** while creating a new issue. Subsequently, you can review issues and open corresponding camera viewpoints across multiple BIM environments, including BIM modelling tools, BIM clash detection tools, and bimU.io Agile's online model viewer.
 
 ### Create Issue
 Click the ``CREATE ISSUE`` button on the left menu to create a new issue. Alternatively, you can do it from the plus button in the top menu bar.
@@ -80,8 +80,12 @@ Again, make sure you have [bimU.io Launcher](/upload-a-bim-model#install-bimuio-
 
 !!! info "A perspective viewpoint will be opened as a camera view in Autodesk Revit which is a bit clunky to navigate. Use orthographic view to create an issue if you're going to review it in Revit."
 
+<iframe class="center" width="560" height="315" src="https://www.youtube.com/embed/at6vEQqTWh8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 #### Open Viewpoint in Web Viewer
 If you have the ``Issues`` panel opened alongside the web viewer, simply click the magnifier button on an issue card to open viewpoint. If you have the web viewer opened in another browswer window, you can open viewpoint from the issue details dialog. This is particularly useful when you have multiple monitors. For example, you can use the Kanban board and the web viewer at the same time by putting them on different screens.
+
+<iframe class="center" width="560" height="315" src="https://www.youtube.com/embed/MxAuKQP3Csw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Move Issues Forward
 Every issue should be progressively closed out based on the sequence of issue statuses. You can find more information [here](/agile/configure-issue-fields#status). If you have issues grouped by status in board columns, it's the easiest way to move issues to the next status column by drag-and-drop. Alternatively, you can change issue status in the issue details dialog.

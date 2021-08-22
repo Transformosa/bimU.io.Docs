@@ -10,7 +10,7 @@ There are two ways to upload your BIM models:
 
 - **Upload from BIM Software:** Uploading from a model view within BIM software gives you more control of how it looks like on bimU.io Agile. What You See Is What You Get (WYSIWYG). Make sure you have [bimU.io Launcher](/upload-a-bim-model#install-bimuio-launcher) installed before uploading a model.
 
-<iframe class="center" width="560" height="315" src="https://www.youtube.com/embed/10F3rJJzepw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="center" width="560" height="315" src="https://www.youtube.com/embed/yBOcVgl9wso" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 - **Upload IFC files:** The industry standard IFC (Industry Foundation Classes) format is also supported. Most BIM modelling tools can export to an IFC file. You can then upload it to bimU.io Agile directly.
 
