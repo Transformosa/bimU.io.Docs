@@ -113,7 +113,8 @@ nav:
     - Manage and Resolve Issues: agile/manage-and-resolve-issues.md
     - Configure Issue Fields: agile/configure-issue-fields.md
     - Navigate BIM Models: agile/navigate-bim-models.md
-    - Gain Insight from Analytics: agile/gain-insight-from-analytics.md    
+    - Gain Insight from Analytics: agile/gain-insight-from-analytics.md
+    - Product Roadmap: agile/product-roadmap.md 
   - Developer Guide: 
     - Getting Started: developer/getting-started.md
     - Project Setup: developer/project-setup.md
