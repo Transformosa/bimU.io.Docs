@@ -3,6 +3,8 @@ bimU.io Agile is a Cloud-based BIM issue tracking platform that aims to streamli
 
 <a href="https://agile.bimu.io/" target="_blank" class="button center">Log in to bimU.io Agile</a>
 
+<iframe class="center" width="560" height="315" src="https://www.youtube.com/embed/6WFwzB3B3Xk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ### Agile BIM Issue Tracker
 BIM issues are captured within a centrally managed database and can be visualised on a Kanban board or in a task list. Every team member can view issue details, comment on issues, and move issues forward. Issue fields are fully configurable to suit project requirements. You can define project specific issue types, statuses, priorities, disciplines, zones, etc.
 
