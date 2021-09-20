@@ -9,6 +9,8 @@
 <dd></dd>
 <dt><a href="#AggregateFunctionsEnum">AggregateFunctionsEnum</a></dt>
 <dd></dd>
+<dt><a href="#CameraTypesEnum">CameraTypesEnum</a></dt>
+<dd></dd>
 <dt><a href="#DataTypesEnum">DataTypesEnum</a></dt>
 <dd></dd>
 <dt><a href="#EventsEnum">EventsEnum</a></dt>
@@ -56,6 +58,7 @@
     * [.setViewpoint(viewpointObject)](#Viewer+setViewpoint)
     * [.getViewpoint()](#Viewer+getViewpoint) ⇒ [<code>Viewpoint</code>](#Viewpoint)
     * [.setSectionBox(min, max)](#Viewer+setSectionBox)
+    * [.setSectionBoxMode(mode)](#Viewer+setSectionBoxMode)
     * [.setProjectionMode(mode, value)](#Viewer+setProjectionMode)
     * [.isPerspectiveMode()](#Viewer+isPerspectiveMode) ⇒ <code>boolean</code>
     * [.toggleSectionbox([isVisible])](#Viewer+toggleSectionbox)
@@ -119,7 +122,6 @@ bimU.io Viewer main application. You should always create an instance of Viewer 
 ```js
 let viewerConfigs = {
     domElementId: "viewer",
-    baseUrl: "https://viewer.bimu.io/rest/api/v1",
     THREE: null,
     showFPS: true,
     showUI: false
@@ -198,6 +200,17 @@ Sets the section box orthogonally.
 | min | <code>THREE.Vector3</code> | Minimum coordinates (lower-left-rear corner of the box). |
 | max | <code>THREE.Vector3</code> | Maximum coordinates (upper-right-front corner of the box). |
 
+<a name="Viewer+setSectionBoxMode"></a>
+
+### viewer.setSectionBoxMode(mode)
+Sets the transformation mode of the section box.
+
+**Kind**: instance method of [<code>Viewer</code>](#Viewer)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| mode | <code>string</code> | The current transformation mode. Possible values are "custom", "translate", "rotate", and "scale". Default is "custom". |
+
 <a name="Viewer+setProjectionMode"></a>
 
 ### viewer.setProjectionMode(mode, value)
@@ -207,7 +220,7 @@ Changes camera parameters directly.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| mode | <code>CameraTypesEnum</code> | Perspective camera or orthographic camera. |
+| mode | [<code>CameraTypesEnum</code>](#CameraTypesEnum) | Perspective camera or orthographic camera. |
 | value | <code>number</code> | Field of View or View to World Scale. |
 
 <a name="Viewer+isPerspectiveMode"></a>
@@ -822,6 +835,23 @@ This method returns a SQL equivalent expression for the underlying selector.
 
 ### new AggregateFunctionsEnum()
 Enum for aggregate functions that perform a calculation on property values and return a single value.
+
+<a name="CameraTypesEnum"></a>
+
+## CameraTypesEnum
+**Kind**: global class  
+**Read only**: true  
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| PERSPECTIVE | <code>string</code> | Perspective projection. |
+| ORTHOGRAPHIC | <code>string</code> | Orthographic projection. |
+
+<a name="new_CameraTypesEnum_new"></a>
+
+### new CameraTypesEnum()
+Enum for camera types.
 
 <a name="DataTypesEnum"></a>
 
