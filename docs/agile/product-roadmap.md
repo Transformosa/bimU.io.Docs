@@ -4,14 +4,16 @@ We’re continuously developing new capabilities to enable your BIM-oriented, Cl
 !!! warning "Please note that delivery timelines may change and planned functionality may not be released."
 
 ### 2021 Q4
-- Section box improvement
+- Section box improvement (Deployed)
+- Bulk import issues from BCF (Deployed)
+- Issue attachments (Deployed)
+- Custom issue report in Microsoft Word format
+- SharePoint/OneDrive integration
 - Real-time notification for MS Teams, Slack, and WebHook
-- Bulk import issues from BCF, Navisworks, Solibri
-- Issue and model labelling/classification
-- Import organisational members from Azure AD
 
 ### 2022 Q1
-- SharePoint/OneDrive integration
+- Bulk import issues from Navisworks and Solibri
+- Import organisational members from Azure AD
 - Group model elements by property
 - Search model elements by property
 - Remember issue filters and board layout
@@ -20,6 +22,6 @@ We’re continuously developing new capabilities to enable your BIM-oriented, Cl
 ### 2022 Q2
 - Model federation
 - Model versioning
-- Issue attachments
+- Issue and model labelling/classification
 - Change profile picture
 - Full text search
