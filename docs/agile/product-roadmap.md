@@ -8,7 +8,7 @@ We’re continuously developing new capabilities to enable your BIM-oriented, Cl
 - Bulk import issues from BCF (Deployed)
 - Issue attachments (Deployed)
 - Custom issue report in Microsoft Word format
-- SharePoint/OneDrive integration
+- Use SharePoint document library as CDE
 - Real-time notification for MS Teams, Slack, and WebHook
 
 ### 2022 Q1
