@@ -1,21 +1,45 @@
 # Import and Export Issues
-Occasionally you might want to bulk import or export issue for various purposes. bimU.io Agile provides a number of different ways to do it.
+Occasionally you might want to bulk import or export issues for various purposes. bimU.io Agile provides a number of different ways to do it.
 
 ### Import Issues
-If you run clash detection or capture problems in other BIM software, it is possible to import issues in batch to bimU.io Agile. Click the ``plus`` button on the top right menu bar and select ``Import Issues``.
+If you run clash detection or capture problems in other BIM software, it is possible to import issues in batch to bimU.io Agile. Click the ``plus`` button on the top right menu bar and select ``Import Issues``. Then you can select which source to import issues from.
 
 ![Screenshot](../images/import-issues.png){: class="center" style="width:80%"}
 
 #### Import from BCF
-<a href="https://en.wikipedia.org/wiki/BIM_Collaboration_Format" target="_blank">BIM Collaboration Format (BCF)</a> is a structured file format suited to issue tracking with a building information model. bimU.io Agile supports BCF version 2.0 or 2.1 (.bcf/.bcfzip/.zip).
+<a href="https://en.wikipedia.org/wiki/BIM_Collaboration_Format" target="_blank">BIM Collaboration Format (BCF)</a> is a structured file format suited to issue tracking with a building information model. bimU.io Agile supports BCF version 2.1 (recommended) or 2.0 (.bcf/.bcfzip/.zip).
 
 ![Screenshot](../images/import-bcf.png){: class="center" style="width:80%"}
 
 #### Import from Navisworks
-This function is currently being developed and will be available in early 2022.
+There are two types of saved items in Navisworks: `Clash Detective` and `Saved Viewpoint`. Choose one to import. 
+
+![Screenshot](../images/nw-clash-detective.png){: class="center" style="width:80%"}
+
+Make sure you have the latest [bimU.io Launcher](/upload-a-bim-model#install-bimuio-launcher) installed and select a Navisworks session from the list to proceed to [Select Items](/agile/import-and-export-issues#select-items-to-import).
+
+![Screenshot](../images/import-nw.png){: class="center" style="width:80%"}
 
 #### Import from Solibri
-This function is currently being developed and will be available in early 2022.
+Please firstly make sure Solibri is opened with REST API enabled and [bimU.io Launcher](/upload-a-bim-model#install-bimuio-launcher) is running in the background. We've created a Windows program called **Start Solibri** that does everything needed to use this function. You can find it in the `Start Menu` => `bimU.io` (or `Transformosa`) => `Start Solibri`.
+
+By default, it will import all of the issues in the current `Presentation`. Alternatively, you can `select` or `mark` some issues to import.
+
+![Screenshot](../images/solibri-issues.png){: class="center" style="width:60%"}
+
+Make sure you have the latest [bimU.io Launcher](/upload-a-bim-model#install-bimuio-launcher) installed and select a Solibri session from the list to proceed to [Select Items](/agile/import-and-export-issues#select-items-to-import).
+
+![Screenshot](../images/import-solibri.png){: class="center" style="width:80%"}
+
+#### Select Items to Import
+Review and select what items to import. The table has a few tools, such as text search, filter, etc., that allow you to quickly find issues. Click `NEXT` to [Set Issue Properties](/agile/import-and-export-issues#set-issue-properties) when you're done. 
+
+![Screenshot](../images/select-imported-items.png){: class="center" style="width:80%"}
+
+#### Set Issue Properties
+You can set issue properties to apply to the selected items. Click `START IMPORT` to trigger the import process.
+
+![Screenshot](../images/set-issue-properties.png){: class="center" style="width:60%"}
 
 ### Export Issues
 You can export selected issues from the [Issue List](/agile/manage-and-resolve-issues/#view-issues-in-issue-list) to different formats, including JSON, CSV, and your custom report format.
