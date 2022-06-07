@@ -22,11 +22,11 @@ bimU.io Launcher is a middleware that exchanges data between bimU.io and BIM sof
 
 #### Download Installer
 
-**<a href="https://github.com/Transformosa/bimU.io.Launcher/releases/download/2022.2.15.0/bimU_io_Launcher_2022.2.15.0.exe" target="_blank">Download bimU.io Launcher 2022.2.15.0</a>**
+**<a href="https://github.com/Transformosa/bimU.io.Launcher/releases/download/2022.6.5.0/bimU_io_Launcher_2022.6.5.0.exe" target="_blank">Download bimU.io Launcher 2022.6.5.0</a>**
 
 !!! warning "Please close all BIM software sessions prior to installation."
 
-The latest version of bimU.io Launcher is 2022.2.15.0. The installer can downloaded from the link above. Technically speaking, admin right is NOT required for the installation. Please speak to your IT staffs if you don't have permission to install it.
+The latest version of bimU.io Launcher is 2022.6.5.0. The installer can downloaded from the link above. Technically speaking, admin right is NOT required for the installation. Please speak to your IT staffs if you don't have permission to install it.
 
 #### Automatic Update
 
