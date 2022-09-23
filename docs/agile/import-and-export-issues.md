@@ -91,6 +91,7 @@ Below is a list of supported issue fields:
 | dueDate     | +++INS $issue.dueDateFormatted+++                                                                                         |
 | created     | +++INS $issue.createdFormatted+++                                                                                         |
 | updated     | +++INS $issue.updatedFormatted+++                                                                                         |
+| attached images     | +++FOR imageUrl IN $issue.imageUrls+++<br>+++ IMAGE imageData($imageUrl, 1.6, 4)+++<br>+++END-FOR imageUrl+++                                                                                        |
 
 HTML syntax can be used to render markup image in your custom report. Here is an example:
 
