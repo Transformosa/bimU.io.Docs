@@ -87,7 +87,9 @@ Below is a list of supported issue fields:
 | creator     | +++INS $issue.creator.name+++                                                                                             |
 | assignees   | +++FOR assignee IN $issue.assignees+++<br>+++INS $assignee.name+++<br>+++END-FOR assignee+++                              |
 | comments    | +++FOR comment IN $issue.comments+++<br>+++INS $comment.creator.name+++: +++INS $comment.text+++<br>+++END-FOR comment+++ |
-| markup      | See below HTML example                                                                                                    |
+| markup      | +++IMAGE imageData($issue.markup, 1.6, 4)+++<br>or See below HTML example|
+| markups     | +++FOR markup IN $issue.markups+++<br>+++ IMAGE imageData($markup, 1.6, 4)+++<br>+++END-FOR markup +++                    |
+| resolutions | +++FOR resolution IN $issue.resolutions+++<br>+++ IMAGE imageData($resolution, 1.6, 4)+++<br>+++END-FOR resolution +++    |
 | dueDate     | +++INS $issue.dueDateFormatted+++                                                                                         |
 | created     | +++INS $issue.createdFormatted+++                                                                                         |
 | updated     | +++INS $issue.updatedFormatted+++                                                                                         |
