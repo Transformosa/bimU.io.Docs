@@ -94,7 +94,10 @@ Below is a list of supported issue fields:
 | created     | +++INS $issue.createdFormatted+++                                                                                         |
 | updated     | +++INS $issue.updatedFormatted+++                                                                                         |
 | attached images     | +++FOR imageUrl IN $issue.imageUrls+++<br>+++ IMAGE imageData($imageUrl, 1.6, 4)+++<br>+++END-FOR imageUrl+++                                                                                        |
-
+| custom fields     | +++INS $issue.PUT_YOUR_CUSTOM_FIELD_NAME_HERE+++                                                                                         |
+| e.g. custom field name: *Functional_Breakdown*     | +++INS $issue.Functional_Breakdown+++                                                                                         |
+| e.g. custom field name: *2*     | ```html +++HTML `<meta charset="UTF-8"><body><p>${$issue[2]}</p></body>`+++ ```
+                                                                                        
 HTML syntax can be used to render markup image in your custom report. Here is an example:
 
 ```html
